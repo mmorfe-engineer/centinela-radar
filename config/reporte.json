@@ -1,0 +1,87 @@
+{
+  "_comentario": "Config del canal RADAR según el schema estándar del doc 05, extendido con los bloques propios de este proyecto (semaforo, capa_determinista, tops, serie_temporal). Toda la personalidad del canal vive aquí; el código viene de centinela-core.",
+  "canal": "radar",
+  "nombre_visible": "📡 RADAR",
+  "banda_color": "#0F4C5C",
+  "crons_utc": ["0 11 * * *", "0 21 * * *"],
+  "cortes": {"0 11 * * *": "MATUTINO (7:00 VET)", "0 21 * * *": "VESPERTINO (17:00 VET)"},
+  "ventana": "desde_corte_anterior",
+  "solapamiento_horas": 1,
+  "pages_ruta": "/radar/",
+  "archivos_universo": {
+    "medios": "config/radar_medios.json",
+    "conectores": "config/conectores.json"
+  },
+  "capa_determinista": {
+    "activa": true,
+    "orden": 1,
+    "metodo": "rss_o_portada",
+    "timeout_por_medio_seg": 20,
+    "reintentos": 2,
+    "conservar_todos_los_titulares": true,
+    "nota": "insumo del Top 10 Global; nunca descartar titulares no matcheados"
+  },
+  "consultas_perplexity": [
+    {"id": 1, "region": "eeuu", "modelo": "sonar-pro", "query": "cobertura sobre Venezuela publicada hoy en: CNN en Español, CBS News, CNBC, Axios, USA Today, Washington Post, Washington Times, LA Times, El Nuevo Herald, Diario Las Américas, WSJ, Bloomberg"},
+    {"id": 2, "region": "reino_unido", "modelo": "sonar-pro", "query": "cobertura sobre Venezuela publicada hoy en: Reuters, Financial Times, BBC"},
+    {"id": 3, "region": "francia", "modelo": "sonar", "query": "cobertura sobre Venezuela publicada hoy en: AFP, Le Monde"},
+    {"id": 4, "region": "oriente_medio", "modelo": "sonar", "query": "cobertura sobre Venezuela publicada hoy en: Al Jazeera, Asharq Al-Awsat, Arab News, Times of Israel"},
+    {"id": 5, "region": "iran", "modelo": "sonar", "query": "cobertura sobre Venezuela publicada hoy en: Mehr News, Tasnim News"},
+    {"id": 6, "region": "rusia", "modelo": "sonar", "query": "cobertura sobre Venezuela publicada hoy en: TASS, RT en Español, Sputnik"},
+    {"id": 7, "region": "iberoamerica", "modelo": "sonar-pro", "query": "cobertura sobre Venezuela publicada hoy en: Clarín, El Mercurio, Reforma, El Tiempo"},
+    {"id": 8, "region": "revistas_semanales", "modelo": "sonar", "query": "publicaciones recientes sobre Venezuela en: The Economist, Foreign Affairs, Foreign Affairs Latinoamérica, El Orden Mundial, AtlasIntel"}
+  ],
+  "instruccion_comun_perplexity": "Analiza cobertura de prensa sobre Venezuela (análisis de agenda mediática). Incluye piezas que mencionen Venezuela directa o indirectamente mediante estos conectores: {conectores_inyectados}. Para cada hallazgo devuelve el schema estándar + medio_id (de la lista dada) + tipo_pieza (portada|editorial|opinion|nota|analisis). Si un medio de la lista no publicó nada, decláralo explícitamente en medios_sin_cobertura: [ids]. No inventes piezas.",
+  "semaforo": {
+    "estados": ["VERDE_con_cobertura", "AMARILLO_sin_cobertura_certificado", "ROJO_no_verificable"],
+    "regla_amarillo": "solo si capa_determinista.exito==true o perplexity declaró el medio revisado sin hallazgos",
+    "regla_roja": "ROJO jamás se convierte en AMARILLO; se declara en tablero y se reintenta en el siguiente corte",
+    "compuerta_propia": "ningún medio puede terminar la corrida sin estado asignado; violación = fallo de auditoría nivel 1"
+  },
+  "clasificacion_matriz": {
+    "modelo": "clasificar",
+    "campos": ["enfoque_matriz", "valencia", "valencia_respecto_a", "prominencia", "es_editorial_u_opinion"],
+    "enfoque_matriz": ["gobierno", "oposicion", "pais_general"],
+    "valencia": ["favorable", "critica", "neutral", "mixta"],
+    "terminologia": "neutral siempre; el sistema detecta la valencia, no la presupone"
+  },
+  "tops": {
+    "top5_venezuela": {
+      "fuente": "hallazgos_verdes",
+      "ranking": ["prominencia", "authority_score", "repeticion_cross_medio"],
+      "multiplicador_editorial_opinion": 2
+    },
+    "top10_global": {
+      "fuente": "todos_los_titulares_capa_determinista",
+      "agrupacion": "embeddings_multilingues_nim",
+      "umbral_coseno": 0.78,
+      "ranking": ["repeticion_cross_medio", "diversidad_regional", "prominencia", "authority_score_promedio"],
+      "marca_cruce": "si un evento venezolano entra al Top10 → etiqueta 'Venezuela en agenda global'"
+    }
+  },
+  "serie_temporal": {
+    "activa": true,
+    "fuente": "rama datos",
+    "metricas": ["volumen_cobertura_por_region_dia", "valencia_por_region_dia"],
+    "render": "svg_generado_por_codigo"
+  },
+  "alerta_temprana": {
+    "umbral_urgencia": "A3",
+    "canal": "telegram_inmediato",
+    "sin_esperar_informe": true
+  },
+  "salidas": {
+    "informe_html": true,
+    "csv_matriz": "matriz_{fecha}-{corte}.csv",
+    "columnas_csv": ["medio_id", "medio_nombre", "region", "semaforo", "titulo", "url", "url_archivo", "fecha", "tipo_pieza", "enfoque_matriz", "valencia", "valencia_respecto_a", "prominencia", "conectores_activados", "resumen_1_frase"]
+  },
+  "presupuesto": {"max_llamadas_busqueda": 10, "max_reintentos_totales": 8},
+  "secciones_activas": ["tablero_certificacion", "top5_venezuela", "top10_global", "matriz_por_region", "serie_temporal", "alertas", "panel_calidad"],
+  "modo_redaccion": "reportero",
+  "v1_1_diferido": ["detector_matriz_coordinada", "comparador_framing_por_region"],
+  "reglas_especiales": [
+    "compliance: citas <=25 palabras, nunca evadir paywalls, guardar solo extracto+URL",
+    "archivo Wayback para todos los hallazgos VERDES",
+    "el formato portal HTML queda diferido; usar plantilla estándar de core"
+  ]
+}

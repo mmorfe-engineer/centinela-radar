@@ -1,0 +1,47 @@
+name: centinela-radar
+
+on:
+  schedule:
+    # Matutino: 7:00 VET = 11:00 UTC
+    - cron: '0 11 * * *'
+    # Vespertino: 17:00 VET = 21:00 UTC
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+    inputs:
+      manual:
+        description: 'Ejecutar corrida manual'
+        required: false
+
+jobs:
+  run-radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run pipeline
+        run: python main.py
+        env:
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPO: mmorfe-engineer/centinela-radar
+          GITHUB_BRANCH_DATOS: datos
+
+      - name: Run tests
+        run: pytest tests/ -v
