@@ -46,13 +46,15 @@ def cargar_config():
 def cargar_medios():
     """Cargar lista de medios"""
     with open("config/radar_medios.json", "r", encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+    return data.get("medios", [])
 
 
 def cargar_conectores():
     """Cargar conectores temáticos"""
     with open("config/conectores.json", "r", encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+    return data.get("grupos", {})
 
 
 def parse_args():
@@ -74,7 +76,6 @@ def main():
     
     # 2. Inicializar panel de calidad
     panel = PanelCalidad()
-    panel.iniciar()
     
     # 3. Capa 1: Determinista (RSS/portada)
     # fetch_todos_medios devuelve: {"medios": [...], "errores": [...], "titulares_todos": [...]}
@@ -86,12 +87,19 @@ def main():
         conectores
     )
     
+    # 4.5. Agrupar hallazgos por medio
+    hallazgos_por_medio = {}
+    for hallazgo in hallazgos_capa1:
+        medio_id = hallazgo.get("medio_id", "desconocido")
+        if medio_id not in hallazgos_por_medio:
+            hallazgos_por_medio[medio_id] = []
+        hallazgos_por_medio[medio_id].append(hallazgo)
+    
     # 5. Asignar estados (semáforo)
     estados, tablero = asignar_estados(
         medios,
-        capa1_result["medios"],
-        capa1_result["errores"],
-        hallazgos_capa1
+        capa1_result,
+        hallazgos_por_medio
     )
     
     # 6. Registrar métricas de capa 1
@@ -119,7 +127,7 @@ def main():
     todos_hallazgos = hallazgos_capa1 + hallazgos_capa2
     
     # 9. Deduplicar
-    nuevos = deduplicar(todos_hallazgos, hashes_previos=set())
+    nuevos, telemetria_dedup = deduplicar(todos_hallazgos, hashes_previos=set())
     
     # 10. Clasificar (DeepSeek-R1)
     from radar.clasificacion import clasificar_todos

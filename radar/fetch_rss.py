@@ -213,11 +213,11 @@ def parse_portada(html: str, url_base: str) -> List[Dict[str, Any]]:
         
         # Estrategia 2: Buscar etiquetas <h1>, <h2>, <h3> con links
         h_pattern = re.compile(
-            r'<(h[1-3])[^>]*>(.*?)</\1>',
+            r'<(h[1-3])\b[^>]*>(.*?)</\1>',
             re.IGNORECASE | re.DOTALL
         )
         for match in h_pattern.findall(html):
-            level, text = match
+            level, text = match[0], match[1]
             text = re.sub(r'<[^>]+>', '', text).strip()
             if len(text) > 5:  # Titulares muy cortos probablemente no son relevantes
                 titulares.append({
@@ -233,7 +233,7 @@ def parse_portada(html: str, url_base: str) -> List[Dict[str, Any]]:
             re.IGNORECASE | re.DOTALL
         )
         for match in link_pattern.findall(html):
-            attrs, text = match
+            attrs, text = match[0], match[1]
             text = re.sub(r'<[^>]+>', '', text).strip()
             if len(text) > 5:
                 titulares.append({
