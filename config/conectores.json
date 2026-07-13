@@ -1,0 +1,59 @@
+{
+  "_comentario": "Conectores temáticos del RADAR. Se usan en ambas capas: matching normalizado (minúsculas, sin tildes, alias) en la capa 1 RSS, e inyectados al prompt regional en la capa 2 Perplexity. El bloque 'coyuntura' es EDITABLE por corrida sin tocar código. Un titular matchea si contiene cualquier término o alias.",
+  "version": "1.0",
+  "normalizacion": {"minusculas": true, "sin_tildes": true, "sin_puntuacion": true},
+  "grupos": {
+    "actores": {
+      "peso": 3,
+      "terminos": [
+        {"canonico": "venezuela", "alias": ["venezolano", "venezolana", "venezuelan", "venezolanos", "venezolanas", "vénézuéla", "venesuela"]},
+        {"canonico": "nicolas maduro", "alias": ["maduro"]},
+        {"canonico": "delcy rodriguez", "alias": ["delcy"]},
+        {"canonico": "jorge rodriguez", "alias": []},
+        {"canonico": "diosdado cabello", "alias": ["cabello"]},
+        {"canonico": "maria corina machado", "alias": ["corina machado", "mcm", "machado"]},
+        {"canonico": "edmundo gonzalez", "alias": ["edmundo gonzalez urrutia"]},
+        {"canonico": "pdvsa", "alias": ["petroleos de venezuela"]},
+        {"canonico": "asamblea nacional", "alias": []},
+        {"canonico": "tsj", "alias": ["tribunal supremo de justicia"]},
+        {"canonico": "cne", "alias": ["consejo nacional electoral"]},
+        {"canonico": "bcv", "alias": ["banco central de venezuela"]}
+      ]
+    },
+    "estructurales": {
+      "peso": 2,
+      "terminos": [
+        {"canonico": "sanciones venezuela", "alias": ["ofac", "licencia general", "sanctions venezuela"]},
+        {"canonico": "chevron venezuela", "alias": ["chevron"]},
+        {"canonico": "crudo venezolano", "alias": ["petroleo venezolano", "venezuelan oil", "venezuelan crude", "faja del orinoco"]},
+        {"canonico": "migracion venezolana", "alias": ["migrantes venezolanos", "exodo venezolano", "venezuelan migrants", "diaspora venezolana"]},
+        {"canonico": "esequibo", "alias": ["essequibo", "guyana venezuela", "guayana esequiba"]},
+        {"canonico": "elecciones venezuela", "alias": ["comicios venezuela", "venezuelan election"]},
+        {"canonico": "presos politicos venezuela", "alias": ["political prisoners venezuela", "detenidos politicos"]},
+        {"canonico": "tren de aragua", "alias": ["tda"]},
+        {"canonico": "citgo", "alias": []},
+        {"canonico": "plataforma unitaria", "alias": ["pud", "oposicion venezolana", "venezuelan opposition"]}
+      ]
+    },
+    "coyuntura": {
+      "peso": 3,
+      "_editable": "Actualizar este bloque según la contingencia activa. Vigente: eventos sísmicos (disparador del proyecto según memo original).",
+      "terminos": [
+        {"canonico": "sismo venezuela", "alias": ["terremoto venezuela", "temblor venezuela", "earthquake venezuela", "replicas venezuela", "seisme venezuela"]},
+        {"canonico": "ayuda humanitaria venezuela", "alias": ["humanitarian aid venezuela", "emergencia venezuela"]}
+      ]
+    },
+    "indirectos": {
+      "peso": 1,
+      "_nota": "Peso bajo: solos no certifican relevancia; suman si acompañan a otro grupo o disparan revisión del artículo completo.",
+      "terminos": [
+        {"canonico": "caracas", "alias": []},
+        {"canonico": "chavismo", "alias": ["chavista", "chavez"]},
+        {"canonico": "bolivar moneda", "alias": ["bolivares"]},
+        {"canonico": "maiquetia", "alias": []},
+        {"canonico": "caribe venezuela", "alias": ["frontera colombo venezolana", "cucuta frontera"]}
+      ]
+    }
+  },
+  "regla_matching": "match si: (a) cualquier termino de peso>=2, o (b) dos o mas terminos de peso 1 en el mismo titular, o (c) un termino peso 1 + fetch del articulo confirma mencion sustantiva de Venezuela"
+}
