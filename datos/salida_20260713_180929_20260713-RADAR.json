@@ -1,0 +1,2864 @@
+{
+  "correlativo": "20260713-RADAR",
+  "tipo_reporte": "radar",
+  "canal": "radar",
+  "nombre_visible": "📡 RADAR",
+  "tablero_certificacion": {
+    "total": 35,
+    "VERDE_con_cobertura": 0,
+    "AMARILLO_sin_cobertura_certificado": 28,
+    "ROJO_no_verificable": 7
+  },
+  "top5_venezuela": [],
+  "top10_global": [
+    {
+      "rank": 1,
+      "evento_id": "evento_32",
+      "titulo_canonico": "headline",
+      "resumen": "📰 202/1944 titulares · 1 regiones · 3 medios",
+      "cuenta_medios": 3,
+      "cuenta_total": 202,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "cnbc",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "headline",
+          "medio_id": "watimes",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 2,
+      "evento_id": "evento_13",
+      "titulo_canonico": "Deportes",
+      "resumen": "📰 2/1944 titulares · 1 regiones · 2 medios",
+      "cuenta_medios": 2,
+      "cuenta_total": 2,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Deportes",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "Deportes",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 3,
+      "evento_id": "evento_17",
+      "titulo_canonico": "Cultura",
+      "resumen": "📰 2/1944 titulares · 1 regiones · 2 medios",
+      "cuenta_medios": 2,
+      "cuenta_total": 2,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Cultura",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "Cultura",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 4,
+      "evento_id": "evento_27",
+      "titulo_canonico": "article",
+      "resumen": "📰 169/1944 titulares · 1 regiones · 2 medios",
+      "cuenta_medios": 2,
+      "cuenta_total": 169,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "article",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 5,
+      "evento_id": "evento_850",
+      "titulo_canonico": "Ukraine’s Drones Are Now Reaching Siberia and Imperiling Russian Energy Assets",
+      "resumen": "📰 2/1944 titulares · 1 regiones · 1 medios",
+      "cuenta_medios": 1,
+      "cuenta_total": 2,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Ukraine’s Drones Are Now Reaching Siberia and Imperiling Russian Energy Assets",
+          "medio_id": "wsj",
+          "region": "desconocido",
+          "url": "https://www.wsj.com/world/ukraines-drones-are-now-reaching-siberia-and-imperiling-russian-energy-assets-e0d2caa7",
+          "fecha": "2026-07-10T00:00:00"
+        },
+        {
+          "titulo": "Ukraine’s Drones Are Now Reaching Siberia and Imperiling Russian Energy Assets",
+          "medio_id": "wsj",
+          "region": "desconocido",
+          "url": "https://www.wsj.com/world/ukraines-drones-are-now-reaching-siberia-and-imperiling-russian-energy-assets-e0d2caa7",
+          "fecha": "2026-07-10T00:00:00"
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 6,
+      "evento_id": "evento_1767",
+      "titulo_canonico": "Brazil’s president is losing clout abroad and unpopular at home",
+      "resumen": "📰 2/1944 titulares · 1 regiones · 1 medios",
+      "cuenta_medios": 1,
+      "cuenta_total": 2,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Brazil’s president is losing clout abroad and unpopular at home",
+          "medio_id": "economist",
+          "region": "desconocido",
+          "url": "https://www.economist.com/the-americas/2025/07/03/brazils-president-is-losing-clout-abroad-and-unpopular-at-home",
+          "fecha": "2025-07-03T12:24:22"
+        },
+        {
+          "titulo": "Brazil’s president is losing clout abroad and unpopular at home",
+          "medio_id": "economist",
+          "region": "desconocido",
+          "url": "https://www.economist.com/the-americas/2025/06/29/brazils-president-is-losing-clout-abroad-and-unpopular-at-home",
+          "fecha": "2025-06-29T17:26:04"
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 7,
+      "evento_id": "evento_356",
+      "titulo_canonico": "Trump says U.S. military will reimpose blockade on Iranian ports",
+      "resumen": "📰 1/1944 titulares · 1 regiones · 1 medios",
+      "cuenta_medios": 1,
+      "cuenta_total": 1,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Trump says U.S. military will reimpose blockade on Iranian ports",
+          "medio_id": "wapo",
+          "region": "desconocido",
+          "url": "https://www.washingtonpost.com/world/2026/07/13/airstrikes-intensify-between-us-iran/",
+          "fecha": "2026-07-13T21:39:12"
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 8,
+      "evento_id": "evento_357",
+      "titulo_canonico": "U.K. to designate Iran’s Islamic Revolutionary Guard Corps as a terrorist group",
+      "resumen": "📰 1/1944 titulares · 1 regiones · 1 medios",
+      "cuenta_medios": 1,
+      "cuenta_total": 1,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "U.K. to designate Iran’s Islamic Revolutionary Guard Corps as a terrorist group",
+          "medio_id": "wapo",
+          "region": "desconocido",
+          "url": "https://www.washingtonpost.com/world/2026/07/13/uk-designate-irans-islamic-revolutionary-guard-corps-terrorist-group/",
+          "fecha": "2026-07-13T13:35:53"
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 9,
+      "evento_id": "evento_358",
+      "titulo_canonico": "Vatican hits back at U.S. claim that Pope Leo speaks as a politician",
+      "resumen": "📰 1/1944 titulares · 1 regiones · 1 medios",
+      "cuenta_medios": 1,
+      "cuenta_total": 1,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Vatican hits back at U.S. claim that Pope Leo speaks as a politician",
+          "medio_id": "wapo",
+          "region": "desconocido",
+          "url": "https://www.washingtonpost.com/world/2026/07/13/vatican-rejects-us-claim-that-pope-leo-speaks-politician/",
+          "fecha": "2026-07-13T12:46:39"
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 10,
+      "evento_id": "evento_359",
+      "titulo_canonico": "Fire at Bangkok bar kills 27; exits may have been blocked, officials say",
+      "resumen": "📰 1/1944 titulares · 1 regiones · 1 medios",
+      "cuenta_medios": 1,
+      "cuenta_total": 1,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Fire at Bangkok bar kills 27; exits may have been blocked, officials say",
+          "medio_id": "wapo",
+          "region": "desconocido",
+          "url": "https://www.washingtonpost.com/world/2026/07/13/bangkok-bar-fire-kills-least-27/",
+          "fecha": "2026-07-13T10:13:03"
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    }
+  ],
+  "hallazgos": [],
+  "csv_matriz": "medio_id,medio_nombre,region,semaforo,titulo,url,url_archivo,fecha,tipo_pieza,enfoque_matriz,valencia,valencia_respecto_a,prominencia,conectores_activados,resumen_1_frase",
+  "panel_calidad": {
+    "hallazgos_iniciales": 1944,
+    "hallazgos_deduplicados": 0,
+    "hallazgos_agrupados": 0,
+    "actores_validos": 0,
+    "actores_invalidos": 0,
+    "timestamps_validos": 0,
+    "timestamps_plausibles": 0,
+    "timestamps_dudosos": 0,
+    "fallas_nivel_1": 0,
+    "fallas_nivel_2": 0,
+    "reintentos_ejecutados": 0,
+    "costo_total_llm": 0.0,
+    "tokens_totales": 0,
+    "tiempo_ejecucion": 294.15
+  }
+}
