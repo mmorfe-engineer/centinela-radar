@@ -15,6 +15,7 @@ Estructura:
 
 import json
 import sys
+import argparse
 from datetime import datetime
 
 # Importar desde centinela-core
@@ -31,8 +32,9 @@ from core.persistencia import guardar_salida, cargar_hashes_previos
 from radar.fetch_rss import fetch_todos_medios
 from radar.matching import cruzar_con_conectores
 from radar.semaforo import asignar_estados, generar_tablero
-from radar.top_global import calcular_top5_venezuela, calcular_top10_global
-from radar.csv_matriz import generar_csv_matriz
+from radar.top5_venezuela import generar_top5_venezuela
+from radar.top_global import generar_top10_global, extraer_titulares_para_top10
+from radar.csv_matriz import generar_csv_matriz, generar_nombre_archivo_csv
 
 
 def cargar_config():
@@ -53,8 +55,18 @@ def cargar_conectores():
         return json.load(f)
 
 
+def parse_args():
+    """Parsear argumentos de línea de comandos"""
+    parser = argparse.ArgumentParser(description="CENTINELA-RADAR Pipeline")
+    parser.add_argument("--corte", type=str, choices=["MATUTINO", "VESPERTINO"], default="MATUTINO",
+                       help="Tipo de corte a ejecutar")
+    return parser.parse_args()
+
+
 def main():
     """Pipeline principal del RADAR"""
+    args = parse_args()
+    corte = args.corte
     # 1. Cargar configuración
     config = cargar_config()
     medios = cargar_medios()
@@ -107,24 +119,22 @@ def main():
     todos_hallazgos = hallazgos_capa1 + hallazgos_capa2
     
     # 9. Deduplicar
-    nuevos, telemetria_dedup = deduplicar(todos_hallazgos, hashes_previos=set())
+    nuevos = deduplicar(todos_hallazgos, hashes_previos=set())
     
     # 10. Clasificar (DeepSeek-R1)
-    for hallazgo in nuevos:
-        clasif = cliente_llm.completar(
-            accion="clasificar",
-            prompt=f"Clasifica este hallazgo: {hallazgo.get('titulo', '')} {hallazgo.get('texto', '')[:200]}",
-            modelo="deepseek-r1",
-            temp=0
-        )
-        hallazgo.update(clasif)
+    from radar.clasificacion import clasificar_todos
+    nuevos = clasificar_todos(nuevos, cliente_llm)
     
     # 11. Top 5 Venezuela y Top 10 Global
-    top5_ve = calcular_top5_venezuela(nuevos)
-    top10_global = calcular_top10_global(capa1_result["titulares_todos"])
+    top5_ve = generar_top5_venezuela(nuevos, medios)
+    
+    # Extraer todos los titulares para Top 10 Global
+    todos_titulares = extraer_titulares_para_top10(capa1_result)
+    top10_global = generar_top10_global(todos_titulares, medios)
     
     # 12. Generar CSV
-    csv_matriz = generar_csv_matriz(nuevos, medios, tablero)
+    fecha, corte = generar_nombre_archivo_csv()
+    csv_matriz = generar_csv_matriz(nuevos, medios, fecha, corte)
     
     # 13. Renderizar informe
     contrato = {
