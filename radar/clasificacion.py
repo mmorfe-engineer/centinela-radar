@@ -116,11 +116,22 @@ def parsear_respuesta_clasificacion(respuesta: str) -> Dict[str, Any]:
         Dict con los campos de clasificación
     """
     resultado = {}
-    
+
     try:
+        # Extraer JSON de markdown code fences si Mistral los incluye
+        texto = respuesta.strip()
+        if texto.startswith("```"):
+            lineas = texto.split("\n")
+            lineas = lineas[1:]  # quitar ```json o ```
+            if lineas and lineas[-1].strip() == "```":
+                lineas = lineas[:-1]
+            texto = "\n".join(lineas).strip()
+        else:
+            texto = respuesta.strip()
+
         # Intentar parsear como JSON
-        if respuesta.strip().startswith("{"):
-            data = json.loads(respuesta)
+        if texto.startswith("{"):
+            data = json.loads(texto)
             
             # Validar campos
             for campo, opciones in [
@@ -143,8 +154,7 @@ def parsear_respuesta_clasificacion(respuesta: str) -> Dict[str, Any]:
             
             return data
         else:
-            # Fallback: intentar extraer información
-            logging.warning(f"Respuesta no es JSON: {respuesta[:200]}")
+            logging.warning(f"Respuesta no es JSON: {texto[:200]}")
             return {}
     
     except json.JSONDecodeError as e:

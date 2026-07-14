@@ -21,12 +21,15 @@ jobs:
   execute-radar:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    permissions:
+      contents: write  # Necesario para push a rama datos
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -38,6 +41,20 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Configure git identity
+        run: |
+          git config --global user.name "Morfe Engineer"
+          git config --global user.email "morfefloresm@uvm.edu.ve"
+
+      - name: Ensure rama datos exists
+        run: |
+          if ! git ls-remote --exit-code origin datos; then
+            git checkout --orphan datos
+            git commit --allow-empty -m "Initial datos branch"
+            git push origin datos
+            git checkout main
+          fi
 
       - name: Determine corte type
         id: corte
@@ -62,45 +79,11 @@ jobs:
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python main.py --corte ${{ steps.corte.outputs.corte }}
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: radar-output-${{ steps.corte.outputs.corte }}
-          path: |
-            output/
-            *.csv
-            *.json
-
-      - name: Commit to datos branch
-        if: success()
+      - name: Push rama datos al remoto
         run: |
-          git config --global user.name "Morfe Engineer"
-          git config --global user.email "morfefloresm@uvm.edu.ve"
-          
-          # Create datos branch if it doesn't exist
-          git fetch origin datos || true
-          if ! git rev-parse --verify origin/datos >/dev/null 2>&1; then
-            git checkout --orphan datos
-            git commit --allow-empty -m "Initial datos branch"
-            git push origin datos
-            git checkout main
-          fi
-          
-          # Checkout datos branch
-          git checkout datos || git checkout -b datos
-          
-          # Copy output files
-          mkdir -p datos
-          cp -r output/* datos/ 2>/dev/null || true
-          cp *.csv datos/ 2>/dev/null || true
-          cp *.json datos/ 2>/dev/null || true
-          
-          # Commit
-          git add datos/
-          git commit -m "Datos del corte ${{ steps.corte.outputs.corte }} $(date -u +%Y-%m-%dT%H:%M:%SZ)" || true
-          git push origin datos || true
+          # guardar_salida() ya hizo commit local en rama datos.
+          # Este paso solo hace el push al remoto.
+          git push origin datos
