@@ -12,6 +12,9 @@ _VERDE = "VERDE_con_cobertura"
 _AMARILLO = "AMARILLO_sin_cobertura_certificado"
 _ROJO = "ROJO_no_verificable"
 
+# Importar normalización para contar hallazgos de Venezuela
+from core.normalizacion import normalizar_titulo
+
 _MESES_ES = {
     1: "Ene", 2: "Feb", 3: "Mar", 4: "Abr", 5: "May", 6: "Jun",
     7: "Jul", 8: "Ago", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dic"
@@ -126,6 +129,54 @@ def _render_top10(top10: List[Dict]) -> str:
     return "\n".join(items)
 
 
+def _render_todos_hallazgos(hallazgos: List[Dict]) -> str:
+    """Renderiza una lista completa de todos los hallazgos sobre Venezuela."""
+    # Filtrar solo hallazgos que mencionan Venezuela
+    hallazgos_venezuela = [
+        h for h in hallazgos
+        if "venezuela" in normalizar_titulo(h.get("titulo", "") or "")
+        or any("venezuela" in normalizar_titulo(c or "") for c in h.get("conectores_activados", []))
+    ]
+    
+    if not hallazgos_venezuela:
+        return '<p class="empty">Sin hallazgos disponibles</p>'
+
+    items = []
+    for idx, hallazgo in enumerate(hallazgos_venezuela, 1):
+        titulo = _esc(hallazgo.get("titulo", "Sin título"))
+        medio_id = hallazgo.get("medio_id", "")
+        valencia = hallazgo.get("valencia", "neutral") or "neutral"
+        enfoque = hallazgo.get("enfoque_matriz", "pais_general") or "pais_general"
+        prominencia = hallazgo.get("prominencia", "") or ""
+        url = hallazgo.get("url", "") or hallazgo.get("fuente_url", "")
+
+        tags = []
+        if medio_id:
+            tags.append(_tag(medio_id.upper(), "medio"))
+        if valencia != "neutral":
+            tags.append(_tag(valencia, valencia))
+        if enfoque != "pais_general":
+            tags.append(_tag(enfoque.replace("_", " "), enfoque))
+        if prominencia == "portada":
+            tags.append(_tag("PORTADA", "portada"))
+
+        link = ""
+        if url and not url.startswith("synthetic://"):
+            link = f'<a class="tag-fuente" href="{url}" target="_blank" rel="noopener">→ ver nota</a>'
+
+        tags_html = " ".join(tags)
+        items.append(f"""
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">{idx}</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">{titulo}</div>
+                <div class="hallazgo-meta">{tags_html} {link}</div>
+            </div>
+        </div>""")
+
+    return "\n".join(items)
+
+
 def render_html_radar(
     contrato: Dict[str, Any],
     url_pages: str = "",
@@ -147,7 +198,13 @@ def render_html_radar(
     amarillo = tablero.get(_AMARILLO, 0)
     rojo = tablero.get(_ROJO, 0)
     total = tablero.get("total", verde + amarillo + rojo)
-    n_hallazgos = len(hallazgos)
+    
+    # CORRECCIÓN: Contar solo hallazgos que realmente mencionan Venezuela
+    n_hallazgos = sum(
+        1 for h in hallazgos
+        if "venezuela" in normalizar_titulo(h.get("titulo", "") or "")
+        or any("venezuela" in normalizar_titulo(c or "") for c in h.get("conectores_activados", []))
+    )
 
     ahora = datetime.now()
     mes = _MESES_ES.get(ahora.month, str(ahora.month))
@@ -161,6 +218,7 @@ def render_html_radar(
     medios_chips = _render_medios_tablero(estados_medios, medios_config)
     top5_html = _render_top5(top5)
     top10_html = _render_top10(top10)
+    todos_hallazgos_html = _render_todos_hallazgos(hallazgos)
 
     link_footer = ""
     if url_pages:
@@ -256,6 +314,16 @@ def render_html_radar(
         .global-titulo{{font-size:14px;font-weight:500;flex:1}}
         .global-stats{{font-size:12px;color:var(--muted);white-space:nowrap}}
 
+        /* TODOS LOS HALLAZGOS */
+        .hallazgo-list{{display:flex;flex-direction:column;gap:8px}}
+        .hallazgo-item{{background:var(--card);border-radius:8px;padding:12px 16px;
+                       box-shadow:0 1px 2px rgba(0,0,0,.06);display:flex;gap:12px;align-items:flex-start;
+                       border-left:3px solid var(--azul)}}
+        .hallazgo-rank{{font-size:18px;font-weight:700;color:var(--border);min-width:24px;text-align:center;line-height:1}}
+        .hallazgo-content{{flex:1;min-width:0}}
+        .hallazgo-titulo{{font-size:14px;font-weight:500;margin-bottom:6px;line-height:1.4}}
+        .hallazgo-meta{{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:11px}}
+
         /* FOOTER */
         footer{{background:var(--header);color:#475569;padding:28px 20px;text-align:center;font-size:12px;margin-top:48px;line-height:2}}
         footer strong{{color:#94A3B8}}
@@ -269,6 +337,10 @@ def render_html_radar(
             .top-rank{{font-size:24px;min-width:30px}}
             .global-stats{{display:none}}
             .tablero-grid{{grid-template-columns:repeat(2,1fr)}}
+            .hallazgo-item{{padding:10px 12px;gap:8px}}
+            .hallazgo-rank{{font-size:16px;min-width:20px}}
+            .hallazgo-titulo{{font-size:13px}}
+            .hallazgo-meta{{font-size:10px}}
         }}
         @media print{{
             body{{background:#fff}}
@@ -323,6 +395,13 @@ def render_html_radar(
     </section>
 
     <section>
+        <h2 class="sec-title">📋 Todos los hallazgos sobre Venezuela</h2>
+        <div class="hallazgo-list">
+{todos_hallazgos_html}
+        </div>
+    </section>
+
+    <section>
         <h2 class="sec-title">🌐 Agenda global · Top 10</h2>
         <div class="global-list">
 {top10_html}
@@ -357,7 +436,13 @@ def generar_mensaje_telegram(
     amarillo = tablero.get(_AMARILLO, 0)
     rojo = tablero.get(_ROJO, 0)
     total = tablero.get("total", verde + amarillo + rojo)
-    n_hallazgos = len(hallazgos)
+    
+    # CORRECCIÓN: Contar solo hallazgos que realmente mencionan Venezuela
+    n_hallazgos = sum(
+        1 for h in hallazgos
+        if "venezuela" in normalizar_titulo(h.get("titulo", "") or "")
+        or any("venezuela" in normalizar_titulo(c or "") for c in h.get("conectores_activados", []))
+    )
 
     ahora = datetime.now()
     mes = _MESES_ES.get(ahora.month, str(ahora.month))
