@@ -100,7 +100,7 @@ def main():
         hallazgos_por_medio[medio_id].append(hallazgo)
     
     # 5. Asignar estados (semáforo)
-    estados, tablero = asignar_estados(
+    estados, tablero, errores_medios = asignar_estados(
         medios,
         capa1_result,
         hallazgos_por_medio
@@ -179,6 +179,7 @@ def main():
         "csv_matriz": csv_matriz,
         "panel_calidad": panel.resumen(),
         "estados_medios": estados,
+        "errores_medios": errores_medios,
         "medios_config": medios,
     }
     html = render_html_radar(contrato, url_pages=PAGES_URL, corte=corte_pipeline)

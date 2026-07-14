@@ -88,7 +88,7 @@ def asignar_estados(
     resultados_fetch: Dict[str, Any],
     hallazgos_por_medio: Dict[str, List[Dict[str, Any]]],
     config_semaforo: Optional[Dict[str, Any]] = None
-) -> Tuple[Dict[str, str], Dict[str, Any]]:
+) -> Tuple[Dict[str, str], Dict[str, Any], Dict[str, str]]:
     """
     Asignar estados a todos los medios.
     
@@ -99,10 +99,11 @@ def asignar_estados(
         config_semaforo: Configuración del semáforo (opcional)
         
     Returns:
-        Tuple[estados: Dict[str, str], tablero: Dict[str, Any]]
+        Tuple[estados: Dict[str, str], tablero: Dict[str, Any], errores_medios: Dict[str, str]]
         
         estados: {"medio_id": "VERDE_con_cobertura" | "AMARILLO_..." | "ROJO_..."}
         tablero: {"total": int, "verdes": int, "amarillos": int, "rojos": int, ...}
+        errores_medios: {"medio_id": "descripción del error"} para medios ROJO
     """
     estados = {}
     tablero = {
@@ -111,6 +112,7 @@ def asignar_estados(
         ESTADO_AMARILLO: 0,
         ESTADO_ROJO: 0
     }
+    errores_medios = {}
     
     # Crear mapeo de id -> resultado de fetch
     resultados_por_id = {}
@@ -126,6 +128,10 @@ def asignar_estados(
         estado, explicacion = asignar_estado_medio(medio, resultado_fetch, hallazgos)
         estados[medio_id] = estado
         tablero[estado] += 1
+        
+        # Guardar error para medios ROJO
+        if estado == ESTADO_ROJO:
+            errores_medios[medio_id] = explicacion
     
     # Verificar regla central: ningún medio sin estado
     medios_sin_estado = [m for m in medios_config if m.get("id") not in estados]
@@ -143,7 +149,7 @@ def asignar_estados(
             f"vs suma={total_estados}"
         )
     
-    return estados, tablero
+    return estados, tablero, errores_medios
 
 
 def generar_tablero(

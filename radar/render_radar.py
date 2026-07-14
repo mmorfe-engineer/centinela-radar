@@ -36,23 +36,31 @@ def _tag(texto: str, cls: str) -> str:
     return f'<span class="tag tag-{cls}">{_esc(texto)}</span>'
 
 
-def _render_medios_tablero(estados_medios: Dict[str, str], medios_config: List[Dict]) -> str:
+def _render_medios_tablero(estados_medios: Dict[str, str], medios_config: List[Dict], errores_medios: Dict[str, str] = None) -> str:
     if not estados_medios or not medios_config:
         return '<p class="empty">Sin datos de tablero por medio</p>'
 
     chips = []
+    errores_medios = errores_medios or {}
+    
     for medio in medios_config:
         mid = medio.get("id", "")
         estado = estados_medios.get(mid, _ROJO)
         nombre = _esc(medio.get("nombre", mid))
+        error_msg = errores_medios.get(mid, "")
+        
         if estado == _VERDE:
             cls = "verde"
+            tooltip = "Con cobertura"
         elif estado == _AMARILLO:
             cls = "amarillo"
+            tooltip = "Sin cobertura certificada"
         else:
             cls = "rojo"
+            tooltip = f"Error: {error_msg}" if error_msg else "No verificable"
+        
         chips.append(
-            f'<div class="medio-chip {cls}">'
+            f'<div class="medio-chip {cls}" title="{tooltip}">'
             f'<span class="dot"></span>'
             f'<span class="nombre">{nombre}</span>'
             f'</div>'
@@ -205,6 +213,7 @@ def render_html_radar(
     hallazgos = contrato.get("hallazgos", [])
     panel = contrato.get("panel_calidad", {})
     estados_medios = contrato.get("estados_medios", {})
+    errores_medios = contrato.get("errores_medios", {})
     medios_config = contrato.get("medios_config", [])
 
     verde = tablero.get(_VERDE, 0)
@@ -228,7 +237,7 @@ def render_html_radar(
     tiempo = panel.get("tiempo_ejecucion", "")
     tiempo_str = f" · {tiempo}s" if tiempo else ""
 
-    medios_chips = _render_medios_tablero(estados_medios, medios_config)
+    medios_chips = _render_medios_tablero(estados_medios, medios_config, errores_medios)
     top5_html = _render_top5(top5)
     top10_html = _render_top10(top10)
     todos_hallazgos_html = _render_todos_hallazgos(hallazgos)
