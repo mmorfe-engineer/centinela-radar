@@ -49,7 +49,10 @@ jobs:
 
       - name: Ensure rama datos exists
         run: |
-          if ! git ls-remote --exit-code origin datos; then
+          if git ls-remote --exit-code origin datos; then
+            # Traer rama remota como rama local para que persistencia._rama_existe() la encuentre
+            git fetch origin datos:datos
+          else
             git checkout --orphan datos
             git commit --allow-empty -m "Initial datos branch"
             git push origin datos
