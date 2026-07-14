@@ -113,15 +113,28 @@ def _render_top10(top10: List[Dict]) -> str:
         n_medios = item.get("cuenta_medios", 0)
         regiones = item.get("regiones", [])
         es_venezolano = item.get("es_venezolano", False)
+        titulares = item.get("titulares", [])
+
+        # Extraer primera URL válida del grupo
+        url = ""
+        for t in titulares:
+            candidate_url = t.get("url", "") or t.get("fuente_url", "")
+            if candidate_url and not candidate_url.startswith("synthetic://"):
+                url = candidate_url
+                break
 
         cls = "global-item venezolano" if es_venezolano else "global-item"
         bandera = " 🇻🇪" if es_venezolano else ""
         stats = f"{n_medios} medios · {len(regiones)} regiones"
 
+        link_html = ""
+        if url:
+            link_html = f' <a class="tag-fuente" href="{url}" target="_blank" rel="noopener">→ fuente</a>'
+
         items.append(
             f'<div class="{cls}">'
             f'<div class="global-rank">{rank}</div>'
-            f'<div class="global-titulo">{titulo}{bandera}</div>'
+            f'<div class="global-titulo">{titulo}{bandera}{link_html}</div>'
             f'<div class="global-stats">{stats}</div>'
             f'</div>'
         )

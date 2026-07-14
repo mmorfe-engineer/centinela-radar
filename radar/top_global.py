@@ -21,10 +21,46 @@ from typing import Any, Dict, List, Optional, Tuple
 import numpy as np
 
 from core.llm import LLMClient
+from core.normalizacion import normalizar_titulo
 
 
 # Umbral de similitud coseno para agrupar eventos
 UMBRAL_COSENO = 0.78
+
+# Palabras clave que indican temas NO relevantes para el RADAR
+PALABRAS_IRRELEVANTES = {
+    "deporte", "deportes", "futbol", "fútbol", "beisbol", "básquet",
+    "tenis", "golf", "atletismo", "olimpico", "jolímpico", "mundial",
+    "cultura", "arte", "música", "cine", "teatro", "literatura",
+    "entretenimiento", "espectaculo", "espectáculo", "famoso", "celebridad",
+    "horoscopo", "farandula", "farándula"
+}
+
+
+def es_grupo_relevante(grupo: Dict[str, Any]) -> bool:
+    """
+    Determinar si un grupo de titulares es relevante para el RADAR.
+    Excluye grupos con temas genéricos como deportes o cultura.
+    """
+    titulo = grupo.get("titulo_canonico", "").lower()
+    
+    # Si el grupo es venezolano, SIEMPRE incluirlo
+    if grupo.get("es_venezolano", False):
+        return True
+    
+    # Verificar si el título normalizado contiene palabras irrelevantes
+    titulo_norm = normalizar_titulo(titulo)
+    for palabra in PALABRAS_IRRELEVANTES:
+        if palabra in titulo_norm:
+            return False
+    
+    # Verificar si algún titular del grupo menciona Venezuela
+    for t in grupo.get("titulares", []):
+        t_titulo = normalizar_titulo(t.get("titulo", ""))
+        if "venezuela" in t_titulo:
+            return True
+    
+    return True
 
 
 def generar_embedding(texto: str, cliente_llm: Optional[LLMClient] = None) -> List[float]:
@@ -323,9 +359,7 @@ def generar_top10_global(
             score = repeticion * diversidad_regional * prominencia * authority
             
             # Determinar si es venezolano
-            # (Por ahora, simple: verificar si algún titular contiene "venezuela" normalizado)
             es_venezolano = False
-            from core.normalizacion import normalizar_titulo
             for t in grupo["titulares"]:
                 titulo_norm = normalizar_titulo(t["titulo"])
                 if "venezuela" in titulo_norm:
@@ -343,8 +377,11 @@ def generar_top10_global(
         # Ordenar por score descendente
         grupos.sort(key=lambda g: g["score"], reverse=True)
         
-        # Tomar Top 10
-        top10 = grupos[:10]
+        # Filtrar grupos relevantes (excluir deportes, cultura, etc.)
+        grupos_relevantes = [g for g in grupos if es_grupo_relevante(g)]
+        
+        # Tomar Top 10 de los relevantes
+        top10 = grupos_relevantes[:10]
         
         # Formatear resultado
         resultado = []
