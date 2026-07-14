@@ -12,7 +12,6 @@ _VERDE = "VERDE_con_cobertura"
 _AMARILLO = "AMARILLO_sin_cobertura_certificado"
 _ROJO = "ROJO_no_verificable"
 
-# Importar normalización para contar hallazgos de Venezuela
 from core.normalizacion import normalizar_titulo
 
 _MESES_ES = {
@@ -22,7 +21,6 @@ _MESES_ES = {
 
 
 def _esc(text: str) -> str:
-    """Escapar caracteres HTML básicos."""
     return (
         str(text)
         .replace("&", "&amp;")
@@ -36,19 +34,24 @@ def _tag(texto: str, cls: str) -> str:
     return f'<span class="tag tag-{cls}">{_esc(texto)}</span>'
 
 
+def _tiene_url_real(h: dict) -> bool:
+    url = h.get("url") or h.get("fuente_url") or ""
+    return bool(url) and url.startswith(("http://", "https://")) and not url.startswith("synthetic://")
+
+
 def _render_medios_tablero(estados_medios: Dict[str, str], medios_config: List[Dict], errores_medios: Dict[str, str] = None) -> str:
     if not estados_medios or not medios_config:
         return '<p class="empty">Sin datos de tablero por medio</p>'
 
     chips = []
     errores_medios = errores_medios or {}
-    
+
     for medio in medios_config:
         mid = medio.get("id", "")
         estado = estados_medios.get(mid, _ROJO)
         nombre = _esc(medio.get("nombre", mid))
         error_msg = errores_medios.get(mid, "")
-        
+
         if estado == _VERDE:
             cls = "verde"
             tooltip = "Con cobertura"
@@ -58,7 +61,7 @@ def _render_medios_tablero(estados_medios: Dict[str, str], medios_config: List[D
         else:
             cls = "rojo"
             tooltip = f"Error: {error_msg}" if error_msg else "No verificable"
-        
+
         chips.append(
             f'<div class="medio-chip {cls}" title="{tooltip}">'
             f'<span class="dot"></span>'
@@ -68,20 +71,22 @@ def _render_medios_tablero(estados_medios: Dict[str, str], medios_config: List[D
     return "\n".join(chips)
 
 
-def _render_top5(top5: List[Dict]) -> str:
-    if not top5:
-        return '<p class="empty">Sin hallazgos disponibles para este corte</p>'
+def _render_hallazgos(hallazgos: List[Dict]) -> str:
+    """Renderiza todos los hallazgos Venezuela de medios VERDES, links primero."""
+    if not hallazgos:
+        return '<p class="empty">Sin hallazgos Venezuela en este corte</p>'
+
+    # Ordenar: con URL verificable primero
+    ordenados = sorted(hallazgos, key=lambda h: 0 if _tiene_url_real(h) else 1)
 
     items = []
-    for item in top5:
-        rank = item.get("rank", "?")
-        h = item.get("hallazgo", {})
+    for idx, h in enumerate(ordenados, 1):
         titulo = _esc(h.get("titulo", "Sin título"))
         medio_id = h.get("medio_id", "")
         valencia = h.get("valencia", "neutral") or "neutral"
         enfoque = h.get("enfoque_matriz", "pais_general") or "pais_general"
         prominencia = h.get("prominencia", "") or ""
-        fuente_url = h.get("fuente_url") or h.get("url") or ""
+        url = h.get("url") or h.get("fuente_url") or ""
 
         tags = []
         if medio_id:
@@ -94,103 +99,7 @@ def _render_top5(top5: List[Dict]) -> str:
             tags.append(_tag("PORTADA", "portada"))
 
         link = ""
-        if fuente_url and not fuente_url.startswith("synthetic://"):
-            link = f'<a class="tag-fuente" href="{fuente_url}" target="_blank" rel="noopener">→ ver nota</a>'
-
-        tags_html = " ".join(tags)
-        items.append(f"""
-        <div class="top-item">
-            <div class="top-rank">{rank}</div>
-            <div class="top-content">
-                <div class="top-titulo">{titulo}</div>
-                <div class="top-meta">{tags_html} {link}</div>
-            </div>
-        </div>""")
-
-    return "\n".join(items)
-
-
-def _render_top10(top10: List[Dict]) -> str:
-    if not top10:
-        return '<p class="empty">Sin datos de agenda global disponibles</p>'
-
-    items = []
-    for item in top10:
-        rank = item.get("rank", "?")
-        titulo = _esc(item.get("titulo_canonico", "Sin título"))
-        n_medios = item.get("cuenta_medios", 0)
-        regiones = item.get("regiones", [])
-        es_venezolano = item.get("es_venezolano", False)
-        titulares = item.get("titulares", [])
-
-        # Extraer primera URL válida del grupo
-        url = ""
-        for t in titulares:
-            candidate_url = t.get("url", "") or t.get("fuente_url", "")
-            if candidate_url and not candidate_url.startswith("synthetic://"):
-                url = candidate_url
-                break
-
-        cls = "global-item venezolano" if es_venezolano else "global-item"
-        bandera = " 🇻🇪" if es_venezolano else ""
-        stats = f"{n_medios} medios · {len(regiones)} regiones"
-
-        link_html = ""
-        if url:
-            link_html = f' <a class="tag-fuente" href="{url}" target="_blank" rel="noopener">→ fuente</a>'
-
-        items.append(
-            f'<div class="{cls}">'
-            f'<div class="global-rank">{rank}</div>'
-            f'<div class="global-titulo">{titulo}{bandera}{link_html}</div>'
-            f'<div class="global-stats">{stats}</div>'
-            f'</div>'
-        )
-
-    return "\n".join(items)
-
-
-def _tiene_url_real(h: dict) -> bool:
-    url = h.get("url") or h.get("fuente_url") or ""
-    return bool(url) and url.startswith(("http://", "https://")) and not url.startswith("synthetic://")
-
-
-def _render_todos_hallazgos(hallazgos: List[Dict]) -> str:
-    """Renderiza una lista completa de todos los hallazgos sobre Venezuela."""
-    # Filtrar solo hallazgos que mencionan Venezuela
-    hallazgos_venezuela = [
-        h for h in hallazgos
-        if "venezuela" in normalizar_titulo(h.get("titulo", "") or "")
-        or any("venezuela" in normalizar_titulo(c or "") for c in h.get("conectores_activados", []))
-    ]
-
-    if not hallazgos_venezuela:
-        return '<p class="empty">Sin hallazgos disponibles</p>'
-
-    # Artículos con link verificable primero
-    hallazgos_venezuela.sort(key=lambda h: 0 if _tiene_url_real(h) else 1)
-
-    items = []
-    for idx, hallazgo in enumerate(hallazgos_venezuela, 1):
-        titulo = _esc(hallazgo.get("titulo", "Sin título"))
-        medio_id = hallazgo.get("medio_id", "")
-        valencia = hallazgo.get("valencia", "neutral") or "neutral"
-        enfoque = hallazgo.get("enfoque_matriz", "pais_general") or "pais_general"
-        prominencia = hallazgo.get("prominencia", "") or ""
-        url = hallazgo.get("url", "") or hallazgo.get("fuente_url", "")
-
-        tags = []
-        if medio_id:
-            tags.append(_tag(medio_id.upper(), "medio"))
-        if valencia != "neutral":
-            tags.append(_tag(valencia, valencia))
-        if enfoque != "pais_general":
-            tags.append(_tag(enfoque.replace("_", " "), enfoque))
-        if prominencia == "portada":
-            tags.append(_tag("PORTADA", "portada"))
-
-        link = ""
-        if url and not url.startswith("synthetic://"):
+        if _tiene_url_real(h):
             link = f'<a class="tag-fuente" href="{url}" target="_blank" rel="noopener">→ ver nota</a>'
 
         tags_html = " ".join(tags)
@@ -216,8 +125,6 @@ def render_html_radar(
     nombre_visible = _esc(contrato.get("nombre_visible", "Centinela RADAR"))
     correlativo = _esc(contrato.get("correlativo", "RADAR"))
     tablero = contrato.get("tablero_certificacion", {})
-    top5 = contrato.get("top5_venezuela", [])
-    top10 = contrato.get("top10_global", [])
     hallazgos = contrato.get("hallazgos", [])
     panel = contrato.get("panel_calidad", {})
     estados_medios = contrato.get("estados_medios", {})
@@ -228,13 +135,7 @@ def render_html_radar(
     amarillo = tablero.get(_AMARILLO, 0)
     rojo = tablero.get(_ROJO, 0)
     total = tablero.get("total", verde + amarillo + rojo)
-    
-    # CORRECCIÓN: Contar solo hallazgos que realmente mencionan Venezuela
-    n_hallazgos = sum(
-        1 for h in hallazgos
-        if "venezuela" in normalizar_titulo(h.get("titulo", "") or "")
-        or any("venezuela" in normalizar_titulo(c or "") for c in h.get("conectores_activados", []))
-    )
+    n_hallazgos = len(hallazgos)
 
     ahora = datetime.now()
     mes = _MESES_ES.get(ahora.month, str(ahora.month))
@@ -246,9 +147,7 @@ def render_html_radar(
     tiempo_str = f" · {tiempo}s" if tiempo else ""
 
     medios_chips = _render_medios_tablero(estados_medios, medios_config, errores_medios)
-    top5_html = _render_top5(top5)
-    top10_html = _render_top10(top10)
-    todos_hallazgos_html = _render_todos_hallazgos(hallazgos)
+    hallazgos_html = _render_hallazgos(hallazgos)
 
     link_footer = ""
     if url_pages:
@@ -309,17 +208,7 @@ def render_html_radar(
         .medio-chip.verde .dot{{background:var(--verde)}} .medio-chip.amarillo .dot{{background:var(--amarillo)}} .medio-chip.rojo .dot{{background:var(--rojo)}}
         .nombre{{font-weight:500}}
 
-        /* TOP 5 */
-        .top-list{{display:flex;flex-direction:column;gap:12px}}
-        .top-item{{background:var(--card);border-radius:12px;padding:16px 20px;
-                   box-shadow:0 1px 3px rgba(0,0,0,.08);display:flex;gap:16px;align-items:flex-start}}
-        .top-rank{{font-size:32px;font-weight:800;color:var(--border);line-height:1;min-width:40px}}
-        .top-item:nth-child(1) .top-rank{{color:#F59E0B}}
-        .top-item:nth-child(2) .top-rank{{color:#94A3B8}}
-        .top-item:nth-child(3) .top-rank{{color:#B45309}}
-        .top-content{{flex:1;min-width:0}}
-        .top-titulo{{font-size:15px;font-weight:600;margin-bottom:8px;line-height:1.4}}
-        .top-meta{{display:flex;flex-wrap:wrap;gap:6px;align-items:center}}
+        /* TAGS */
         .tag{{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;
                text-transform:uppercase;letter-spacing:.3px}}
         .tag-medio{{background:#EEF2FF;color:#3730A3}}
@@ -334,22 +223,12 @@ def render_html_radar(
         .tag-fuente{{color:var(--azul);font-size:12px;text-decoration:none;font-weight:500}}
         .tag-fuente:hover{{text-decoration:underline}}
 
-        /* TOP 10 */
-        .global-list{{display:flex;flex-direction:column;gap:8px}}
-        .global-item{{background:var(--card);border-radius:8px;padding:14px 16px;
-                      display:flex;gap:14px;align-items:center;box-shadow:0 1px 2px rgba(0,0,0,.06);
-                      border-left:3px solid transparent}}
-        .global-item.venezolano{{border-color:var(--rojo)}}
-        .global-rank{{font-size:20px;font-weight:800;color:#CBD5E1;min-width:28px;text-align:center;line-height:1}}
-        .global-titulo{{font-size:14px;font-weight:500;flex:1}}
-        .global-stats{{font-size:12px;color:var(--muted);white-space:nowrap}}
-
-        /* TODOS LOS HALLAZGOS */
+        /* HALLAZGOS */
         .hallazgo-list{{display:flex;flex-direction:column;gap:8px}}
         .hallazgo-item{{background:var(--card);border-radius:8px;padding:12px 16px;
                        box-shadow:0 1px 2px rgba(0,0,0,.06);display:flex;gap:12px;align-items:flex-start;
-                       border-left:3px solid var(--azul)}}
-        .hallazgo-rank{{font-size:18px;font-weight:700;color:var(--border);min-width:24px;text-align:center;line-height:1}}
+                       border-left:3px solid var(--verde)}}
+        .hallazgo-rank{{font-size:18px;font-weight:700;color:var(--border);min-width:28px;text-align:right;line-height:1.4}}
         .hallazgo-content{{flex:1;min-width:0}}
         .hallazgo-titulo{{font-size:14px;font-weight:500;margin-bottom:6px;line-height:1.4}}
         .hallazgo-meta{{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:11px}}
@@ -363,14 +242,10 @@ def render_html_radar(
         /* RESPONSIVE */
         @media(max-width:480px){{
             .sem-sub{{display:none}}
-            .top-item{{padding:12px 14px;gap:10px}}
-            .top-rank{{font-size:24px;min-width:30px}}
-            .global-stats{{display:none}}
             .tablero-grid{{grid-template-columns:repeat(2,1fr)}}
             .hallazgo-item{{padding:10px 12px;gap:8px}}
-            .hallazgo-rank{{font-size:16px;min-width:20px}}
+            .hallazgo-rank{{font-size:16px;min-width:22px}}
             .hallazgo-titulo{{font-size:13px}}
-            .hallazgo-meta{{font-size:10px}}
         }}
         @media print{{
             body{{background:#fff}}
@@ -418,23 +293,9 @@ def render_html_radar(
     </section>
 
     <section>
-        <h2 class="sec-title">🔝 Top 5 Venezuela · cobertura más destacada</h2>
-        <div class="top-list">
-{top5_html}
-        </div>
-    </section>
-
-    <section>
-        <h2 class="sec-title">📋 Todos los hallazgos sobre Venezuela</h2>
+        <h2 class="sec-title">📰 Hallazgos Venezuela · {verde} medios con cobertura</h2>
         <div class="hallazgo-list">
-{todos_hallazgos_html}
-        </div>
-    </section>
-
-    <section>
-        <h2 class="sec-title">🌐 Agenda global · Top 10</h2>
-        <div class="global-list">
-{top10_html}
+{hallazgos_html}
         </div>
     </section>
 
@@ -459,36 +320,29 @@ def generar_mensaje_telegram(
 
     nombre_visible = contrato.get("nombre_visible", "Centinela RADAR")
     tablero = contrato.get("tablero_certificacion", {})
-    top5 = contrato.get("top5_venezuela", [])
     hallazgos = contrato.get("hallazgos", [])
 
     verde = tablero.get(_VERDE, 0)
     amarillo = tablero.get(_AMARILLO, 0)
     rojo = tablero.get(_ROJO, 0)
     total = tablero.get("total", verde + amarillo + rojo)
-    
-    # CORRECCIÓN: Contar solo hallazgos que realmente mencionan Venezuela
-    n_hallazgos = sum(
-        1 for h in hallazgos
-        if "venezuela" in normalizar_titulo(h.get("titulo", "") or "")
-        or any("venezuela" in normalizar_titulo(c or "") for c in h.get("conectores_activados", []))
-    )
+    n_hallazgos = len(hallazgos)
 
     ahora = datetime.now()
     mes = _MESES_ES.get(ahora.month, str(ahora.month))
     fecha = f"{ahora.day:02d} {mes} {ahora.year} · {ahora.strftime('%H:%M')} VET"
 
-    # Top 3 de Venezuela
+    # Top 3 hallazgos con URL para previsualización
     top_lines = []
-    for item in top5[:3]:
-        h = item.get("hallazgo", {})
+    for h in [x for x in hallazgos if _tiene_url_real(x)][:3]:
         titulo = h.get("titulo", "Sin título")
         medio = h.get("medio_id", "")
         titulo_corto = (titulo[:65] + "…") if len(titulo) > 65 else titulo
         medio_str = f" <i>— {medio.upper()}</i>" if medio else ""
-        top_lines.append(f"{item.get('rank', '?')}. {_esc(titulo_corto)}{medio_str}")
+        top_lines.append(f"• {_esc(titulo_corto)}{medio_str}")
 
-    top_block = "\n".join(top_lines) if top_lines else "Sin hallazgos destacados"
+    top_block = "\n".join(top_lines) if top_lines else ""
+    top_section = f"\n📌 <b>Destacados:</b>\n{top_block}" if top_block else ""
 
     link_block = ""
     if url_pages:
@@ -500,9 +354,7 @@ def generar_mensaje_telegram(
         f'\n'
         f'📊 <b>{total}/35</b> medios certificados\n'
         f'🟢 {verde} con cobertura  🟡 {amarillo} sin cobertura  🔴 {rojo} no verificable\n'
-        f'📰 {n_hallazgos} hallazgos Venezuela detectados\n'
-        f'\n'
-        f'📌 <b>Top Venezuela:</b>\n'
-        f'{top_block}'
+        f'📰 {n_hallazgos} hallazgos Venezuela'
+        f'{top_section}'
         f'{link_block}'
     )
