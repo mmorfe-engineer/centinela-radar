@@ -183,7 +183,7 @@ def clasificar_hallazgo(
             accion="clasificar",
             prompt=prompt,
             modelo="deepseek-r1",
-            temp=0.0,  # Determinista
+            temperatura=0.0,
             max_tokens=500
         )
         

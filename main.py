@@ -136,6 +136,15 @@ def main():
     todos_hallazgos = hallazgos_capa1 + hallazgos_capa2
     
     # 9. Deduplicar
+    # core.dedupe requiere 'fuente_url'; matching.py usa 'url' (y portadas tienen url=None)
+    import hashlib as _hashlib
+    for h in todos_hallazgos:
+        if not h.get('fuente_url'):
+            url = h.get('url') or ''
+            if not url:
+                key = f"{h.get('medio_id', '')}/{h.get('titulo', '')}"
+                url = f"synthetic://{_hashlib.md5(key.encode()).hexdigest()}"
+            h['fuente_url'] = url
     nuevos, telemetria_dedup = deduplicar(todos_hallazgos, hashes_previos=set())
     
     # 10. Clasificar (DeepSeek-R1)
