@@ -14,6 +14,7 @@ Estructura:
 """
 
 import json
+import os
 import sys
 import argparse
 from datetime import datetime
@@ -24,7 +25,6 @@ from core.dedupe import deduplicar
 from core.normalizacion import normalizar_titulo, normalizar_texto
 from core.auditor import ejecutar_con_auditoria
 from core.calidad import PanelCalidad
-from core.render import render_informe
 from core.entrega import enviar_telegram, enviar_discord
 from core.persistencia import guardar_salida, cargar_hashes_previos
 
@@ -36,6 +36,9 @@ from radar.semaforo import asignar_estados, generar_tablero
 from radar.top5_venezuela import generar_top5_venezuela
 from radar.top_global import generar_top10_global, extraer_titulares_para_top10
 from radar.csv_matriz import generar_csv_matriz, generar_nombre_archivo_csv
+from radar.render_radar import render_html_radar, generar_mensaje_telegram
+
+PAGES_URL = "https://mmorfe-engineer.github.io/centinela-radar/"
 
 
 def cargar_config():
@@ -69,6 +72,7 @@ def main():
     """Pipeline principal del RADAR"""
     args = parse_args()
     corte = args.corte
+    corte_pipeline = corte  # preservar antes de que generar_nombre_archivo_csv lo sobrescriba
     # 1. Cargar configuración
     config = cargar_config()
     medios = cargar_medios()
@@ -162,9 +166,9 @@ def main():
     fecha, corte = generar_nombre_archivo_csv()
     csv_matriz = generar_csv_matriz(nuevos, medios, fecha, corte)
     
-    # 13. Renderizar informe
+    # 13. Construir contrato y renderizar informe HTML
     contrato = {
-        "correlativo": f"{datetime.now().strftime('%Y%m%d')}-RADAR",
+        "correlativo": f"{datetime.now().strftime('%Y%m%d')}-RADAR-{corte_pipeline}",
         "tipo_reporte": "radar",
         "canal": config["canal"],
         "nombre_visible": config["nombre_visible"],
@@ -173,13 +177,21 @@ def main():
         "top10_global": top10_global,
         "hallazgos": nuevos,
         "csv_matriz": csv_matriz,
-        "panel_calidad": panel.resumen()
+        "panel_calidad": panel.resumen(),
+        "estados_medios": estados,
+        "medios_config": medios,
     }
-    html = render_informe(contrato)
-    
-    # 14. Entregar
+    html = render_html_radar(contrato, url_pages=PAGES_URL, corte=corte_pipeline)
+
+    # 13.5 Guardar HTML para GitHub Pages (docs/index.html en rama main)
+    os.makedirs("docs", exist_ok=True)
+    with open("docs/index.html", "w", encoding="utf-8") as _f:
+        _f.write(html)
+
+    # 14. Entregar — mensaje corto en Telegram + link al informe
     import logging as _logging
-    resultado_tg = enviar_telegram(html[:3500])
+    msg_telegram = generar_mensaje_telegram(contrato, url_pages=PAGES_URL, corte=corte_pipeline)
+    resultado_tg = enviar_telegram(msg_telegram)
     if resultado_tg.get("success"):
         _logging.info(f"Telegram: {resultado_tg['detalle']}")
     else:
