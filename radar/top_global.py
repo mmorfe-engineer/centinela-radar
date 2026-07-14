@@ -42,24 +42,23 @@ def es_grupo_relevante(grupo: Dict[str, Any]) -> bool:
     Determinar si un grupo de titulares es relevante para el RADAR.
     Excluye grupos con temas genéricos como deportes o cultura.
     """
-    titulo = grupo.get("titulo_canonico", "").lower()
-    
     # Si el grupo es venezolano, SIEMPRE incluirlo
     if grupo.get("es_venezolano", False):
         return True
-    
-    # Verificar si el título normalizado contiene palabras irrelevantes
-    titulo_norm = normalizar_titulo(titulo)
+
+    titulares = grupo.get("titulares", [])
+    if not titulares:
+        return True
+
+    # titulo_canonico NO existe aún en el grupo al momento del filtro;
+    # se usa el título más corto de los titulares como representativo.
+    titulo_repr = min((t.get("titulo", "") for t in titulares), key=len)
+    titulo_norm = normalizar_titulo(titulo_repr)
+
     for palabra in PALABRAS_IRRELEVANTES:
         if palabra in titulo_norm:
             return False
-    
-    # Verificar si algún titular del grupo menciona Venezuela
-    for t in grupo.get("titulares", []):
-        t_titulo = normalizar_titulo(t.get("titulo", ""))
-        if "venezuela" in t_titulo:
-            return True
-    
+
     return True
 
 

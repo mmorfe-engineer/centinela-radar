@@ -17,7 +17,7 @@ import json
 import os
 import sys
 import argparse
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 # Importar desde centinela-core
 from core.llm import LLMClient
@@ -135,9 +135,25 @@ def main():
     hallazgos_capa2 = []
     for region, data in resultados_capa2.get("por_region", {}).items():
         hallazgos_capa2.extend(data.get("hallazgos", []))
-    
-    # 8. Unificar hallazgos (capa1 + capa2)
-    todos_hallazgos = hallazgos_capa1 + hallazgos_capa2
+
+    # 8. Unificar hallazgos (capa1 + capa2) y filtrar por ventana temporal
+    # Perplexity devuelve resultados históricos de su índice aunque el prompt
+    # diga "hoy". Descartamos cualquier hallazgo con fecha fuera de las últimas 48h.
+    _limite_48h = datetime.now(tz=timezone.utc) - timedelta(hours=48)
+
+    def _es_reciente(h: dict) -> bool:
+        fecha_str = (h.get("fecha") or "").strip()
+        if not fecha_str:
+            return True  # sin fecha = RSS actual, se incluye
+        try:
+            f = datetime.fromisoformat(fecha_str.replace("Z", "+00:00"))
+            if f.tzinfo is None:
+                f = f.replace(tzinfo=timezone.utc)
+            return f >= _limite_48h
+        except Exception:
+            return True  # no parseable = incluir
+
+    todos_hallazgos = hallazgos_capa1 + [h for h in hallazgos_capa2 if _es_reciente(h)]
     
     # 9. Deduplicar
     # core.dedupe requiere 'fuente_url'; matching.py usa 'url' (y portadas tienen url=None)
