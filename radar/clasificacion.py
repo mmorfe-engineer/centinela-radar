@@ -188,12 +188,11 @@ def clasificar_hallazgo(
         # Crear prompt
         prompt = crear_prompt_clasificacion(hallazgo)
         
-        # Ejecutar clasificación con DeepSeek (acción="clasificar")
+        # accion="redactar" → RUTEO directo a mistral/mistral-large-latest
+        # Evita 3 reintentos inútiles a NVIDIA (HTTP 404 siempre) antes del fallback
         resultado_llm = cliente_llm.completar(
-            accion="clasificar",
+            accion="redactar",
             prompt=prompt,
-            # modelo=None → usa routing table: nvidia/deepseek-ai/deepseek-r1
-            # con fallback automático a mistral/mistral-large-latest
             temperatura=0.0,
             max_tokens=500
         )
