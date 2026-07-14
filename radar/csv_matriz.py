@@ -16,7 +16,7 @@ Reglas:
 
 import csv
 import datetime
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Tuple
 
 # Columnas del CSV según config/reporte.json
 COLUMNAS_CSV = [

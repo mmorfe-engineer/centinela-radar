@@ -31,6 +31,7 @@ from core.persistencia import guardar_salida, cargar_hashes_previos
 # Importar módulos propios del RADAR
 from radar.fetch_rss import fetch_todos_medios
 from radar.matching import cruzar_con_conectores
+from radar.capa2_perplexity import ejecutar_capa2
 from radar.semaforo import asignar_estados, generar_tablero
 from radar.top5_venezuela import generar_top5_venezuela
 from radar.top_global import generar_top10_global, extraer_titulares_para_top10
@@ -53,8 +54,7 @@ def cargar_medios():
 def cargar_conectores():
     """Cargar conectores temáticos"""
     with open("config/conectores.json", "r", encoding="utf-8") as f:
-        data = json.load(f)
-    return data.get("grupos", {})
+        return json.load(f)
 
 
 def parse_args():
@@ -111,17 +111,26 @@ def main():
     
     # 7. Capa 2: Perplexity (búsquedas por región)
     cliente_llm = LLMClient()
+
+    # Construir mapeo región → medio_ids desde la configuración de medios
+    medios_por_region: dict = {}
+    for medio in medios:
+        region = medio.get("region")
+        if region:
+            medios_por_region.setdefault(region, []).append(medio.get("id"))
+
+    conectores_tematicos = list(conectores.get("grupos", {}).keys())
+
+    resultados_capa2 = ejecutar_capa2(
+        consultas_config=config.get("consultas_perplexity", []),
+        medios_por_region=medios_por_region,
+        conectores_tematicos=conectores_tematicos,
+        cliente_llm=cliente_llm
+    )
+
     hallazgos_capa2 = []
-    
-    for consulta in config.get("consultas_perplexity", []):
-        # Ejecutar búsqueda
-        resultado = cliente_llm.completar(
-            accion="buscar",
-            prompt=consulta["query"],
-            modelo=consulta.get("modelo", "sonar"),
-            max_tokens=2000
-        )
-        hallazgos_capa2.extend(resultado.get("hallazgos", []))
+    for region, data in resultados_capa2.get("por_region", {}).items():
+        hallazgos_capa2.extend(data.get("hallazgos", []))
     
     # 8. Unificar hallazgos (capa1 + capa2)
     todos_hallazgos = hallazgos_capa1 + hallazgos_capa2

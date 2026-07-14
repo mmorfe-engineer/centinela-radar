@@ -105,36 +105,37 @@ def fetch_url(url: str) -> Tuple[bool, Optional[str], Optional[str]]:
     return False, None, "Error desconocido después de reintentos"
 
 
-def parse_feed(contenido: str, url_base: str) -> List[Dict[str, Any]]:
+def parse_feed(contenido: str, url_base: str, medio_id: Optional[str] = None) -> List[Dict[str, Any]]:
     """
     Parsear contenido RSS/Atom y extraer titulares.
-    
+
     Args:
         contenido: Contenido del feed en texto
         url_base: URL base para resolver URLs relativas
-        
+        medio_id: ID del medio para asociar cada titular
+
     Returns:
-        Lista de dicts: [{"titulo": str, "url": str, "fecha": str | None}, ...]
+        Lista de dicts: [{"titulo": str, "url": str, "fecha": str | None, "medio_id": str | None}, ...]
         Si el feed es inválido, vuelve lista vacía
     """
     try:
         feed = feedparser.parse(contenido)
-        
+
         titulares = []
         for entry in feed.get("entries", []):
             titulo = entry.get("title", "")
             if not titulo:
                 continue
-                
+
             # Obtener URL
             url = entry.get("link", "")
             if not url:
                 url = entry.get("id", "")
-            
+
             # Resolver URL relativa
             if url and not es_url_valida(url):
                 url = urljoin(url_base, url)
-            
+
             # Obtener fecha
             fecha = None
             if hasattr(entry, "published_parsed"):
@@ -145,15 +146,16 @@ def parse_feed(contenido: str, url_base: str) -> List[Dict[str, Any]]:
                     fecha = datetime.datetime(*ts[:6]).isoformat()
                 except (ValueError, TypeError):
                     pass
-            
+
             titulares.append({
                 "titulo": titulo.strip(),
                 "url": url,
-                "fecha": fecha
+                "fecha": fecha,
+                "medio_id": medio_id
             })
-        
+
         return titulares
-        
+
     except Exception as e:
         # Log detallado (fail loud)
         import logging
@@ -161,26 +163,27 @@ def parse_feed(contenido: str, url_base: str) -> List[Dict[str, Any]]:
         return []
 
 
-def parse_portada(html: str, url_base: str) -> List[Dict[str, Any]]:
+def parse_portada(html: str, url_base: str, medio_id: Optional[str] = None) -> List[Dict[str, Any]]:
     """
     Extraer titulares de una portada HTML.
-    
+
     Estrategia:
-    1. Buscar <h1>, <h2>, <h3> tags
-    2. Buscar <a> tags con clases como "titulo", "headline", "title"
-    3. Usar feedparser para extraer links
-    
+    1. Usar feedparser (intenta extraer titulares de HTML)
+    2. Buscar <h1>, <h2>, <h3> tags
+    3. Buscar <a> tags con clases como "titulo", "headline", "title"
+
     Args:
         html: Contenido HTML
         url_base: URL base para resolver URLs relativas
-        
+        medio_id: ID del medio para asociar cada titular
+
     Returns:
         Lista de dicts con titulares y URLs
     """
     import re
-    
+
     titulares = []
-    
+
     try:
         # Estrategia 1: Usar feedparser (intenta extraer titulares de HTML)
         feed = feedparser.parse(html)
@@ -191,7 +194,7 @@ def parse_portada(html: str, url_base: str) -> List[Dict[str, Any]]:
             url = entry.get("link", "")
             if url and not es_url_valida(url):
                 url = urljoin(url_base, url)
-            
+
             fecha = None
             if hasattr(entry, "published_parsed"):
                 import datetime
@@ -200,18 +203,18 @@ def parse_portada(html: str, url_base: str) -> List[Dict[str, Any]]:
                     fecha = datetime.datetime(*ts[:6]).isoformat()
                 except (ValueError, TypeError):
                     pass
-            
+
             titulares.append({
                 "titulo": titulo.strip(),
                 "url": url,
                 "fecha": fecha,
-                "fuente": "feedparser"
+                "medio_id": medio_id
             })
-        
+
         if titulares:
             return titulares
-        
-        # Estrategia 2: Buscar etiquetas <h1>, <h2>, <h3> con links
+
+        # Estrategia 2: Buscar etiquetas <h1>, <h2>, <h3>
         h_pattern = re.compile(
             r'<(h[1-3])\b[^>]*>(.*?)</\1>',
             re.IGNORECASE | re.DOTALL
@@ -219,32 +222,32 @@ def parse_portada(html: str, url_base: str) -> List[Dict[str, Any]]:
         for match in h_pattern.findall(html):
             level, text = match[0], match[1]
             text = re.sub(r'<[^>]+>', '', text).strip()
-            if len(text) > 5:  # Titulares muy cortos probablemente no son relevantes
+            if len(text) > 5:
                 titulares.append({
                     "titulo": text,
                     "url": None,
                     "fecha": None,
-                    "fuente": f"<{level}>"
+                    "medio_id": medio_id
                 })
-        
+
         # Estrategia 3: Buscar links con clases comunes de titulares
         link_pattern = re.compile(
             r'<a\s+[^>]*(class=["\'][^"\']*(headline|titulo|title|nota|article)[^"\']*["\'])[^>]*>(.*?)</a>',
             re.IGNORECASE | re.DOTALL
         )
         for match in link_pattern.findall(html):
-            attrs, text = match[0], match[1]
-            text = re.sub(r'<[^>]+>', '', text).strip()
+            # match[2] es el contenido del link (grupo 3), no match[1] (palabra clave de la clase)
+            text = re.sub(r'<[^>]+>', '', match[2]).strip()
             if len(text) > 5:
                 titulares.append({
                     "titulo": text,
                     "url": None,
                     "fecha": None,
-                    "fuente": "link_class"
+                    "medio_id": medio_id
                 })
-        
+
         return titulares
-        
+
     except Exception as e:
         import logging
         logging.error(f"Error parseando portada: {e}")
@@ -284,7 +287,7 @@ def fetch_medio(medio: Dict[str, Any], timeout: int = TIMEOUT_SEGUNDOS,
     if rss_url and es_url_valida(rss_url):
         exito, contenido, error = fetch_url(rss_url)
         if exito and contenido:
-            titulares = parse_feed(contenido, rss_url)
+            titulares = parse_feed(contenido, rss_url, medio_id)
             return {
                 "id": medio_id,
                 "exito": True,
@@ -294,16 +297,16 @@ def fetch_medio(medio: Dict[str, Any], timeout: int = TIMEOUT_SEGUNDOS,
                 "es_rss": True,
                 "es_portada": False
             }
-    
+
     # RSS falló o no existe, intentar portada
     if portada_url and es_url_valida(portada_url):
         exito, contenido, error = fetch_url(portada_url)
         if exito and contenido:
             # Intentar parsear como feed primero (algunas portadas devuelven RSS)
-            titulares = parse_feed(contenido, portada_url)
+            titulares = parse_feed(contenido, portada_url, medio_id)
             if not titulares:
                 # Parsear como HTML
-                titulares = parse_portada(contenido, portada_url)
+                titulares = parse_portada(contenido, portada_url, medio_id)
             return {
                 "id": medio_id,
                 "exito": True,
