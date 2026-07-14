@@ -99,11 +99,11 @@ def parsear_respuesta_perplexity(
 ) -> Dict[str, Any]:
     """
     Parsear la respuesta de Perplexity al schema esperado.
-    
+
     Args:
         respuesta: Texto de la respuesta
         medios_ids: Lista de IDs de medios esperados
-        
+
     Returns:
         Dict con {"hallazgos": [...], "medios_sin_cobertura": [...]}
     """
@@ -111,17 +111,26 @@ def parsear_respuesta_perplexity(
         "hallazgos": [],
         "medios_sin_cobertura": []
     }
-    
+
     try:
+        # Extraer JSON de markdown code fences si los incluye
+        texto = respuesta.strip()
+        if texto.startswith("```"):
+            lineas = texto.split("\n")
+            lineas = lineas[1:]
+            if lineas and lineas[-1].strip() == "```":
+                lineas = lineas[:-1]
+            texto = "\n".join(lineas).strip()
+
         # Intentar parsear como JSON primero
-        if respuesta.strip().startswith("{"):
-            data = json.loads(respuesta)
+        if texto.startswith("{"):
+            data = json.loads(texto)
             resultado["hallazgos"] = data.get("hallazgos", [])
             resultado["medios_sin_cobertura"] = data.get("medios_sin_cobertura", [])
         else:
             # Si no es JSON, intentamos extraer información
             # Esto es un fallback, no debería pasar con prompts bien diseñados
-            logging.warning(f"Respuesta no es JSON: {respuesta[:200]}")
+            logging.warning(f"Respuesta no es JSON: {texto[:200]}")
             
             # Extraer URLs
             import re
@@ -179,16 +188,19 @@ def buscar_con_perplexity(
         prompt = crear_prompt_perplexity(region, query, medios_ids, conectores)
         
         # Ejecutar consulta con Perplexity
-        respuesta = cliente_llm.completar(
+        resultado_llm = cliente_llm.completar(
             accion="buscar",
             prompt=prompt,
             modelo=MODELO_POR_DEFECTO,
-            temp=0.1,
+            temperatura=0.1,
             max_tokens=3000
         )
-        
+        if not resultado_llm.get("exito"):
+            raise RuntimeError(f"Perplexity falló: {resultado_llm.get('error', 'sin detalle')}")
+        respuesta_texto = resultado_llm.get("respuesta", "") or ""
+
         # Parsear respuesta
-        return parsear_respuesta_perplexity(respuesta, medios_ids)
+        return parsear_respuesta_perplexity(respuesta_texto, medios_ids)
         
     except Exception as e:
         # Fail loud

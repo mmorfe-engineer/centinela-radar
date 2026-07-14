@@ -87,6 +87,7 @@ jobs:
           if [ -f docs/index.html ]; then
             git add docs/index.html
             git commit -m "radar: informe $(date -u +%Y%m%dT%H%M) [${{ steps.corte.outputs.corte }}]"
+            git pull --rebase origin main
             git push origin main
           else
             echo "docs/index.html no encontrado, saltando publicación"
