@@ -178,7 +178,12 @@ def main():
     html = render_informe(contrato)
     
     # 14. Entregar
-    enviar_telegram(html[:3500])
+    import logging as _logging
+    resultado_tg = enviar_telegram(html[:3500])
+    if resultado_tg.get("success"):
+        _logging.info(f"Telegram: {resultado_tg['detalle']}")
+    else:
+        _logging.warning(f"Telegram falló: {resultado_tg.get('detalle')} | {resultado_tg.get('error')}")
     enviar_discord(html)
     
     # 15. Guardar en rama datos
