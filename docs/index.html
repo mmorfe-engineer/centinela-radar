@@ -88,6 +88,16 @@
         .global-titulo{font-size:14px;font-weight:500;flex:1}
         .global-stats{font-size:12px;color:var(--muted);white-space:nowrap}
 
+        /* TODOS LOS HALLAZGOS */
+        .hallazgo-list{display:flex;flex-direction:column;gap:8px}
+        .hallazgo-item{background:var(--card);border-radius:8px;padding:12px 16px;
+                       box-shadow:0 1px 2px rgba(0,0,0,.06);display:flex;gap:12px;align-items:flex-start;
+                       border-left:3px solid var(--azul)}
+        .hallazgo-rank{font-size:18px;font-weight:700;color:var(--border);min-width:24px;text-align:center;line-height:1}
+        .hallazgo-content{flex:1;min-width:0}
+        .hallazgo-titulo{font-size:14px;font-weight:500;margin-bottom:6px;line-height:1.4}
+        .hallazgo-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:11px}
+
         /* FOOTER */
         footer{background:var(--header);color:#475569;padding:28px 20px;text-align:center;font-size:12px;margin-top:48px;line-height:2}
         footer strong{color:#94A3B8}
@@ -101,6 +111,10 @@
             .top-rank{font-size:24px;min-width:30px}
             .global-stats{display:none}
             .tablero-grid{grid-template-columns:repeat(2,1fr)}
+            .hallazgo-item{padding:10px 12px;gap:8px}
+            .hallazgo-rank{font-size:16px;min-width:20px}
+            .hallazgo-titulo{font-size:13px}
+            .hallazgo-meta{font-size:10px}
         }
         @media print{
             body{background:#fff}
@@ -115,8 +129,8 @@
     <h1>📡 📡 RADAR</h1>
     <div class="hdr-meta">
         <span class="badge badge-matutino">MATUTINO</span>
-        <span>14 Jul 2026 · 15:34 VET</span>
-        <span>35/35 medios · 122 hallazgos Venezuela</span>
+        <span>14 Jul 2026 · 16:56 VET</span>
+        <span>35/35 medios · 83 hallazgos Venezuela</span>
     </div>
 </header>
 
@@ -124,12 +138,12 @@
 
     <div class="semaforo">
         <div class="sem-card v">
-            <div class="sem-num">12</div>
+            <div class="sem-num">8</div>
             <div class="sem-label">🟢 Con cobertura</div>
             <div class="sem-sub">Venezuela en agenda</div>
         </div>
         <div class="sem-card a">
-            <div class="sem-num">16</div>
+            <div class="sem-num">20</div>
             <div class="sem-label">🟡 Sin cobertura</div>
             <div class="sem-sub">Certificado · sin Venezuela</div>
         </div>
@@ -143,41 +157,41 @@
     <section>
         <h2 class="sec-title">🗺️ Tablero de medios certificados</h2>
         <div class="tablero-grid">
-<div class="medio-chip verde"><span class="dot"></span><span class="nombre">CNN en Español</span></div>
-<div class="medio-chip verde"><span class="dot"></span><span class="nombre">CBS News</span></div>
-<div class="medio-chip verde"><span class="dot"></span><span class="nombre">CNBC</span></div>
-<div class="medio-chip rojo"><span class="dot"></span><span class="nombre">Axios</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">USA Today</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">The Washington Post</span></div>
-<div class="medio-chip rojo"><span class="dot"></span><span class="nombre">The Washington Times</span></div>
-<div class="medio-chip verde"><span class="dot"></span><span class="nombre">Los Angeles Times</span></div>
-<div class="medio-chip rojo"><span class="dot"></span><span class="nombre">El Nuevo Herald (Miami Herald)</span></div>
-<div class="medio-chip verde"><span class="dot"></span><span class="nombre">Diario Las Américas</span></div>
-<div class="medio-chip verde"><span class="dot"></span><span class="nombre">The Wall Street Journal</span></div>
-<div class="medio-chip rojo"><span class="dot"></span><span class="nombre">Bloomberg / Bloomberg Línea</span></div>
-<div class="medio-chip rojo"><span class="dot"></span><span class="nombre">Reuters (Americas)</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">Financial Times</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">BBC</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">AFP — Agence France-Presse</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">Le Monde</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">Al Jazeera</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">Asharq Al-Awsat</span></div>
-<div class="medio-chip rojo"><span class="dot"></span><span class="nombre">Arab News</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">The Times of Israel</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">Mehr News Agency</span></div>
-<div class="medio-chip rojo"><span class="dot"></span><span class="nombre">Tasnim News Agency</span></div>
-<div class="medio-chip verde"><span class="dot"></span><span class="nombre">TASS</span></div>
-<div class="medio-chip verde"><span class="dot"></span><span class="nombre">RT en Español</span></div>
-<div class="medio-chip verde"><span class="dot"></span><span class="nombre">Sputnik (Noticias LATAM)</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">Clarín</span></div>
-<div class="medio-chip verde"><span class="dot"></span><span class="nombre">El Mercurio (Emol)</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">Reforma</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">El Tiempo</span></div>
-<div class="medio-chip verde"><span class="dot"></span><span class="nombre">The Economist</span></div>
-<div class="medio-chip verde"><span class="dot"></span><span class="nombre">Foreign Affairs (CFR)</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">Foreign Affairs Latinoamérica</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">El Orden Mundial</span></div>
-<div class="medio-chip amarillo"><span class="dot"></span><span class="nombre">AtlasIntel</span></div>
+<div class="medio-chip verde" title="Con cobertura"><span class="dot"></span><span class="nombre">CNN en Español</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">CBS News</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">CNBC</span></div>
+<div class="medio-chip rojo" title="Error: Fetch fallido: Bloqueado: HTTP 403"><span class="dot"></span><span class="nombre">Axios</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">USA Today</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">The Washington Post</span></div>
+<div class="medio-chip rojo" title="Error: Fetch fallido: Bloqueado: HTTP 403"><span class="dot"></span><span class="nombre">The Washington Times</span></div>
+<div class="medio-chip verde" title="Con cobertura"><span class="dot"></span><span class="nombre">Los Angeles Times</span></div>
+<div class="medio-chip rojo" title="Error: Fetch fallido: Timeout después de 2 reintentos"><span class="dot"></span><span class="nombre">El Nuevo Herald (Miami Herald)</span></div>
+<div class="medio-chip verde" title="Con cobertura"><span class="dot"></span><span class="nombre">Diario Las Américas</span></div>
+<div class="medio-chip verde" title="Con cobertura"><span class="dot"></span><span class="nombre">The Wall Street Journal</span></div>
+<div class="medio-chip rojo" title="Error: Fetch fallido: Bloqueado: HTTP 403"><span class="dot"></span><span class="nombre">Bloomberg / Bloomberg Línea</span></div>
+<div class="medio-chip rojo" title="Error: Fetch fallido: HTTP 401"><span class="dot"></span><span class="nombre">Reuters (Americas)</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Financial Times</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">BBC</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">AFP — Agence France-Presse</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Le Monde</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Al Jazeera</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Asharq Al-Awsat</span></div>
+<div class="medio-chip rojo" title="Error: Fetch fallido: Bloqueado: HTTP 403"><span class="dot"></span><span class="nombre">Arab News</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">The Times of Israel</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Mehr News Agency</span></div>
+<div class="medio-chip rojo" title="Error: Fetch fallido: HTTPSConnectionPool(host='www.tasnimnews.com', port=443): Max retries exceeded with url: /en (Caused by NameResolutionError("HTTPSConnection(host='www.tasnimnews.com', port=443): Failed to resolve 'www.tasnimnews.com' ([Errno -2] Name or service not known)"))"><span class="dot"></span><span class="nombre">Tasnim News Agency</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">TASS</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">RT en Español</span></div>
+<div class="medio-chip verde" title="Con cobertura"><span class="dot"></span><span class="nombre">Sputnik (Noticias LATAM)</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Clarín</span></div>
+<div class="medio-chip verde" title="Con cobertura"><span class="dot"></span><span class="nombre">El Mercurio (Emol)</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Reforma</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">El Tiempo</span></div>
+<div class="medio-chip verde" title="Con cobertura"><span class="dot"></span><span class="nombre">The Economist</span></div>
+<div class="medio-chip verde" title="Con cobertura"><span class="dot"></span><span class="nombre">Foreign Affairs (CFR)</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Foreign Affairs Latinoamérica</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">El Orden Mundial</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">AtlasIntel</span></div>
         </div>
     </section>
 
@@ -188,13 +202,21 @@
         <div class="top-item">
             <div class="top-rank">1</div>
             <div class="top-content">
+                <div class="top-titulo">Maduro’s hollow victory</div>
+                <div class="top-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2025/08/01/maduros-hollow-victory-in-venezuela" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="top-item">
+            <div class="top-rank">2</div>
+            <div class="top-content">
                 <div class="top-titulo">Opinion | An SOS From the Cuban People</div>
                 <div class="top-meta"><span class="tag tag-medio">WSJ</span> <span class="tag tag-critica">critica</span> <a class="tag-fuente" href="https://www.wsj.com/opinion/an-sos-from-the-cuban-people-67343e31" target="_blank" rel="noopener">→ ver nota</a></div>
             </div>
         </div>
 
         <div class="top-item">
-            <div class="top-rank">2</div>
+            <div class="top-rank">3</div>
             <div class="top-content">
                 <div class="top-titulo">The Venezuela Donald Trump “runs” is a land of surreal contrasts</div>
                 <div class="top-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/03/30/the-venezuela-donald-trump-runs-is-a-land-of-surreal-contrasts" target="_blank" rel="noopener">→ ver nota</a></div>
@@ -202,7 +224,7 @@
         </div>
 
         <div class="top-item">
-            <div class="top-rank">3</div>
+            <div class="top-rank">4</div>
             <div class="top-content">
                 <div class="top-titulo">How to tell if Venezuela is heading for democracy</div>
                 <div class="top-meta"><span class="tag tag-medio">ECONOMIST</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/01/27/how-to-tell-if-venezuela-is-heading-for-democracy" target="_blank" rel="noopener">→ ver nota</a></div>
@@ -210,18 +232,705 @@
         </div>
 
         <div class="top-item">
-            <div class="top-rank">4</div>
+            <div class="top-rank">5</div>
             <div class="top-content">
                 <div class="top-titulo">Venezuela’s new dictator is a regime loyalist—and America’s hostage</div>
                 <div class="top-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/01/09/venezuelas-new-dictator-is-a-regime-loyalist-and-americas-hostage" target="_blank" rel="noopener">→ ver nota</a></div>
             </div>
         </div>
+        </div>
+    </section>
 
-        <div class="top-item">
-            <div class="top-rank">5</div>
-            <div class="top-content">
-                <div class="top-titulo">The many risks to Donald Trump’s plans to “run” Venezuela</div>
-                <div class="top-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/01/04/the-many-risks-to-donald-trumps-plans-to-run-venezuela" target="_blank" rel="noopener">→ ver nota</a></div>
+    <section>
+        <h2 class="sec-title">📋 Todos los hallazgos sobre Venezuela</h2>
+        <div class="hallazgo-list">
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">1</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Siguen los cambios en Venezuela: Delcy Rodríguez fusiona dos ministerios y nombra canciller a Félix Plasencia</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">CNN_ESP</span> <span class="tag tag-gobierno">gobierno</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">2</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Video
+                    &quot;De vender hamburguesas a salvar vidas&quot;. McDonald’s se convierte en centro médico tras terremoto en Venezuela
+                        3:05</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">CNN_ESP</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">3</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Lenin Peña, Míster Universo Venezuela 2025, asistió este domingo al funeral de su pareja, Yordy Paredes, cuyo cuerpo fue encontrado tras varios días de búsqueda. Peña documentó en sus redes sociales los esfuerzos por localizarlo entre los escombros de un edificio en La Guaira, una de las zonas más afectadas por el doble terremoto del pasado 24 de junio.' class='image__dam-img image__dam-img--loading' onload='this.classList.remove(&amp;apos;image__dam-img--loading&amp;apos;)' onerror='imageLoadError(this)' height='1080' width='1920'/&gt;
+    
+    
+    
+      
+        
+        
+        Clipped From Video</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">CNN_ESP</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">4</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Video
+                    Lenin Peña, Míster Universo Venezuela, despide a su novio fallecido tras los terremotos en La Guaira
+                        1:44
+            
+                
+                    Jul 14, 2026</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">CNN_ESP</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">5</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Un corte por la dignidad: estilistas en Venezuela van a hospitales y refugios para ayudar a damnificados por los terremotos</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">CNN_ESP</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">6</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Video
+                    Fue deportada de EE.UU. y horas después sobrevivió a los terremotos en Venezuela
+                        2:29</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">CNN_ESP</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">7</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Terremoto en Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">8</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Más de 36,000 mujeres embarazadas están en riesgo tras sismos en Venezuela, según la ONU</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">9</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Cifra de víctimas mortales sigue en aumento mientras Venezuela intenta recuperar la normalidad</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">10</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Miami abre un centro de acopio en el loanDepot Park para damnificados del terremoto en Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> <span class="tag tag-gobierno">gobierno</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">11</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Personas heridas en la búsqueda de familiares entre escombros, otro rostro que dejan los sismos en Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">12</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">¿Quién es el nuevo Encargado de Negocios de Venezuela en EEUU?</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> <span class="tag tag-gobierno">gobierno</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">13</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Delcy Rodríguez asegura que producción petrolera de Venezuela no fue &amp;quot;perturbada&amp;quot; por terremotos</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> <span class="tag tag-favorable">favorable</span> <span class="tag tag-gobierno">gobierno</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">14</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela anuncia que mantendrá la reestructuración de su deuda externa pese a terremotos</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> <span class="tag tag-gobierno">gobierno</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">15</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">La NASA afirma que terremotos desplazaron hasta 60 centímetros la superficie terrestre en Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">16</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela, terremotos, Delcy Rodríguez y Trump</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> <span class="tag tag-gobierno">gobierno</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">17</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">TRAGEDIA  Más de 36,000 mujeres embarazadas están en riesgo tras sismos en Venezuela, según la ONU   Por
+                            REDACCIÓN/Diario Las Américas</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">18</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Tragedia  Cifra de víctimas mortales sigue en aumento mientras Venezuela intenta recuperar la normalidad   Por
+                            REDACCIÓN/Diario Las Américas</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">19</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">ALTRUISMO  Miami abre un centro de acopio en el loanDepot Park para damnificados del terremoto en Venezuela   Por
+                            Daniel Castropé</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">20</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">TRAGEDIA  Personas heridas en la búsqueda de familiares entre escombros, otro rostro que dejan los sismos en Venezuela   Por
+                            REDACCIÓN/Diario Las Américas</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">21</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">CAMBIOS  ¿Quién es el nuevo Encargado de Negocios de Venezuela en EEUU?   Por
+                            REDACCIÓN/Diario Las Américas</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> <span class="tag tag-gobierno">gobierno</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">22</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">GOBIERNO INTERINO  Delcy Rodríguez asegura que producción petrolera de Venezuela no fue &amp;quot;perturbada&amp;quot; por terremotos   Por
+                            REDACCIÓN/Diario Las Américas</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> <span class="tag tag-gobierno">gobierno</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">23</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">COMPROMISOS  Venezuela anuncia que mantendrá la reestructuración de su deuda externa pese a terremotos   Por
+                            REDACCIÓN/Diario Las Américas</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> <span class="tag tag-gobierno">gobierno</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">24</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Falla  La NASA afirma que terremotos desplazaron hasta 60 centímetros la superficie terrestre en Venezuela   Por
+                            REDACCIÓN/Diario Las Américas</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">25</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">OPINIÓN		Venezuela, terremotos, Delcy Rodríguez y Trump   Por
+                            VENAMÉRICA</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">DLAMERICAS</span> <span class="tag tag-gobierno">gobierno</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">26</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">An Army of Foreign Doctors Is Saving Quake Victims From Venezuela’s Hospitals</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">WSJ</span> <a class="tag-fuente" href="https://www.wsj.com/world/americas/venezuela-earthquake-healthcare-foreign-doctors-3cb9dcb8" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">27</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">How Venezuelan Bureaucracy Thwarted an American Earthquake Rescue Squad</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">WSJ</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.wsj.com/world/americas/how-venezuelan-bureaucracy-thwarted-an-american-earthquake-rescue-squad-6a175a3f" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">28</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">The Science Behind Venezuela’s Doublet Earthquake</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">WSJ</span> <a class="tag-fuente" href="https://www.wsj.com/world/americas/the-science-behind-venezuelas-doublet-earthquake-6246baea" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">29</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Supera los 4.500 el número de fallecidos por el doble terremoto en Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">SPUTNIK</span> <a class="tag-fuente" href="https://noticiaslatam.lat/20260713/supera-los-4500-el-numero-de-fallecidos-por-el-doble-terremoto-en-venezuela-1174271969.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">30</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela anuncia al nuevo canciller que sustituirá a Yván Gil</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">SPUTNIK</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://noticiaslatam.lat/20260713/venezuela-anuncia-al-nuevo-canciller-que-sustituira-a-yvan-gil-1174271870.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">31</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela recibe 88 contenedores con ayuda humanitaria de la Comunidad del Caribe</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">SPUTNIK</span> <span class="tag tag-favorable">favorable</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://noticiaslatam.lat/20260712/venezuela-recibe-88-contenedores-con-ayuda-humanitaria-de-la-comunidad-del-caribe-1174261206.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">32</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Se suman 157 fallecimientos al saldo fatal del doblete sísmico en Venezuela: van 4.490 en total</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">SPUTNIK</span> <a class="tag-fuente" href="https://noticiaslatam.lat/20260712/se-suman-157-fallecimientos-al-saldo-fatal-del-doblete-sismico-en-venezuela-van-4490-en-total-1174260914.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">33</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Llega a Venezuela el segundo cargamento de ayuda humanitaria rusa para los afectados por sismos</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">SPUTNIK</span> <span class="tag tag-favorable">favorable</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://noticiaslatam.lat/20260712/llega-a-venezuela-el-segundo-cargamento-de-ayuda-humanitaria-rusa-para-los-afectados-por-sismos-1174258331.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">34</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Este es el estimado de cuántas viviendas se requieren en Venezuela para los afectados por los sismos</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">SPUTNIK</span> <a class="tag-fuente" href="https://noticiaslatam.lat/20260711/este-es-el-estimado-de-cuantas-viviendas-se-requieren-en-venezuela-para-los-afectados-por-los-1174254784.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">35</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela agradece a Rusia tras la recepción de su primer envío de ayuda humanitaria</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">SPUTNIK</span> <span class="tag tag-favorable">favorable</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://noticiaslatam.lat/20260711/venezuela-agradece-a-rusia-tras-la-recepcion-de-su-primer-envio-de-ayuda-humanitaria-1174254233.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">36</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Aumenta a más de 4.300 el número de muertos tras los sismos en Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">SPUTNIK</span> <a class="tag-fuente" href="https://noticiaslatam.lat/20260711/aumenta-a-mas-de-4300-el-numero-de-muertos-tras-los-sismos-en-venezuela-1174253526.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">37</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Arriba a Venezuela el primer cargamento con ayuda humanitaria desde Rusia | Videos</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">SPUTNIK</span> <span class="tag tag-favorable">favorable</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://noticiaslatam.lat/20260711/arriba-a-venezuela-el-primer-cargamento-con-ayuda-humanitaria-desde-rusia-1174252935.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">38</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">La reconstrucción en Venezuela &quot;va a contribuir a repuntar&quot; la economía nacional, anticipa un experto</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">SPUTNIK</span> <span class="tag tag-favorable">favorable</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://noticiaslatam.lat/20260711/la-reconstruccion-en-venezuela-va-a-contribuir-a-repuntar-la-economia-nacional-anticipa-experto-1174249028.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">39</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Aumenta el número de fallecidos en Venezuela por los sismos a más de 4.000</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">SPUTNIK</span> <a class="tag-fuente" href="https://noticiaslatam.lat/20260710/aumenta-el-numero-de-fallecidos-en-venezuela-por-los-sismos-a-mas-de-4000-1174245727.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">40</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">&quot;La sonrisa ha sido una extraordinaria terapia&quot;: Venezuela crea la Ruta de la Esperanza para ayudar a la población</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">SPUTNIK</span> <span class="tag tag-favorable">favorable</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://noticiaslatam.lat/20260710/la-sonrisa-ha-sido-una-extraordinaria-terapia-venezuela-crea-la-ruta-de-la-esperanza-para-ayudar-a-1174233561.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">41</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">&quot;Los recursos bloqueados deben volver para reconstruir Venezuela&quot;, afirma vicepresidente sectorial de Planificación</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">SPUTNIK</span> <span class="tag tag-favorable">favorable</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://noticiaslatam.lat/20260709/los-recursos-bloqueados-deben-volver-para-reconstruir-venezuela-afirma-vicepresidente-sectorial-de-1174232047.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">42</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Félix Plasencia, el diplomático encargado de restablecer los lazos con EE.UU. que vuelve como canciller de Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">EMOL</span> <span class="tag tag-gobierno">gobierno</span> </div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">43</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuelans are furious with the American-backed regime</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/07/02/venezuelans-are-furious-with-the-american-backed-regime" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">44</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">El Boletín newsletter: An earthquake shakes Venezuela’s political reset</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/06/30/el-boletin-newsletter-an-earthquake-shakes-venezuelas-political-reset" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">45</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">How will America respond to Venezuela’s deadly quakes?</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/06/28/how-will-america-respond-to-venezuelas-deadly-quakes" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">46</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela suffers its worst earthquake in a century</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/06/25/venezuela-suffers-its-worst-earthquake-in-a-century" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">47</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">America is using force to drive gangsters from Venezuela’s gold</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/06/25/america-is-using-force-to-drive-gangsters-from-venezuelas-gold" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">48</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Two powerful earthquakes hit Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/06/25/two-powerful-earthquakes-hit-venezuela" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">49</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela’s 100-year territorial dispute is back in court</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/05/07/venezuelas-100-year-territorial-dispute-is-back-in-court" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">50</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">The Venezuela Donald Trump “runs” is a land of surreal contrasts</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/03/30/the-venezuela-donald-trump-runs-is-a-land-of-surreal-contrasts" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">51</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Nicaragua has so far dodged the fate of Cuba and Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-favorable">favorable</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/02/16/nicaragua-has-so-far-dodged-the-fate-of-cuba-and-venezuela" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">52</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">How to tell if Venezuela is heading for democracy</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/01/27/how-to-tell-if-venezuela-is-heading-for-democracy" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">53</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuelans believe Donald Trump has offered them a better future</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-favorable">favorable</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/01/13/venezuelans-believe-donald-trump-has-offered-them-a-better-future" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">54</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Donald Trump’s Venezuela oil deal is already up and running</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/01/10/donald-trumps-venezuela-oil-deal-is-already-up-and-running" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">55</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela’s new dictator is a regime loyalist—and America’s hostage</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/01/09/venezuelas-new-dictator-is-a-regime-loyalist-and-americas-hostage" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">56</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">The Venezuelan regime is rapidly consolidating its grip on power</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/01/06/the-venezuelan-regime-is-rapidly-consolidating-its-grip-on-power" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">57</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Latin America fears what comes next after the Venezuela raid</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/01/06/latin-america-fears-what-comes-next-after-the-venezuela-raid" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">58</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">The many risks to Donald Trump’s plans to “run” Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/01/04/the-many-risks-to-donald-trumps-plans-to-run-venezuela" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">59</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Donald Trump wants to run Venezuela, and dominate the western hemisphere</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/01/03/donald-trump-wants-to-run-venezuela-and-dominate-the-western-hemisphere" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">60</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">The United States has captured Venezuela’s dictator, Nicolás Maduro</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/01/03/the-united-states-has-captured-venezuelas-dictator-nicolas-maduro" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">61</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">An American oil blockade would devastate the Venezuelan regime</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2025/12/12/an-american-oil-blockade-would-devastate-the-venezuelan-regime" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">62</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Is Donald Trump preparing to strike Venezuela or lining up a deal?</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2025/11/19/is-donald-trump-preparing-to-strike-venezuela-or-lining-up-a-deal" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">63</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">War looms in Venezuela as Trump tests an “Americas First” doctrine</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2025/11/06/war-looms-in-venezuela-as-trump-tests-an-americas-first-doctrine" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">64</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Tracking America’s pressure campaign on Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/interactive/the-americas/2025/11/05/tracking-american-drug-boat-strikes-off-venezuela-coast" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">65</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">The meaning of America’s vast military build-up off Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2025/10/27/the-meaning-of-americas-vast-military-build-up-off-venezuela" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">66</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuelans wonder if America will bring down Nicolás Maduro</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2025/10/15/venezuelans-wonder-if-america-will-bring-down-nicolas-maduro" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">67</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">María Corina Machado, Venezuela’s “Iron Lady”, gets the peace Nobel</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2025/10/10/maria-corina-machado-venezuelas-iron-lady-gets-the-peace-nobel" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">68</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela’s sound of silence</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2025/05/29/venezuelas-sound-of-silence" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">69</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Armed groups are terrorising Colombia’s border with Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2025/01/30/armed-groups-are-terrorising-colombias-border-with-venezuela" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">70</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela’s Nicolás Maduro looks set to take the throne</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2025/01/02/venezuelas-nicolas-maduro-looks-set-to-take-the-throne" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">71</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">BRICS isn’t exactly picky, but has just rejected Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2024/11/07/brics-isnt-exactly-picky-but-has-just-rejected-venezuela" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">72</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Historia, riquezas, rivales, aliados, armas y divisiones: esto debes saber sobre Venezuela tras el ataque de EE.UU.</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">CNN_ESP</span> <a class="tag-fuente" href="https://cnnespanol.cnn.com/2026/01/03/venezuela/chavismo-riquezas-aliados-tensiones-eeuu-historia-orix" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">73</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">&quot;Hay edificios donde no se ha removido ni una sola piedra&quot;: crece la indignación en Venezuela mientras se desvanece la esperanza de hallar más sobrevivientes</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">BBC</span> <span class="tag tag-critica">critica</span> <a class="tag-fuente" href="https://www.bbc.com/mundo/articles/cgrk18ynx4do" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">74</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Russia keeps diplomatic ties with Venezuela — Kremlin</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">TASS</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://tass.com/politics/2076739" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">75</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Crisis en Venezuela hoy, EN VIVO: María Corina Machado fue secuestrada por el régimen de Maduro, la obligaron a grabar un video y luego la liberaron</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">CLARIN</span> <span class="tag tag-critica">critica</span> <span class="tag tag-oposicion">oposicion</span> <span class="tag tag-portada">PORTADA</span> <a class="tag-fuente" href="https://www.clarin.com/mundo/crisis-venezuela-hoy-vivo-protestas-maduro-toma-posesion-ultimas-noticias-pais-9-enero_0_Ksezbeh7ll.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">76</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela’s sham election</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/leaders/venezuela-sham-election-maduro-democracy-2025" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">77</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela’s opposition at a crossroads</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">FOREIGNAFFAIRS</span> <span class="tag tag-oposicion">oposicion</span> <a class="tag-fuente" href="https://www.foreignaffairs.com/articles/venezuela/2025-06-10/venezuelas-opposition-crossroads" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">78</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">How Venezuela’s collapse reshaped Latin America</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">FOREIGNAFFAIRS</span> <a class="tag-fuente" href="https://www.foreignaffairs.com/articles/venezuela/2025-03-18/how-venezuelas-collapse-reshaped-latin-america" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">79</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Maduro y la erosión de la democracia en Venezuela</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">FAL</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://revistafal.com/maduro-y-la-erosion-de-la-democracia-en-venezuela" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">80</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela: elecciones sin alternativas</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">FAL</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://revistafal.com/venezuela-elecciones-sin-alternativas" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">81</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">¿Por qué Venezuela sigue siendo un Estado fallido?</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">EOM</span> <span class="tag tag-critica">critica</span> <a class="tag-fuente" href="https://elordenmundial.com/venezuela-sigue-siendo-un-estado-fallido" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">82</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">El efecto Venezuela en la geopolítica energética</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">EOM</span> <a class="tag-fuente" href="https://elordenmundial.com/el-efecto-venezuela-geopolitica-energetica" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">83</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela 2025: intención de voto y clima de opinión</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">ATLASINTEL</span> <a class="tag-fuente" href="https://atlasintel.org/venezuela-2025-intencion-de-voto" target="_blank" rel="noopener">→ ver nota</a></div>
             </div>
         </div>
         </div>
@@ -232,23 +941,23 @@
         <div class="global-list">
 <div class="global-item"><div class="global-rank">1</div><div class="global-titulo">Deportes</div><div class="global-stats">2 medios · 1 regiones</div></div>
 <div class="global-item"><div class="global-rank">2</div><div class="global-titulo">Cultura</div><div class="global-stats">2 medios · 1 regiones</div></div>
-<div class="global-item"><div class="global-rank">3</div><div class="global-titulo">America’s Latest Weapon Against Iran: Sea Drones</div><div class="global-stats">1 medios · 1 regiones</div></div>
-<div class="global-item"><div class="global-rank">4</div><div class="global-titulo">Brazil’s president is losing clout abroad and unpopular at home</div><div class="global-stats">1 medios · 1 regiones</div></div>
-<div class="global-item"><div class="global-rank">5</div><div class="global-titulo">Oil prices jump after Trump’s threats on Strait of Hormuz</div><div class="global-stats">1 medios · 1 regiones</div></div>
-<div class="global-item"><div class="global-rank">6</div><div class="global-titulo">Trump says U.S. military will reimpose blockade on Iranian ports</div><div class="global-stats">1 medios · 1 regiones</div></div>
-<div class="global-item"><div class="global-rank">7</div><div class="global-titulo">U.K. to designate Iran’s Islamic Revolutionary Guard Corps as a terrorist group</div><div class="global-stats">1 medios · 1 regiones</div></div>
-<div class="global-item"><div class="global-rank">8</div><div class="global-titulo">Vatican hits back at U.S. claim that Pope Leo speaks as a politician</div><div class="global-stats">1 medios · 1 regiones</div></div>
-<div class="global-item"><div class="global-rank">9</div><div class="global-titulo">Fire at Bangkok bar kills 27; exits may have been blocked, officials say</div><div class="global-stats">1 medios · 1 regiones</div></div>
-<div class="global-item"><div class="global-rank">10</div><div class="global-titulo">Renovated Buckingham Palace will be a very royal office building</div><div class="global-stats">1 medios · 1 regiones</div></div>
+<div class="global-item"><div class="global-rank">3</div><div class="global-titulo">America’s Latest Weapon Against Iran: Sea Drones <a class="tag-fuente" href="https://www.wsj.com/world/middle-east/americas-latest-weapon-against-iran-sea-drones-3d5150e7" target="_blank" rel="noopener">→ fuente</a></div><div class="global-stats">1 medios · 1 regiones</div></div>
+<div class="global-item"><div class="global-rank">4</div><div class="global-titulo">Brazil’s president is losing clout abroad and unpopular at home <a class="tag-fuente" href="https://www.economist.com/the-americas/2025/07/03/brazils-president-is-losing-clout-abroad-and-unpopular-at-home" target="_blank" rel="noopener">→ fuente</a></div><div class="global-stats">1 medios · 1 regiones</div></div>
+<div class="global-item"><div class="global-rank">5</div><div class="global-titulo">Trump retreats from shipping toll in Strait of Hormuz <a class="tag-fuente" href="https://www.washingtonpost.com/world/2026/07/14/oil-prices-jump-after-trumps-threats-strait-hormuz/" target="_blank" rel="noopener">→ fuente</a></div><div class="global-stats">1 medios · 1 regiones</div></div>
+<div class="global-item"><div class="global-rank">6</div><div class="global-titulo">Lindsey Graham was tough on Russia. Moscow hopes to gain from his death. <a class="tag-fuente" href="https://www.washingtonpost.com/world/2026/07/14/russia-hopes-lindsey-graham-death-will-advance-kremlin-interests/" target="_blank" rel="noopener">→ fuente</a></div><div class="global-stats">1 medios · 1 regiones</div></div>
+<div class="global-item"><div class="global-rank">7</div><div class="global-titulo">Trump says U.S. military will reimpose blockade on Iranian ports <a class="tag-fuente" href="https://www.washingtonpost.com/world/2026/07/13/airstrikes-intensify-between-us-iran/" target="_blank" rel="noopener">→ fuente</a></div><div class="global-stats">1 medios · 1 regiones</div></div>
+<div class="global-item"><div class="global-rank">8</div><div class="global-titulo">U.K. to designate Iran’s Islamic Revolutionary Guard Corps as a terrorist group <a class="tag-fuente" href="https://www.washingtonpost.com/world/2026/07/13/uk-designate-irans-islamic-revolutionary-guard-corps-terrorist-group/" target="_blank" rel="noopener">→ fuente</a></div><div class="global-stats">1 medios · 1 regiones</div></div>
+<div class="global-item"><div class="global-rank">9</div><div class="global-titulo">Vatican hits back at U.S. claim that Pope Leo speaks as a politician <a class="tag-fuente" href="https://www.washingtonpost.com/world/2026/07/13/vatican-rejects-us-claim-that-pope-leo-speaks-politician/" target="_blank" rel="noopener">→ fuente</a></div><div class="global-stats">1 medios · 1 regiones</div></div>
+<div class="global-item"><div class="global-rank">10</div><div class="global-titulo">Fire at Bangkok bar kills 27; exits may have been blocked, officials say <a class="tag-fuente" href="https://www.washingtonpost.com/world/2026/07/13/bangkok-bar-fire-kills-least-27/" target="_blank" rel="noopener">→ fuente</a></div><div class="global-stats">1 medios · 1 regiones</div></div>
         </div>
     </section>
 
 </div>
 
 <footer>
-    <strong>CENTINELA RADAR</strong> · 20260714-RADAR-MATUTINO · 491.05s<br>
+    <strong>CENTINELA RADAR</strong> · 20260714-RADAR-MATUTINO · 501.64s<br>
     Pipeline automatizado de monitoreo de prensa internacional<br>
-    Generado el 14 de Jul de 2026 a las 15:34<br><a href="https://mmorfe-engineer.github.io/centinela-radar/">🔗 https://mmorfe-engineer.github.io/centinela-radar/</a>
+    Generado el 14 de Jul de 2026 a las 16:56<br><a href="https://mmorfe-engineer.github.io/centinela-radar/">🔗 https://mmorfe-engineer.github.io/centinela-radar/</a>
 </footer>
 
 </body>
