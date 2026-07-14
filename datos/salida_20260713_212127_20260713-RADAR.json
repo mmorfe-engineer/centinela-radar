@@ -1,0 +1,1819 @@
+{
+  "correlativo": "20260713-RADAR",
+  "tipo_reporte": "radar",
+  "canal": "radar",
+  "nombre_visible": "📡 RADAR",
+  "tablero_certificacion": {
+    "total": 35,
+    "VERDE_con_cobertura": 16,
+    "AMARILLO_sin_cobertura_certificado": 13,
+    "ROJO_no_verificable": 6
+  },
+  "top5_venezuela": [
+    {
+      "rank": 1,
+      "hallazgo": {
+        "titulo": "Fears Over New Luxury Jet Forced Trump Back to an Old Air Force One After Israeli Warning",
+        "url": "https://www.wsj.com/politics/national-security/trump-air-force-one-israel-iran-intelligence-7b51d456",
+        "fecha": "2026-07-11T04:00:00",
+        "medio_id": "wsj",
+        "conectores_activados": [
+          "actores"
+        ],
+        "texto_normalizado": "fears over new luxury jet forced trump back to asamblea nacional old air force one after israeli warning",
+        "fuente_url": "https://www.wsj.com/politics/national-security/trump-air-force-one-israel-iran-intelligence-7b51d456",
+        "hash": "f3ab3b915ae2432bfb83afec938af69138ae5778"
+      },
+      "puntuacion": 1.5
+    },
+    {
+      "rank": 2,
+      "hallazgo": {
+        "titulo": "An Elite Club Is in the Firing Line of India’s War on Its Colonial Past",
+        "url": "https://www.wsj.com/world/asia/an-elite-club-is-in-the-firing-line-of-indias-war-on-its-colonial-past-80571fd4",
+        "fecha": "2026-07-10T17:50:00",
+        "medio_id": "wsj",
+        "conectores_activados": [
+          "actores"
+        ],
+        "texto_normalizado": "asamblea nacional elite club is in the firing line of india s war on its colonial past",
+        "fuente_url": "https://www.wsj.com/world/asia/an-elite-club-is-in-the-firing-line-of-indias-war-on-its-colonial-past-80571fd4",
+        "hash": "13a4d34127bc229cecb78ad6821de202c37ef3eb"
+      },
+      "puntuacion": 1.5
+    },
+    {
+      "rank": 3,
+      "hallazgo": {
+        "titulo": "An Army of Foreign Doctors Is Saving Quake Victims From Venezuela’s Hospitals",
+        "url": "https://www.wsj.com/world/americas/venezuela-earthquake-healthcare-foreign-doctors-3cb9dcb8",
+        "fecha": "2026-07-11T18:00:00",
+        "medio_id": "wsj",
+        "conectores_activados": [
+          "actores",
+          "actores"
+        ],
+        "texto_normalizado": "asamblea nacional army of foreign doctors is saving quake victims from venezuela s hospitals",
+        "fuente_url": "https://www.wsj.com/world/americas/venezuela-earthquake-healthcare-foreign-doctors-3cb9dcb8",
+        "hash": "60c563de31c39ff0d35ab8df81f0eca45f7bb46b"
+      },
+      "puntuacion": 1.5
+    },
+    {
+      "rank": 4,
+      "hallazgo": {
+        "titulo": "How Venezuelan Bureaucracy Thwarted an American Earthquake Rescue Squad",
+        "url": "https://www.wsj.com/world/americas/how-venezuelan-bureaucracy-thwarted-an-american-earthquake-rescue-squad-6a175a3f",
+        "fecha": "2026-07-09T23:00:00",
+        "medio_id": "wsj",
+        "conectores_activados": [
+          "actores",
+          "actores"
+        ],
+        "texto_normalizado": "how venezuelan bureaucracy thwarted asamblea nacional american earthquake rescue squad",
+        "fuente_url": "https://www.wsj.com/world/americas/how-venezuelan-bureaucracy-thwarted-an-american-earthquake-rescue-squad-6a175a3f",
+        "hash": "d8c6cf031d547df6c3671ddeb67fb2accfec73f1"
+      },
+      "puntuacion": 1.5
+    },
+    {
+      "rank": 5,
+      "hallazgo": {
+        "titulo": "An English Estate Once Home to Princess Margaret Asks $5.29 Million",
+        "url": "https://www.wsj.com/real-estate/luxury-homes/princess-margaret-lord-snowdon-old-house-20ffcd07",
+        "fecha": "2026-07-08T17:30:00",
+        "medio_id": "wsj",
+        "conectores_activados": [
+          "actores"
+        ],
+        "texto_normalizado": "asamblea nacional english estate once home to princess margaret asks 5 29 million",
+        "fuente_url": "https://www.wsj.com/real-estate/luxury-homes/princess-margaret-lord-snowdon-old-house-20ffcd07",
+        "hash": "c4519a4ba2ed278a92a7478e3c8da9125e6b8808"
+      },
+      "puntuacion": 1.5
+    }
+  ],
+  "top10_global": [
+    {
+      "rank": 1,
+      "evento_id": "evento_12",
+      "titulo_canonico": "Deportes",
+      "resumen": "📰 2/2001 titulares · 1 regiones · 2 medios",
+      "cuenta_medios": 2,
+      "cuenta_total": 2,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Deportes",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "Deportes",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 2,
+      "evento_id": "evento_16",
+      "titulo_canonico": "Cultura",
+      "resumen": "📰 2/2001 titulares · 1 regiones · 2 medios",
+      "cuenta_medios": 2,
+      "cuenta_total": 2,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Cultura",
+          "medio_id": "cnn_esp",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        },
+        {
+          "titulo": "Cultura",
+          "medio_id": "dlamericas",
+          "region": "desconocido",
+          "url": null,
+          "fecha": null
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 3,
+      "evento_id": "evento_892",
+      "titulo_canonico": "Ukraine’s Drones Are Now Reaching Siberia and Imperiling Russian Energy Assets",
+      "resumen": "📰 2/2001 titulares · 1 regiones · 1 medios",
+      "cuenta_medios": 1,
+      "cuenta_total": 2,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Ukraine’s Drones Are Now Reaching Siberia and Imperiling Russian Energy Assets",
+          "medio_id": "wsj",
+          "region": "desconocido",
+          "url": "https://www.wsj.com/world/ukraines-drones-are-now-reaching-siberia-and-imperiling-russian-energy-assets-e0d2caa7",
+          "fecha": "2026-07-10T00:00:00"
+        },
+        {
+          "titulo": "Ukraine’s Drones Are Now Reaching Siberia and Imperiling Russian Energy Assets",
+          "medio_id": "wsj",
+          "region": "desconocido",
+          "url": "https://www.wsj.com/world/ukraines-drones-are-now-reaching-siberia-and-imperiling-russian-energy-assets-e0d2caa7",
+          "fecha": "2026-07-10T00:00:00"
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 4,
+      "evento_id": "evento_1824",
+      "titulo_canonico": "Brazil’s president is losing clout abroad and unpopular at home",
+      "resumen": "📰 2/2001 titulares · 1 regiones · 1 medios",
+      "cuenta_medios": 1,
+      "cuenta_total": 2,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Brazil’s president is losing clout abroad and unpopular at home",
+          "medio_id": "economist",
+          "region": "desconocido",
+          "url": "https://www.economist.com/the-americas/2025/07/03/brazils-president-is-losing-clout-abroad-and-unpopular-at-home",
+          "fecha": "2025-07-03T12:24:22"
+        },
+        {
+          "titulo": "Brazil’s president is losing clout abroad and unpopular at home",
+          "medio_id": "economist",
+          "region": "desconocido",
+          "url": "https://www.economist.com/the-americas/2025/06/29/brazils-president-is-losing-clout-abroad-and-unpopular-at-home",
+          "fecha": "2025-06-29T17:26:04"
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 5,
+      "evento_id": "evento_398",
+      "titulo_canonico": "Trump says U.S. military will reimpose blockade on Iranian ports",
+      "resumen": "📰 1/2001 titulares · 1 regiones · 1 medios",
+      "cuenta_medios": 1,
+      "cuenta_total": 1,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Trump says U.S. military will reimpose blockade on Iranian ports",
+          "medio_id": "wapo",
+          "region": "desconocido",
+          "url": "https://www.washingtonpost.com/world/2026/07/13/airstrikes-intensify-between-us-iran/",
+          "fecha": "2026-07-13T21:39:12"
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 6,
+      "evento_id": "evento_399",
+      "titulo_canonico": "U.K. to designate Iran’s Islamic Revolutionary Guard Corps as a terrorist group",
+      "resumen": "📰 1/2001 titulares · 1 regiones · 1 medios",
+      "cuenta_medios": 1,
+      "cuenta_total": 1,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "U.K. to designate Iran’s Islamic Revolutionary Guard Corps as a terrorist group",
+          "medio_id": "wapo",
+          "region": "desconocido",
+          "url": "https://www.washingtonpost.com/world/2026/07/13/uk-designate-irans-islamic-revolutionary-guard-corps-terrorist-group/",
+          "fecha": "2026-07-13T13:35:53"
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 7,
+      "evento_id": "evento_400",
+      "titulo_canonico": "Vatican hits back at U.S. claim that Pope Leo speaks as a politician",
+      "resumen": "📰 1/2001 titulares · 1 regiones · 1 medios",
+      "cuenta_medios": 1,
+      "cuenta_total": 1,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Vatican hits back at U.S. claim that Pope Leo speaks as a politician",
+          "medio_id": "wapo",
+          "region": "desconocido",
+          "url": "https://www.washingtonpost.com/world/2026/07/13/vatican-rejects-us-claim-that-pope-leo-speaks-politician/",
+          "fecha": "2026-07-13T12:46:39"
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 8,
+      "evento_id": "evento_401",
+      "titulo_canonico": "Fire at Bangkok bar kills 27; exits may have been blocked, officials say",
+      "resumen": "📰 1/2001 titulares · 1 regiones · 1 medios",
+      "cuenta_medios": 1,
+      "cuenta_total": 1,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Fire at Bangkok bar kills 27; exits may have been blocked, officials say",
+          "medio_id": "wapo",
+          "region": "desconocido",
+          "url": "https://www.washingtonpost.com/world/2026/07/13/bangkok-bar-fire-kills-least-27/",
+          "fecha": "2026-07-13T10:13:03"
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 9,
+      "evento_id": "evento_402",
+      "titulo_canonico": "Renovated Buckingham Palace will be a very royal office building",
+      "resumen": "📰 1/2001 titulares · 1 regiones · 1 medios",
+      "cuenta_medios": 1,
+      "cuenta_total": 1,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "Renovated Buckingham Palace will be a very royal office building",
+          "medio_id": "wapo",
+          "region": "desconocido",
+          "url": "https://www.washingtonpost.com/world/2026/07/13/renovated-buckingham-palace-will-be-very-royal-office-building/",
+          "fecha": "2026-07-13T09:00:00"
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    },
+    {
+      "rank": 10,
+      "evento_id": "evento_403",
+      "titulo_canonico": "He fleeced the Navy for millions, then fled the country. Now he wants a pardon.",
+      "resumen": "📰 1/2001 titulares · 1 regiones · 1 medios",
+      "cuenta_medios": 1,
+      "cuenta_total": 1,
+      "regiones": [
+        "desconocido"
+      ],
+      "titulares": [
+        {
+          "titulo": "He fleeced the Navy for millions, then fled the country. Now he wants a pardon.",
+          "medio_id": "wapo",
+          "region": "desconocido",
+          "url": "https://www.washingtonpost.com/investigations/2026/07/12/fat-leonard-reveals-how-he-escaped-house-arrest-fled-us/",
+          "fecha": "2026-07-12T09:00:00"
+        }
+      ],
+      "es_venezolano": false,
+      "etiqueta_especial": null
+    }
+  ],
+  "hallazgos": [
+    {
+      "titulo": "¿Los escombros también sepultaron la economía? El dólar se acelera, los precios suben y los venezolanos se inquietan",
+      "url": null,
+      "fecha": null,
+      "medio_id": "cnn_esp",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "los escombros tambien sepultaron la economia el dolar se acelera los precios suben y los venezolanos se inquietan",
+      "fuente_url": "synthetic://016daee844eb97e8ab88fc86eef744e6",
+      "hash": "c19b30496ddb2bf2e9a6fc35a1bc1e88b6e1f4e6"
+    },
+    {
+      "titulo": "Video\n                    \"De vender hamburguesas a salvar vidas\". McDonald’s se convierte en centro médico tras terremoto en Venezuela\n                        3:05",
+      "url": null,
+      "fecha": null,
+      "medio_id": "cnn_esp",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "video de vender hamburguesas a salvar vidas mcdonald s se convierte en centro medico tras terremoto en venezuela 3 05",
+      "fuente_url": "synthetic://2f475fa84e5b0af5e96d2c81efdbb91e",
+      "hash": "36d91c4ac17813c74e54847518b17e83445440bf"
+    },
+    {
+      "titulo": "La cifra de fallecidos por los terremotos en Venezuela sube a 4.490",
+      "url": null,
+      "fecha": null,
+      "medio_id": "cnn_esp",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "la cifra de fallecidos por los terremotos en venezuela sube a 4 490",
+      "fuente_url": "synthetic://6341cb28196402c49e89c921ea65c3b4",
+      "hash": "34f1ca40fbf2a6641898ac44ae56b4177cfcce0f"
+    },
+    {
+      "titulo": "Un corte por la dignidad: estilistas en Venezuela van a hospitales y refugios para ayudar a damnificados por los terremotos",
+      "url": null,
+      "fecha": null,
+      "medio_id": "cnn_esp",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "un corte por la dignidad estilistas en venezuela van a hospitales y refugios para ayudar a damnificados por los terremotos",
+      "fuente_url": "synthetic://3ed0606d6551ef0f2779bfea68e8b9ad",
+      "hash": "4b6195242aa56741374fa3859b7573443f6f5675"
+    },
+    {
+      "titulo": "\"El peor momento\" para los venezolanos en Estados Unidos: crecen los llamados para que regrese el TPS luego de los terremotos",
+      "url": null,
+      "fecha": null,
+      "medio_id": "cnn_esp",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "el peor momento para los venezolanos en estados unidos crecen los llamados para que regrese el tps luego de los terremotos",
+      "fuente_url": "synthetic://b556c990c89980577495e32eeb8d5177",
+      "hash": "66c9a87374b423b419c458a4cd725dbc8398dc80"
+    },
+    {
+      "titulo": "Video\n                    Fue deportada de EE.UU. y horas después sobrevivió a los terremotos en Venezuela\n                        2:29",
+      "url": null,
+      "fecha": null,
+      "medio_id": "cnn_esp",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "video fue deportada de estados unidos y horas despues sobrevivio a los terremotos en venezuela 2 29",
+      "fuente_url": "synthetic://0a1c2f6e4915d47a4ad75791f69f6235",
+      "hash": "0852b19639655357f611141237733d48112fed59"
+    },
+    {
+      "titulo": "Un vuelo de deportados venezolanos partió desde Miami horas antes del sismo. El hotel donde se alojaban colapsó",
+      "url": null,
+      "fecha": null,
+      "medio_id": "cnn_esp",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "un vuelo de deportados venezolanos partio desde miami horas antes del sismo el hotel donde se alojaban colapso",
+      "fuente_url": "synthetic://cbd44b681c5950e24712be0c8dae140b",
+      "hash": "a9ac799307f349c0c07d2bab2a178b1a082e78ff"
+    },
+    {
+      "titulo": "Rebellions is targeting an IPO in South Korea next year: CEO Park",
+      "url": null,
+      "fecha": null,
+      "medio_id": "cnbc",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "rebellions is targeting asamblea nacional ipo in south korea next year ceo park",
+      "fuente_url": "synthetic://4f8766ae5529c921502162b77605bba8",
+      "hash": "c05c71ab40a1a6c263d7a933ceec35ec153aba67"
+    },
+    {
+      "titulo": "Support for Israel isn&#8217;t a high priority for younger Jewish Americans, an AP-NORC poll finds",
+      "url": null,
+      "fecha": null,
+      "medio_id": "watimes",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "support for israel isn 8217 t a high priority for younger jewish americans asamblea nacional ap norc poll finds",
+      "fuente_url": "synthetic://c86d1c5a878eaacb59f743468d2ed6ae",
+      "hash": "36c15856a1f55dda32db8bbfc7aeaa4a8a5b7a51"
+    },
+    {
+      "titulo": "With AI character Tilly Norwood set for feature-film debut, Hollywood debates what it means to be an actor",
+      "url": "https://www.latimes.com/entertainment-arts/movies/story/2026-07-13/tilly-norwood-starring-role-actor-hollywood-wrestles-with-ai",
+      "fecha": "2026-07-13T10:00:00",
+      "medio_id": "latimes",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "with ai character tilly norwood set for feature film debut hollywood debates what it means to be asamblea nacional actor",
+      "fuente_url": "https://www.latimes.com/entertainment-arts/movies/story/2026-07-13/tilly-norwood-starring-role-actor-hollywood-wrestles-with-ai",
+      "hash": "f9203070fe47e204299f399babed99ad59d5614c"
+    },
+    {
+      "titulo": "A vacant lot near City Hall will become an art park. Why are some people objecting?",
+      "url": "https://www.latimes.com/california/story/2026-07-13/vacant-lot-near-city-hall-will-become-art-park-why-are-some-people-objecting",
+      "fecha": "2026-07-13T10:00:00",
+      "medio_id": "latimes",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "a vacant lot near city hall will become asamblea nacional art park why are some people objecting",
+      "fuente_url": "https://www.latimes.com/california/story/2026-07-13/vacant-lot-near-city-hall-will-become-art-park-why-are-some-people-objecting",
+      "hash": "d367c59be25965e2760d58870e41b3339c1e707f"
+    },
+    {
+      "titulo": "Are the Dodgers tone deaf? White House visit is an insult to their fans",
+      "url": "https://www.latimes.com/sports/dodgers/story/2026-07-09/dodgers-white-house-visit-trump-insult-to-fans",
+      "fecha": "2026-07-09T22:54:08",
+      "medio_id": "latimes",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "are the dodgers tone deaf white house visit is asamblea nacional insult to their fans",
+      "fuente_url": "https://www.latimes.com/sports/dodgers/story/2026-07-09/dodgers-white-house-visit-trump-insult-to-fans",
+      "hash": "30c4ee8aab28be528edfe0e09d6122c4f7e5a278"
+    },
+    {
+      "titulo": "After 58 years, Echo Park loses an iconic neighborhood burrito stand",
+      "url": "https://www.latimes.com/food/story/2026-07-09/echo-park-community-mourns-historic-burrito-king",
+      "fecha": "2026-07-10T01:18:07",
+      "medio_id": "latimes",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "after 58 years echo park loses asamblea nacional iconic neighborhood burrito stand",
+      "fuente_url": "https://www.latimes.com/food/story/2026-07-09/echo-park-community-mourns-historic-burrito-king",
+      "hash": "4d4fd6b0c46465e05bcfc7fb9734d74a8bf28a8c"
+    },
+    {
+      "titulo": "He dreamed of a Midcentury compound on an 'unbuildable' L.A. hillside. It took 12 years",
+      "url": "https://www.latimes.com/lifestyle/story/2026-06-25/la-family-architects-design-build-side-by-side-homes-hillside-lot-mount-washington",
+      "fecha": "2026-06-25T10:00:00",
+      "medio_id": "latimes",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "he dreamed of a midcentury compound on asamblea nacional unbuildable l a hillside it took 12 years",
+      "fuente_url": "https://www.latimes.com/lifestyle/story/2026-06-25/la-family-architects-design-build-side-by-side-homes-hillside-lot-mount-washington",
+      "hash": "1d759e611f872f4bd0902b6bdb4abdb6fbfec4b2"
+    },
+    {
+      "titulo": "He turned his one-bedroom West Hollywood apartment into an entertainer's paradise",
+      "url": "https://www.latimes.com/lifestyle/story/2026-06-26/west-hollywood-apartment-made-for-entertaining-not-boring-rentals",
+      "fecha": "2026-06-26T10:00:00",
+      "medio_id": "latimes",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "he turned his one bedroom west hollywood apartment into asamblea nacional entertainer s paradise",
+      "fuente_url": "https://www.latimes.com/lifestyle/story/2026-06-26/west-hollywood-apartment-made-for-entertaining-not-boring-rentals",
+      "hash": "ee655e85f7837ccee5eff461e82b8acd26cf65d4"
+    },
+    {
+      "titulo": "Cifra de fallecidos por terremotos en Venezuela asciende a casi 4.500",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "cifra de fallecidos por terremotos en venezuela asciende a casi 4 500",
+      "fuente_url": "synthetic://3cef415e0d2acc59c1bfaec9ba2f48d7",
+      "hash": "62223a715afe6511346a0b013cc4db92b81c81f8"
+    },
+    {
+      "titulo": "Terremoto en Venezuela",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "terremoto en venezuela",
+      "fuente_url": "synthetic://c7ba3b48450e42c70b75637ce132bcba",
+      "hash": "4cacf4fa4c4cbf860bb19a362fc8fc867718becd"
+    },
+    {
+      "titulo": "Más de 36,000 mujeres embarazadas están en riesgo tras sismos en Venezuela, según la ONU",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "mas de 36 000 mujeres embarazadas estan en riesgo tras sismos en venezuela segun la onu",
+      "fuente_url": "synthetic://f6af925f75597049d7cc7762d2981dfd",
+      "hash": "9c5250feebf5590501b1bcfb960cf6fbdbc8d257"
+    },
+    {
+      "titulo": "No hay grúas para sacar a Fabio, el niño venezolano de 9 años atrapado bajo escombros tras terremotos",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "no hay gruas para sacar a fabio el nino venezolano de 9 anos atrapado bajo escombros tras terremotos",
+      "fuente_url": "synthetic://837837d206e015da8ab77822bab23ef4",
+      "hash": "5c02bb2e509a47c943bd6e0d9beec4ec50dd296d"
+    },
+    {
+      "titulo": "Cifra de víctimas mortales sigue en aumento mientras Venezuela intenta recuperar la normalidad",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "cifra de victimas mortales sigue en aumento mientras venezuela intenta recuperar la normalidad",
+      "fuente_url": "synthetic://edd12ee3d23d34e2395d0570479709df",
+      "hash": "2c55c32c0f3a9e75b477f211e08b77872eeca0ea"
+    },
+    {
+      "titulo": "Miami abre un centro de acopio en el loanDepot Park para damnificados del terremoto en Venezuela",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "miami abre un centro de acopio en el loandepot park para damnificados del terremoto en venezuela",
+      "fuente_url": "synthetic://3abafd98fa25e4bbe4c180564b406451",
+      "hash": "88d22994987c7173984d94731773f9a975181705"
+    },
+    {
+      "titulo": "Venezolano Jesús Valenzuela sigue en carrera: la FIFA respalda al árbitro venezolano en el Mundial",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "venezolano jesus valenzuela sigue en carrera la fifa respalda al arbitro venezolano en el mundial",
+      "fuente_url": "synthetic://98b4869c58c490efcc6751601ffa74dc",
+      "hash": "f12d9c248497a28a6633efa946378621bbd41302"
+    },
+    {
+      "titulo": "Delcy Rodríguez designa a su jefe de misión en EEUU como nuevo canciller tras destituir a Yván Gil",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "delcy rodriguez designa a su jefe de mision en estados unidos como nuevo canciller tras destituir a yvan gil",
+      "fuente_url": "synthetic://ed358a548e7851f2c9dfc42625ce868e",
+      "hash": "8b079a7cc0fb6f5204ac619e4d2a195a37125d4b"
+    },
+    {
+      "titulo": "Reparación del cable submarino de fibra óptica en Venezuela, tras los sismos, debe esperar más tiempo",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "reparacion del cable submarino de fibra optica en venezuela tras los sismos debe esperar mas tiempo",
+      "fuente_url": "synthetic://427a7880df28e6ed58a9a7c0b943d722",
+      "hash": "b04d58907394929d4d5bf28d53e1619e846b3ed6"
+    },
+    {
+      "titulo": "Miembro de ETA sobrevive a sismos en Venezuela;  mientras en España reclaman detención",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "miembro de eta sobrevive a sismos en venezuela mientras en espana reclaman detencion",
+      "fuente_url": "synthetic://fac1528197a7f6ba5709688e127ac23e",
+      "hash": "3ec5e8cd4e68eec21b9dd00c211a29727a26b97c"
+    },
+    {
+      "titulo": "María Corina Machado y Edmundo González reciben Premio de Convivencia en España por su vocación democrática",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores",
+        "actores"
+      ],
+      "texto_normalizado": "maria maria corina machado y edmundo gonzalez reciben premio de convivencia en espana por su vocacion democratica",
+      "fuente_url": "synthetic://8d49b3ace9351eb2ade534b75b76e447",
+      "hash": "3b26fb0c907edf55c61a1120230ce5fb9d389b93"
+    },
+    {
+      "titulo": "Venezuela, terremotos, Delcy Rodríguez y Trump",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores",
+        "actores"
+      ],
+      "texto_normalizado": "venezuela terremotos delcy rodriguez y trump",
+      "fuente_url": "synthetic://a343755405297eea027d29e3e5542715",
+      "hash": "82e9183e4ac05ee26fe523efee68d838e3b000d9"
+    },
+    {
+      "titulo": "VENEZUELA  Encuentran cuerpo del niño Fabio y de su madre en escombros de su residencia en La Guaira   Por\n                            REDACCIÓN/Diario Las Américas",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "venezuela encuentran cuerpo del nino fabio y de su madre en escombros de su residencia en la guaira por redaccion diario las americas",
+      "fuente_url": "synthetic://94a6289e05bcf99442ab885d347e92e5",
+      "hash": "92cda4c851457575acc4c61853bddde926d887e3"
+    },
+    {
+      "titulo": "EMERGENCIA  Cifra de fallecidos por terremotos en Venezuela asciende a casi 4.500   Por\n                            REDACCIÓN/Diario Las Américas",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "emergencia cifra de fallecidos por terremotos en venezuela asciende a casi 4 500 por redaccion diario las americas",
+      "fuente_url": "synthetic://d3445b21dd03067089037e5e6e1ffa4a",
+      "hash": "e07ea51624c9cc772e1205006ad460aa727e747b"
+    },
+    {
+      "titulo": "TRAGEDIA  Más de 36,000 mujeres embarazadas están en riesgo tras sismos en Venezuela, según la ONU   Por\n                            REDACCIÓN/Diario Las Américas",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "tragedia mas de 36 000 mujeres embarazadas estan en riesgo tras sismos en venezuela segun la onu por redaccion diario las americas",
+      "fuente_url": "synthetic://cca644baa5d668e1c9216ff9488b50bd",
+      "hash": "3db1c6e15f3b7ae6955b9bf8002799a36bdcf67d"
+    },
+    {
+      "titulo": "TRAGEDIA  No hay grúas para sacar a Fabio, el niño venezolano de 9 años atrapado bajo escombros tras terremotos   Por\n                            REDACCIÓN/Diario Las Américas",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "tragedia no hay gruas para sacar a fabio el nino venezolano de 9 anos atrapado bajo escombros tras terremotos por redaccion diario las americas",
+      "fuente_url": "synthetic://98f187dcd06630358181c4d6735e0811",
+      "hash": "002d7d4aba70be075b1268fa2f63eebd5c1bea71"
+    },
+    {
+      "titulo": "Tragedia  Cifra de víctimas mortales sigue en aumento mientras Venezuela intenta recuperar la normalidad   Por\n                            REDACCIÓN/Diario Las Américas",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "tragedia cifra de victimas mortales sigue en aumento mientras venezuela intenta recuperar la normalidad por redaccion diario las americas",
+      "fuente_url": "synthetic://fd7ce86e450697a3ca4b3c920109eb02",
+      "hash": "073214018efa08fc54aa58127ec1ace064a7026c"
+    },
+    {
+      "titulo": "ALTRUISMO  Miami abre un centro de acopio en el loanDepot Park para damnificados del terremoto en Venezuela   Por\n                            Daniel Castropé",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "altruismo miami abre un centro de acopio en el loandepot park para damnificados del terremoto en venezuela por daniel castrope",
+      "fuente_url": "synthetic://f8910d419d40c309855aff9e1a9b6d28",
+      "hash": "51e38dba02fbb5b4fad00da5bb1d95ccf5e6ccf7"
+    },
+    {
+      "titulo": "Fútbol  Venezolano Jesús Valenzuela sigue en carrera: la FIFA respalda al árbitro venezolano en el Mundial   Por\n                            Pedro Felipe Hernández",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "futbol venezolano jesus valenzuela sigue en carrera la fifa respalda al arbitro venezolano en el mundial por pedro felipe hernandez",
+      "fuente_url": "synthetic://683314a98d11e83bc51759f041dce09a",
+      "hash": "51b3ffd96877e1953a41658cad212b1db696b1d4"
+    },
+    {
+      "titulo": "¿CAMBIOS?  Delcy Rodríguez designa a su jefe de misión en EEUU como nuevo canciller tras destituir a Yván Gil   Por\n                            REDACCIÓN/Diario Las Américas",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "cambios delcy rodriguez designa a su jefe de mision en estados unidos como nuevo canciller tras destituir a yvan gil por redaccion diario las americas",
+      "fuente_url": "synthetic://e44f0eedd536a8b1b11b0b506e108c96",
+      "hash": "0bf40399396a34d9cbb4123b2e8606a25c0acf0f"
+    },
+    {
+      "titulo": "TRAGEDIA  Reparación del cable submarino de fibra óptica en Venezuela, tras los sismos, debe esperar más tiempo   Por\n                            REDACCIÓN/Diario Las Américas",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "tragedia reparacion del cable submarino de fibra optica en venezuela tras los sismos debe esperar mas tiempo por redaccion diario las americas",
+      "fuente_url": "synthetic://2d736df1dc987be00ad0fbe3c1b4184e",
+      "hash": "c2a671dc36771a475388a4928a3f0a1a59d4a01f"
+    },
+    {
+      "titulo": "TRÁMITES  Miembro de ETA sobrevive a sismos en Venezuela;  mientras en España reclaman detención   Por\n                            REDACCIÓN/Diario Las Américas",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "tramites miembro de eta sobrevive a sismos en venezuela mientras en espana reclaman detencion por redaccion diario las americas",
+      "fuente_url": "synthetic://e0a10b82e7877cc0ff1a65a507c2b898",
+      "hash": "b0ce897ce50b1733bc9ca017bac03c190229eeb3"
+    },
+    {
+      "titulo": "GALARDÓN\t\t\tMaría Corina Machado y Edmundo González reciben Premio de Convivencia en España por su vocación democrática",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores",
+        "actores"
+      ],
+      "texto_normalizado": "galardon maria maria corina machado y edmundo gonzalez reciben premio de convivencia en espana por su vocacion democratica",
+      "fuente_url": "synthetic://044aba18c62ad9ba2c6d2a6a71080724",
+      "hash": "e8f290215906029e0a6fb008a085c056bbeaf25f"
+    },
+    {
+      "titulo": "OPINIÓN\t\tVenezuela, terremotos, Delcy Rodríguez y Trump   Por\n                            VENAMÉRICA",
+      "url": null,
+      "fecha": null,
+      "medio_id": "dlamericas",
+      "conectores_activados": [
+        "actores",
+        "actores"
+      ],
+      "texto_normalizado": "opinion venezuela terremotos delcy rodriguez y trump por venamerica",
+      "fuente_url": "synthetic://dc48cd07adbbeae8fb29366f389a9dcf",
+      "hash": "fa6c95ea814170f34ae2b3e5fa45a0812d425ae0"
+    },
+    {
+      "titulo": "Fears Over New Luxury Jet Forced Trump Back to an Old Air Force One After Israeli Warning",
+      "url": "https://www.wsj.com/politics/national-security/trump-air-force-one-israel-iran-intelligence-7b51d456",
+      "fecha": "2026-07-11T04:00:00",
+      "medio_id": "wsj",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "fears over new luxury jet forced trump back to asamblea nacional old air force one after israeli warning",
+      "fuente_url": "https://www.wsj.com/politics/national-security/trump-air-force-one-israel-iran-intelligence-7b51d456",
+      "hash": "f3ab3b915ae2432bfb83afec938af69138ae5778"
+    },
+    {
+      "titulo": "An Elite Club Is in the Firing Line of India’s War on Its Colonial Past",
+      "url": "https://www.wsj.com/world/asia/an-elite-club-is-in-the-firing-line-of-indias-war-on-its-colonial-past-80571fd4",
+      "fecha": "2026-07-10T17:50:00",
+      "medio_id": "wsj",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "asamblea nacional elite club is in the firing line of india s war on its colonial past",
+      "fuente_url": "https://www.wsj.com/world/asia/an-elite-club-is-in-the-firing-line-of-indias-war-on-its-colonial-past-80571fd4",
+      "hash": "13a4d34127bc229cecb78ad6821de202c37ef3eb"
+    },
+    {
+      "titulo": "An Army of Foreign Doctors Is Saving Quake Victims From Venezuela’s Hospitals",
+      "url": "https://www.wsj.com/world/americas/venezuela-earthquake-healthcare-foreign-doctors-3cb9dcb8",
+      "fecha": "2026-07-11T18:00:00",
+      "medio_id": "wsj",
+      "conectores_activados": [
+        "actores",
+        "actores"
+      ],
+      "texto_normalizado": "asamblea nacional army of foreign doctors is saving quake victims from venezuela s hospitals",
+      "fuente_url": "https://www.wsj.com/world/americas/venezuela-earthquake-healthcare-foreign-doctors-3cb9dcb8",
+      "hash": "60c563de31c39ff0d35ab8df81f0eca45f7bb46b"
+    },
+    {
+      "titulo": "How Venezuelan Bureaucracy Thwarted an American Earthquake Rescue Squad",
+      "url": "https://www.wsj.com/world/americas/how-venezuelan-bureaucracy-thwarted-an-american-earthquake-rescue-squad-6a175a3f",
+      "fecha": "2026-07-09T23:00:00",
+      "medio_id": "wsj",
+      "conectores_activados": [
+        "actores",
+        "actores"
+      ],
+      "texto_normalizado": "how venezuelan bureaucracy thwarted asamblea nacional american earthquake rescue squad",
+      "fuente_url": "https://www.wsj.com/world/americas/how-venezuelan-bureaucracy-thwarted-an-american-earthquake-rescue-squad-6a175a3f",
+      "hash": "d8c6cf031d547df6c3671ddeb67fb2accfec73f1"
+    },
+    {
+      "titulo": "An English Estate Once Home to Princess Margaret Asks $5.29 Million",
+      "url": "https://www.wsj.com/real-estate/luxury-homes/princess-margaret-lord-snowdon-old-house-20ffcd07",
+      "fecha": "2026-07-08T17:30:00",
+      "medio_id": "wsj",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "asamblea nacional english estate once home to princess margaret asks 5 29 million",
+      "fuente_url": "https://www.wsj.com/real-estate/luxury-homes/princess-margaret-lord-snowdon-old-house-20ffcd07",
+      "hash": "c4519a4ba2ed278a92a7478e3c8da9125e6b8808"
+    },
+    {
+      "titulo": "Opinion | An SOS From the Cuban People",
+      "url": "https://www.wsj.com/opinion/an-sos-from-the-cuban-people-67343e31",
+      "fecha": "2026-07-12T20:28:00",
+      "medio_id": "wsj",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "opinion asamblea nacional sos from the cuban people",
+      "fuente_url": "https://www.wsj.com/opinion/an-sos-from-the-cuban-people-67343e31",
+      "hash": "5cb736af4cf3303b36f67eb94939530dac4a33dd"
+    },
+    {
+      "titulo": "Wagner’s Remnants Are Running an Opioid Empire in the Center of Africa",
+      "url": "https://www.wsj.com/world/africa/russia-wagner-africa-opioid-trade-d015c4bc",
+      "fecha": "2026-07-12T02:00:00",
+      "medio_id": "wsj",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "wagner s remnants are running asamblea nacional opioid empire in the center of africa",
+      "fuente_url": "https://www.wsj.com/world/africa/russia-wagner-africa-opioid-trade-d015c4bc",
+      "hash": "7e7c362565498265d3593245799bcafc4ecd7264"
+    },
+    {
+      "titulo": "The Science Behind Venezuela’s Doublet Earthquake",
+      "url": "https://www.wsj.com/world/americas/the-science-behind-venezuelas-doublet-earthquake-6246baea",
+      "fecha": "2026-06-25T16:02:00",
+      "medio_id": "wsj",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "the science behind venezuela s doublet earthquake",
+      "fuente_url": "https://www.wsj.com/world/americas/the-science-behind-venezuelas-doublet-earthquake-6246baea",
+      "hash": "32cce427dbbf285737da390109b60e014d2bf4d3"
+    },
+    {
+      "titulo": "The U.S. Navy’s New Insurance Policy for War With China Is an Australian Base",
+      "url": "https://www.wsj.com/world/the-u-s-navys-new-insurance-policy-for-war-with-china-is-an-australian-base-764af616",
+      "fecha": "2026-02-08T03:00:00",
+      "medio_id": "wsj",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "the u s navy s new insurance policy for war with china is asamblea nacional australian base",
+      "fuente_url": "https://www.wsj.com/world/the-u-s-navys-new-insurance-policy-for-war-with-china-is-an-australian-base-764af616",
+      "hash": "bae8807552c34c5b54d92c25c5b3ade970912024"
+    },
+    {
+      "titulo": "Bondi Beach Terror Suspects Condemned ‘Zionists’ and Amassed an Arsenal",
+      "url": "https://www.wsj.com/world/oceania/bondi-beach-terror-suspects-condemned-zionists-and-amassed-an-arsenal-f1b1cf04",
+      "fecha": "2025-12-22T11:11:00",
+      "medio_id": "wsj",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "bondi beach terror suspects condemned zionists and amassed asamblea nacional arsenal",
+      "fuente_url": "https://www.wsj.com/world/oceania/bondi-beach-terror-suspects-condemned-zionists-and-amassed-an-arsenal-f1b1cf04",
+      "hash": "ce14b3784866c84892702765de7e32ac6467842d"
+    },
+    {
+      "titulo": "Venezuela : le double séisme révèle la fragilité des logements sociaux, écroulés tels des châteaux de cartes",
+      "url": "https://www.lemonde.fr/international/article/2026/07/13/venezuela-le-double-seisme-revele-la-fragilite-des-logements-sociaux-ecroules-tels-des-chateaux-de-cartes_6723082_3210.html",
+      "fecha": "2026-07-13T12:00:07",
+      "medio_id": "lemonde",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "venezuela le double seisme revele la fragilite des logements sociaux ecroules tels des chateaux de cartes",
+      "fuente_url": "https://www.lemonde.fr/international/article/2026/07/13/venezuela-le-double-seisme-revele-la-fragilite-des-logements-sociaux-ecroules-tels-des-chateaux-de-cartes_6723082_3210.html",
+      "hash": "03397af10011000998cd4cd6f6b96698d7788052"
+    },
+    {
+      "titulo": "Venezuelan earthquake death toll reaches 4,561",
+      "url": "https://tass.com/world/2159773",
+      "fecha": "2026-07-13T19:38:13",
+      "medio_id": "tass",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "venezuelan earthquake death toll reaches 4 561",
+      "fuente_url": "https://tass.com/world/2159773",
+      "hash": "cbeaa4da1060d5012269aa333eb6b9fcfd2450c9"
+    },
+    {
+      "titulo": "\"Abrazado a sus abuelos\": Así hallaron el cuerpo del niño Lucas Gámez tras los sismos en Venezuela",
+      "url": "https://actualidad.rt.com/actualidad/616555-abrazado-abuelo-hallaron-cuerpo-lucas-gamez?utm_source=rss&utm_medium=rss&utm_campaign=all",
+      "fecha": "2026-07-13T23:51:11",
+      "medio_id": "rt",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "abrazado a sus abuelos asi hallaron el cuerpo del nino lucas gamez tras los sismos en venezuela",
+      "fuente_url": "https://actualidad.rt.com/actualidad/616555-abrazado-abuelo-hallaron-cuerpo-lucas-gamez?utm_source=rss&utm_medium=rss&utm_campaign=all",
+      "hash": "b930aac38d3453301d0c9028d353969b171bb654"
+    },
+    {
+      "titulo": "Supera los 4.500 el número de fallecidos por el doble terremoto en Venezuela",
+      "url": "https://noticiaslatam.lat/20260713/supera-los-4500-el-numero-de-fallecidos-por-el-doble-terremoto-en-venezuela-1174271969.html",
+      "fecha": "2026-07-13T22:59:54",
+      "medio_id": "sputnik",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "supera los 4 500 el numero de fallecidos por el doble terremoto en venezuela",
+      "fuente_url": "https://noticiaslatam.lat/20260713/supera-los-4500-el-numero-de-fallecidos-por-el-doble-terremoto-en-venezuela-1174271969.html",
+      "hash": "72786a9d6266df9bf3ddb4af631d8afe2e41e89f"
+    },
+    {
+      "titulo": "Venezuela anuncia al nuevo canciller que sustituirá a Yván Gil",
+      "url": "https://noticiaslatam.lat/20260713/venezuela-anuncia-al-nuevo-canciller-que-sustituira-a-yvan-gil-1174271870.html",
+      "fecha": "2026-07-13T22:55:25",
+      "medio_id": "sputnik",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "venezuela anuncia al nuevo canciller que sustituira a yvan gil",
+      "fuente_url": "https://noticiaslatam.lat/20260713/venezuela-anuncia-al-nuevo-canciller-que-sustituira-a-yvan-gil-1174271870.html",
+      "hash": "1fa5b7fe1cbc4f22846785a350c6edd926f06683"
+    },
+    {
+      "titulo": "Irán repudia el incumplimiento del memorando de entendimiento por parte de EEUU",
+      "url": "https://noticiaslatam.lat/20260713/iran-repudia-el-incumplimiento-del-memorando-de-entendimiento-por-parte-de-eeuu-1174264707.html",
+      "fecha": "2026-07-13T14:01:57",
+      "medio_id": "sputnik",
+      "conectores_activados": [
+        "estructurales"
+      ],
+      "texto_normalizado": "iran repudia el incumplimiento del memorando de entendimiento por parte de estados unidos",
+      "fuente_url": "https://noticiaslatam.lat/20260713/iran-repudia-el-incumplimiento-del-memorando-de-entendimiento-por-parte-de-eeuu-1174264707.html",
+      "hash": "1777737e7c8b850ee61d185dd29e669535283f38"
+    },
+    {
+      "titulo": "Venezuela recibe 88 contenedores con ayuda humanitaria de la Comunidad del Caribe",
+      "url": "https://noticiaslatam.lat/20260712/venezuela-recibe-88-contenedores-con-ayuda-humanitaria-de-la-comunidad-del-caribe-1174261206.html",
+      "fecha": "2026-07-12T23:03:05",
+      "medio_id": "sputnik",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "venezuela recibe 88 contenedores con ayuda humanitaria de la comunidad del caribe",
+      "fuente_url": "https://noticiaslatam.lat/20260712/venezuela-recibe-88-contenedores-con-ayuda-humanitaria-de-la-comunidad-del-caribe-1174261206.html",
+      "hash": "42df51d16b9a4c6bdaf0a720601413f0da0bd921"
+    },
+    {
+      "titulo": "Se suman 157 fallecimientos al saldo fatal del doblete sísmico en Venezuela: van 4.490 en total",
+      "url": "https://noticiaslatam.lat/20260712/se-suman-157-fallecimientos-al-saldo-fatal-del-doblete-sismico-en-venezuela-van-4490-en-total-1174260914.html",
+      "fecha": "2026-07-12T22:58:36",
+      "medio_id": "sputnik",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "se suman 157 fallecimientos al saldo fatal del doblete sismico en venezuela van 4 490 en total",
+      "fuente_url": "https://noticiaslatam.lat/20260712/se-suman-157-fallecimientos-al-saldo-fatal-del-doblete-sismico-en-venezuela-van-4490-en-total-1174260914.html",
+      "hash": "a24df2efe2f98b4602d79f338a55d345a97f4f85"
+    },
+    {
+      "titulo": "Llega a Venezuela el segundo cargamento de ayuda humanitaria rusa para los afectados por sismos",
+      "url": "https://noticiaslatam.lat/20260712/llega-a-venezuela-el-segundo-cargamento-de-ayuda-humanitaria-rusa-para-los-afectados-por-sismos-1174258331.html",
+      "fecha": "2026-07-12T13:19:18",
+      "medio_id": "sputnik",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "llega a venezuela el segundo cargamento de ayuda humanitaria rusa para los afectados por sismos",
+      "fuente_url": "https://noticiaslatam.lat/20260712/llega-a-venezuela-el-segundo-cargamento-de-ayuda-humanitaria-rusa-para-los-afectados-por-sismos-1174258331.html",
+      "hash": "a302c3804e30caa82375fd68462eb3b428a0c67b"
+    },
+    {
+      "titulo": "Este es el estimado de cuántas viviendas se requieren en Venezuela para los afectados por los sismos",
+      "url": "https://noticiaslatam.lat/20260711/este-es-el-estimado-de-cuantas-viviendas-se-requieren-en-venezuela-para-los-afectados-por-los-1174254784.html",
+      "fecha": "2026-07-11T22:13:02",
+      "medio_id": "sputnik",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "este es el estimado de cuantas viviendas se requieren en venezuela para los afectados por los sismos",
+      "fuente_url": "https://noticiaslatam.lat/20260711/este-es-el-estimado-de-cuantas-viviendas-se-requieren-en-venezuela-para-los-afectados-por-los-1174254784.html",
+      "hash": "cf97b3511e6fc5b910a2007dca1556487e93cfee"
+    },
+    {
+      "titulo": "Venezuela agradece a Rusia tras la recepción de su primer envío de ayuda humanitaria",
+      "url": "https://noticiaslatam.lat/20260711/venezuela-agradece-a-rusia-tras-la-recepcion-de-su-primer-envio-de-ayuda-humanitaria-1174254233.html",
+      "fecha": "2026-07-11T21:42:14",
+      "medio_id": "sputnik",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "venezuela agradece a rusia tras la recepcion de su primer envio de ayuda humanitaria",
+      "fuente_url": "https://noticiaslatam.lat/20260711/venezuela-agradece-a-rusia-tras-la-recepcion-de-su-primer-envio-de-ayuda-humanitaria-1174254233.html",
+      "hash": "ee26b4e6af97a0339e4d60796afe0e5663e2beb9"
+    },
+    {
+      "titulo": "Aumenta a más de 4.300 el número de muertos tras los sismos en Venezuela",
+      "url": "https://noticiaslatam.lat/20260711/aumenta-a-mas-de-4300-el-numero-de-muertos-tras-los-sismos-en-venezuela-1174253526.html",
+      "fecha": "2026-07-11T18:25:23",
+      "medio_id": "sputnik",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "aumenta a mas de 4 300 el numero de muertos tras los sismos en venezuela",
+      "fuente_url": "https://noticiaslatam.lat/20260711/aumenta-a-mas-de-4300-el-numero-de-muertos-tras-los-sismos-en-venezuela-1174253526.html",
+      "hash": "b1f210ce1b59d6e826837fc193fbc82f1b3f80d5"
+    },
+    {
+      "titulo": "Arriba a Venezuela el primer cargamento con ayuda humanitaria desde Rusia | Videos",
+      "url": "https://noticiaslatam.lat/20260711/arriba-a-venezuela-el-primer-cargamento-con-ayuda-humanitaria-desde-rusia-1174252935.html",
+      "fecha": "2026-07-11T18:04:59",
+      "medio_id": "sputnik",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "arriba a venezuela el primer cargamento con ayuda humanitaria desde rusia videos",
+      "fuente_url": "https://noticiaslatam.lat/20260711/arriba-a-venezuela-el-primer-cargamento-con-ayuda-humanitaria-desde-rusia-1174252935.html",
+      "hash": "d5162a45b1cb1ba1f4882a0d66313caed366e3f0"
+    },
+    {
+      "titulo": "La reconstrucción en Venezuela \"va a contribuir a repuntar\" la economía nacional, anticipa un experto",
+      "url": "https://noticiaslatam.lat/20260711/la-reconstruccion-en-venezuela-va-a-contribuir-a-repuntar-la-economia-nacional-anticipa-experto-1174249028.html",
+      "fecha": "2026-07-11T03:48:27",
+      "medio_id": "sputnik",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "la reconstruccion en venezuela va a contribuir a repuntar la economia nacional anticipa un experto",
+      "fuente_url": "https://noticiaslatam.lat/20260711/la-reconstruccion-en-venezuela-va-a-contribuir-a-repuntar-la-economia-nacional-anticipa-experto-1174249028.html",
+      "hash": "d851f42c68cabcbc013504b3d22f696949c6e111"
+    },
+    {
+      "titulo": "Aumenta el número de fallecidos en Venezuela por los sismos a más de 4.000",
+      "url": "https://noticiaslatam.lat/20260710/aumenta-el-numero-de-fallecidos-en-venezuela-por-los-sismos-a-mas-de-4000-1174245727.html",
+      "fecha": "2026-07-10T22:26:58",
+      "medio_id": "sputnik",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "aumenta el numero de fallecidos en venezuela por los sismos a mas de 4 000",
+      "fuente_url": "https://noticiaslatam.lat/20260710/aumenta-el-numero-de-fallecidos-en-venezuela-por-los-sismos-a-mas-de-4000-1174245727.html",
+      "hash": "2704819a9a5e66c0e0509307479921b49ab6799b"
+    },
+    {
+      "titulo": "\"La sonrisa ha sido una extraordinaria terapia\": Venezuela crea la Ruta de la Esperanza para ayudar a la población",
+      "url": "https://noticiaslatam.lat/20260710/la-sonrisa-ha-sido-una-extraordinaria-terapia-venezuela-crea-la-ruta-de-la-esperanza-para-ayudar-a-1174233561.html",
+      "fecha": "2026-07-10T02:00:00",
+      "medio_id": "sputnik",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "la sonrisa ha sido una extraordinaria terapia venezuela crea la ruta de la esperanza para ayudar a la poblacion",
+      "fuente_url": "https://noticiaslatam.lat/20260710/la-sonrisa-ha-sido-una-extraordinaria-terapia-venezuela-crea-la-ruta-de-la-esperanza-para-ayudar-a-1174233561.html",
+      "hash": "24808837bbbffb61da99bc436010688b49ead9fa"
+    },
+    {
+      "titulo": "\"Los recursos bloqueados deben volver para reconstruir Venezuela\", afirma vicepresidente sectorial de Planificación",
+      "url": "https://noticiaslatam.lat/20260709/los-recursos-bloqueados-deben-volver-para-reconstruir-venezuela-afirma-vicepresidente-sectorial-de-1174232047.html",
+      "fecha": "2026-07-09T22:30:00",
+      "medio_id": "sputnik",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "los recursos bloqueados deben volver para reconstruir venezuela afirma vicepresidente sectorial de planificacion",
+      "fuente_url": "https://noticiaslatam.lat/20260709/los-recursos-bloqueados-deben-volver-para-reconstruir-venezuela-afirma-vicepresidente-sectorial-de-1174232047.html",
+      "hash": "e94fbd6976881358670925435f79385094205be6"
+    },
+    {
+      "titulo": "Venezuela y los desafíos de su reconstrucción: costos en alza, viviendas temporales y aprender a convivir con la amenaza de un nuevo terremoto",
+      "url": "https://www.clarin.com/mundo/venezuela-desafios-reconstruccion-costos-alza-viviendas-temporales-aprender-convivir-amenaza-nuevo-terremoto_0_eSTM5JeuJN.html",
+      "fecha": "2026-07-13T21:05:59",
+      "medio_id": "clarin",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "venezuela y los desafios de su reconstruccion costos en alza viviendas temporales y aprender a convivir con la amenaza de un nuevo terremoto",
+      "fuente_url": "https://www.clarin.com/mundo/venezuela-desafios-reconstruccion-costos-alza-viviendas-temporales-aprender-convivir-amenaza-nuevo-terremoto_0_eSTM5JeuJN.html",
+      "hash": "3ee1af9eb358509deb7d2e5f3cffe331d6f6d068"
+    },
+    {
+      "titulo": "\"¿Dónde están las grúas?\": familiares de víctimas de los terremotos claman por el regreso de los rescatistas extranjeros a Venezuela",
+      "url": "https://www.clarin.com/mundo/gruas-familiares-victimas-terremotos-claman-regreso-rescatistas-extranjeros-venezuela_0_mDqeBX7GeJ.html",
+      "fecha": "2026-07-13T15:25:32",
+      "medio_id": "clarin",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "donde estan las gruas familiares de victimas de los terremotos claman por el regreso de los rescatistas extranjeros a venezuela",
+      "fuente_url": "https://www.clarin.com/mundo/gruas-familiares-victimas-terremotos-claman-regreso-rescatistas-extranjeros-venezuela_0_mDqeBX7GeJ.html",
+      "hash": "2232256547c6a9624e1890a22d05fd9728436bdf"
+    },
+    {
+      "titulo": "No se pudo realizar la migración de tu cuenta.",
+      "url": null,
+      "fecha": null,
+      "medio_id": "emol",
+      "conectores_activados": [
+        "estructurales"
+      ],
+      "texto_normalizado": "no se pudo realizar la migracion de tu cuenta",
+      "fuente_url": "synthetic://b2a7271415b0d466e4b88f4a3a1a03df",
+      "hash": "cf4b512fbdbf5f0f261529c72b4e7f94c9846fa2"
+    },
+    {
+      "titulo": "Arriban a Venezuela buques de la Semar con ayuda humanitaria",
+      "url": "https://www.reforma.com/arriban-a-venezuela-buques-de-la-semar-con-ayuda-humanitaria/ar3239638",
+      "fecha": "2026-07-13T22:47:04",
+      "medio_id": "reforma",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "arriban a venezuela buques de la semar con ayuda humanitaria",
+      "fuente_url": "https://www.reforma.com/arriban-a-venezuela-buques-de-la-semar-con-ayuda-humanitaria/ar3239638",
+      "hash": "c5abeba4aa985a15801c9babc51a998f2b2dd349"
+    },
+    {
+      "titulo": "Nasa revela que los terremotos en Venezuela desplazaron hasta 60 centímetros la superficie terrestre",
+      "url": "https://www.eltiempo.com/mundo/venezuela/nasa-revela-que-los-terremotos-en-venezuela-desplazaron-hasta-60-centimetros-la-superficie-terrestre-3570958",
+      "fecha": "2026-07-13T22:58:28",
+      "medio_id": "eltiempo",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "nasa revela que los terremotos en venezuela desplazaron hasta 60 centimetros la superficie terrestre",
+      "fuente_url": "https://www.eltiempo.com/mundo/venezuela/nasa-revela-que-los-terremotos-en-venezuela-desplazaron-hasta-60-centimetros-la-superficie-terrestre-3570958",
+      "hash": "bc5f6c77544c8039ec23a0b97edcf4b02fbebb95"
+    },
+    {
+      "titulo": "Delcy Rodríguez designó a Félix Plasencia como nuevo canciller en Venezuela tras destituir a Yván Gil: 'Tiene amplia experiencia en la diplomacia'",
+      "url": "https://www.eltiempo.com/mundo/venezuela/delcy-rodriguez-designo-a-felix-plasencia-como-nuevo-canciller-en-venezuela-tras-destituir-a-yvan-gil-tiene-amplia-experiencia-en-la-diplomacia-3570957",
+      "fecha": "2026-07-13T22:38:48",
+      "medio_id": "eltiempo",
+      "conectores_activados": [
+        "actores",
+        "actores"
+      ],
+      "texto_normalizado": "delcy rodriguez designo a felix plasencia como nuevo canciller en venezuela tras destituir a yvan gil tiene amplia experiencia en la diplomacia",
+      "fuente_url": "https://www.eltiempo.com/mundo/venezuela/delcy-rodriguez-designo-a-felix-plasencia-como-nuevo-canciller-en-venezuela-tras-destituir-a-yvan-gil-tiene-amplia-experiencia-en-la-diplomacia-3570957",
+      "hash": "c34bea546cfc6a479e773d6503d157bd0dcbc185"
+    },
+    {
+      "titulo": "La inflación en Venezuela se dispara a 13,8 % en junio, mes de los terremotos",
+      "url": "https://www.eltiempo.com/mundo/venezuela/la-inflacion-en-venezuela-se-dispara-a-13-8-en-junio-mes-de-los-terremotos-3570948",
+      "fecha": "2026-07-13T20:21:20",
+      "medio_id": "eltiempo",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "la inflacion en venezuela se dispara a 13 8 en junio mes de los terremotos",
+      "fuente_url": "https://www.eltiempo.com/mundo/venezuela/la-inflacion-en-venezuela-se-dispara-a-13-8-en-junio-mes-de-los-terremotos-3570948",
+      "hash": "d8cbe49fdc3e22a02d3c5eaa849e03dcb4ca6cd7"
+    },
+    {
+      "titulo": "González Urrutia: 'Reconstruir Venezuela exigirá recuperar instituciones y la confianza'",
+      "url": "https://www.eltiempo.com/mundo/venezuela/gonzalez-urrutia-reconstruir-venezuela-exigira-recuperar-instituciones-y-la-confianza-3570946",
+      "fecha": "2026-07-13T20:15:49",
+      "medio_id": "eltiempo",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "gonzalez urrutia reconstruir venezuela exigira recuperar instituciones y la confianza",
+      "fuente_url": "https://www.eltiempo.com/mundo/venezuela/gonzalez-urrutia-reconstruir-venezuela-exigira-recuperar-instituciones-y-la-confianza-3570946",
+      "hash": "bbc96960ce54ee6f30f0a7c08a4c4b8a4f84b796"
+    },
+    {
+      "titulo": "Mexico is placing an enormous bet on rail",
+      "url": "https://www.economist.com/the-americas/2026/07/06/mexico-is-placing-an-enormous-bet-on-rail",
+      "fecha": "2026-07-06T17:19:34",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "mexico is placing asamblea nacional enormous bet on rail",
+      "fuente_url": "https://www.economist.com/the-americas/2026/07/06/mexico-is-placing-an-enormous-bet-on-rail",
+      "hash": "d8973fe58521c11bc7ad2e7e7dc1d41b9b8051d3"
+    },
+    {
+      "titulo": "Venezuelans are furious with the American-backed regime",
+      "url": "https://www.economist.com/the-americas/2026/07/02/venezuelans-are-furious-with-the-american-backed-regime",
+      "fecha": "2026-07-02T11:15:20",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "venezuelans are furious with the american backed regime",
+      "fuente_url": "https://www.economist.com/the-americas/2026/07/02/venezuelans-are-furious-with-the-american-backed-regime",
+      "hash": "cadd5a0e7e0ed5ff114a26553ccfd7833757f4a6"
+    },
+    {
+      "titulo": "El Boletín newsletter: An earthquake shakes Venezuela’s political reset",
+      "url": "https://www.economist.com/the-americas/2026/06/30/el-boletin-newsletter-an-earthquake-shakes-venezuelas-political-reset",
+      "fecha": "2026-06-30T08:08:42",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores",
+        "actores"
+      ],
+      "texto_normalizado": "el boletin newsletter asamblea nacional earthquake shakes venezuela s political reset",
+      "fuente_url": "https://www.economist.com/the-americas/2026/06/30/el-boletin-newsletter-an-earthquake-shakes-venezuelas-political-reset",
+      "hash": "bba7ce2418daac35b94ef024ea797c96ccae80ca"
+    },
+    {
+      "titulo": "How will America respond to Venezuela’s deadly quakes?",
+      "url": "https://www.economist.com/the-americas/2026/06/28/how-will-america-respond-to-venezuelas-deadly-quakes",
+      "fecha": "2026-06-28T19:36:10",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "how will america respond to venezuela s deadly quakes",
+      "fuente_url": "https://www.economist.com/the-americas/2026/06/28/how-will-america-respond-to-venezuelas-deadly-quakes",
+      "hash": "0ff14d8ce694efecd2965819274b13a7d49bd15e"
+    },
+    {
+      "titulo": "Venezuela suffers its worst earthquake in a century",
+      "url": "https://www.economist.com/the-americas/2026/06/25/venezuela-suffers-its-worst-earthquake-in-a-century",
+      "fecha": "2026-06-25T20:16:44",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "venezuela suffers its worst earthquake in a century",
+      "fuente_url": "https://www.economist.com/the-americas/2026/06/25/venezuela-suffers-its-worst-earthquake-in-a-century",
+      "hash": "020c5b2a57ba3eb583611092fdd5728fc486d1da"
+    },
+    {
+      "titulo": "America is using force to drive gangsters from Venezuela’s gold",
+      "url": "https://www.economist.com/the-americas/2026/06/25/america-is-using-force-to-drive-gangsters-from-venezuelas-gold",
+      "fecha": "2026-06-25T12:58:00",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "america is using force to drive gangsters from venezuela s gold",
+      "fuente_url": "https://www.economist.com/the-americas/2026/06/25/america-is-using-force-to-drive-gangsters-from-venezuelas-gold",
+      "hash": "a86e2e324b62e16de419e95358f0528514390402"
+    },
+    {
+      "titulo": "Two powerful earthquakes hit Venezuela",
+      "url": "https://www.economist.com/the-americas/2026/06/25/two-powerful-earthquakes-hit-venezuela",
+      "fecha": "2026-06-25T12:58:00",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "two powerful earthquakes hit venezuela",
+      "fuente_url": "https://www.economist.com/the-americas/2026/06/25/two-powerful-earthquakes-hit-venezuela",
+      "hash": "857a05edeb8e7eaf9f988c03f6ca5d11710d0be2"
+    },
+    {
+      "titulo": "Venezuela’s 100-year territorial dispute is back in court",
+      "url": "https://www.economist.com/the-americas/2026/05/07/venezuelas-100-year-territorial-dispute-is-back-in-court",
+      "fecha": "2026-05-07T13:08:12",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "venezuela s 100 year territorial dispute is back in court",
+      "fuente_url": "https://www.economist.com/the-americas/2026/05/07/venezuelas-100-year-territorial-dispute-is-back-in-court",
+      "hash": "b15214e582b6a402666b536ec3b1cf81424346be"
+    },
+    {
+      "titulo": "The Venezuela Donald Trump “runs” is a land of surreal contrasts",
+      "url": "https://www.economist.com/the-americas/2026/03/30/the-venezuela-donald-trump-runs-is-a-land-of-surreal-contrasts",
+      "fecha": "2026-03-30T13:22:39",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "the venezuela donald trump runs is a land of surreal contrasts",
+      "fuente_url": "https://www.economist.com/the-americas/2026/03/30/the-venezuela-donald-trump-runs-is-a-land-of-surreal-contrasts",
+      "hash": "dbd79c0f35af786fc6c46c2ac524f15835e34739"
+    },
+    {
+      "titulo": "Nicaragua has so far dodged the fate of Cuba and Venezuela",
+      "url": "https://www.economist.com/the-americas/2026/02/16/nicaragua-has-so-far-dodged-the-fate-of-cuba-and-venezuela",
+      "fecha": "2026-02-16T18:13:14",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "nicaragua has so far dodged the fate of cuba and venezuela",
+      "fuente_url": "https://www.economist.com/the-americas/2026/02/16/nicaragua-has-so-far-dodged-the-fate-of-cuba-and-venezuela",
+      "hash": "a1c427606e9e454ad61f553aa295b3c4237c7a96"
+    },
+    {
+      "titulo": "How to tell if Venezuela is heading for democracy",
+      "url": "https://www.economist.com/the-americas/2026/01/27/how-to-tell-if-venezuela-is-heading-for-democracy",
+      "fecha": "2026-01-27T16:39:29",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "how to tell if venezuela is heading for democracy",
+      "fuente_url": "https://www.economist.com/the-americas/2026/01/27/how-to-tell-if-venezuela-is-heading-for-democracy",
+      "hash": "ffdbb3fc271044888c60dadab29e56a076c5244e"
+    },
+    {
+      "titulo": "Venezuelans believe Donald Trump has offered them a better future",
+      "url": "https://www.economist.com/the-americas/2026/01/13/venezuelans-believe-donald-trump-has-offered-them-a-better-future",
+      "fecha": "2026-01-13T18:08:36",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "venezuelans believe donald trump has offered them a better future",
+      "fuente_url": "https://www.economist.com/the-americas/2026/01/13/venezuelans-believe-donald-trump-has-offered-them-a-better-future",
+      "hash": "0c2a4b75bcdc7ec5958bded8ac7c613a664323d9"
+    },
+    {
+      "titulo": "Donald Trump’s Venezuela oil deal is already up and running",
+      "url": "https://www.economist.com/the-americas/2026/01/10/donald-trumps-venezuela-oil-deal-is-already-up-and-running",
+      "fecha": "2026-01-10T15:46:07",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "donald trump s venezuela oil deal is already up and running",
+      "fuente_url": "https://www.economist.com/the-americas/2026/01/10/donald-trumps-venezuela-oil-deal-is-already-up-and-running",
+      "hash": "dcfb0b3e030300bb74de33f7c21bc3e052293055"
+    },
+    {
+      "titulo": "Venezuela’s new dictator is a regime loyalist—and America’s hostage",
+      "url": "https://www.economist.com/the-americas/2026/01/09/venezuelas-new-dictator-is-a-regime-loyalist-and-americas-hostage",
+      "fecha": "2026-01-09T15:27:00",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "venezuela s new dictator is a regime loyalist and america s hostage",
+      "fuente_url": "https://www.economist.com/the-americas/2026/01/09/venezuelas-new-dictator-is-a-regime-loyalist-and-americas-hostage",
+      "hash": "3e564ecf62fbee8398066ccbe0ec005ce34cb292"
+    },
+    {
+      "titulo": "The Venezuelan regime is rapidly consolidating its grip on power",
+      "url": "https://www.economist.com/the-americas/2026/01/06/the-venezuelan-regime-is-rapidly-consolidating-its-grip-on-power",
+      "fecha": "2026-01-06T15:02:52",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "the venezuelan regime is rapidly consolidating its grip on power",
+      "fuente_url": "https://www.economist.com/the-americas/2026/01/06/the-venezuelan-regime-is-rapidly-consolidating-its-grip-on-power",
+      "hash": "41cc26b779cfe3d3c2744983f0bcdc136b9f2b6f"
+    },
+    {
+      "titulo": "Latin America fears what comes next after the Venezuela raid",
+      "url": "https://www.economist.com/the-americas/2026/01/06/latin-america-fears-what-comes-next-after-the-venezuela-raid",
+      "fecha": "2026-01-06T14:30:45",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "latin america fears what comes next after the venezuela raid",
+      "fuente_url": "https://www.economist.com/the-americas/2026/01/06/latin-america-fears-what-comes-next-after-the-venezuela-raid",
+      "hash": "e671ac9351759b3f6efc21525899f61221ba4172"
+    },
+    {
+      "titulo": "The many risks to Donald Trump’s plans to “run” Venezuela",
+      "url": "https://www.economist.com/the-americas/2026/01/04/the-many-risks-to-donald-trumps-plans-to-run-venezuela",
+      "fecha": "2026-01-04T10:23:53",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "the many risks to donald trump s plans to run venezuela",
+      "fuente_url": "https://www.economist.com/the-americas/2026/01/04/the-many-risks-to-donald-trumps-plans-to-run-venezuela",
+      "hash": "3c33da625058fe7717bc954fe86d6b12174fdecf"
+    },
+    {
+      "titulo": "How the Pentagon snatched Nicolás Maduro",
+      "url": "https://www.economist.com/the-americas/2026/01/03/how-the-pentagon-snatched-nicolas-maduro",
+      "fecha": "2026-01-03T21:16:06",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "how the pentagon snatched nicolas maduro",
+      "fuente_url": "https://www.economist.com/the-americas/2026/01/03/how-the-pentagon-snatched-nicolas-maduro",
+      "hash": "81df7572560e5899e18f7b61397904f06ec273b6"
+    },
+    {
+      "titulo": "Donald Trump wants to run Venezuela, and dominate the western hemisphere",
+      "url": "https://www.economist.com/the-americas/2026/01/03/donald-trump-wants-to-run-venezuela-and-dominate-the-western-hemisphere",
+      "fecha": "2026-01-03T20:26:48",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "donald trump wants to run venezuela and dominate the western hemisphere",
+      "fuente_url": "https://www.economist.com/the-americas/2026/01/03/donald-trump-wants-to-run-venezuela-and-dominate-the-western-hemisphere",
+      "hash": "baee14c5adc5852ac0c7babfed0ed97963ffd7d8"
+    },
+    {
+      "titulo": "The United States has captured Venezuela’s dictator, Nicolás Maduro",
+      "url": "https://www.economist.com/the-americas/2026/01/03/the-united-states-has-captured-venezuelas-dictator-nicolas-maduro",
+      "fecha": "2026-01-03T10:23:37",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores",
+        "actores"
+      ],
+      "texto_normalizado": "the united states has captured venezuela s dictator nicolas maduro",
+      "fuente_url": "https://www.economist.com/the-americas/2026/01/03/the-united-states-has-captured-venezuelas-dictator-nicolas-maduro",
+      "hash": "40b83bf6a41dcadbfe077c3ed0fe5a7bbd4df7ff"
+    },
+    {
+      "titulo": "Christmas in Caracas with Donald Trump on the doorstep",
+      "url": "https://www.economist.com/the-americas/2025/12/22/christmas-in-caracas-with-donald-trump-on-the-doorstep",
+      "fecha": "2025-12-22T14:22:22",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "indirectos"
+      ],
+      "texto_normalizado": "christmas in caracas with donald trump on the doorstep",
+      "fuente_url": "https://www.economist.com/the-americas/2025/12/22/christmas-in-caracas-with-donald-trump-on-the-doorstep",
+      "hash": "63ce9b5b797de82509f47224464d5b1d040f2b87"
+    },
+    {
+      "titulo": "An oil boom where the Amazon meets the Atlantic",
+      "url": "https://www.economist.com/the-americas/2025/12/15/an-oil-boom-where-the-amazon-meets-the-atlantic",
+      "fecha": "2025-12-15T18:20:57",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "asamblea nacional oil boom where the amazon meets the atlantic",
+      "fuente_url": "https://www.economist.com/the-americas/2025/12/15/an-oil-boom-where-the-amazon-meets-the-atlantic",
+      "hash": "ccb1c2a4feaaf7e8857743c0e4d436f9acddec38"
+    },
+    {
+      "titulo": "An American oil blockade would devastate the Venezuelan regime",
+      "url": "https://www.economist.com/the-americas/2025/12/12/an-american-oil-blockade-would-devastate-the-venezuelan-regime",
+      "fecha": "2025-12-12T10:12:10",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores",
+        "actores"
+      ],
+      "texto_normalizado": "asamblea nacional american oil blockade would devastate the venezuelan regime",
+      "fuente_url": "https://www.economist.com/the-americas/2025/12/12/an-american-oil-blockade-would-devastate-the-venezuelan-regime",
+      "hash": "2e94a9b40bc541b32cab31c91da112de36623620"
+    },
+    {
+      "titulo": "Is Donald Trump preparing to strike Venezuela or lining up a deal?",
+      "url": "https://www.economist.com/the-americas/2025/11/19/is-donald-trump-preparing-to-strike-venezuela-or-lining-up-a-deal",
+      "fecha": "2025-11-19T12:38:19",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "is donald trump preparing to strike venezuela or lining up a deal",
+      "fuente_url": "https://www.economist.com/the-americas/2025/11/19/is-donald-trump-preparing-to-strike-venezuela-or-lining-up-a-deal",
+      "hash": "7d350ccd39ac7aa50c447275bbc7b9f09d631d77"
+    },
+    {
+      "titulo": "War looms in Venezuela as Trump tests an “Americas First” doctrine",
+      "url": "https://www.economist.com/the-americas/2025/11/06/war-looms-in-venezuela-as-trump-tests-an-americas-first-doctrine",
+      "fecha": "2025-11-06T14:01:38",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores",
+        "actores"
+      ],
+      "texto_normalizado": "war looms in venezuela as trump tests asamblea nacional americas first doctrine",
+      "fuente_url": "https://www.economist.com/the-americas/2025/11/06/war-looms-in-venezuela-as-trump-tests-an-americas-first-doctrine",
+      "hash": "2c6a1e5d5d0be9ca4ec2ac3036a8984a1de087ac"
+    },
+    {
+      "titulo": "Tracking America’s pressure campaign on Venezuela",
+      "url": "https://www.economist.com/interactive/the-americas/2025/11/05/tracking-american-drug-boat-strikes-off-venezuela-coast",
+      "fecha": "2025-11-05T13:00:39",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "tracking america s pressure campaign on venezuela",
+      "fuente_url": "https://www.economist.com/interactive/the-americas/2025/11/05/tracking-american-drug-boat-strikes-off-venezuela-coast",
+      "hash": "d975751d55d524db87d6701d027ca22826812a4a"
+    },
+    {
+      "titulo": "An EU-Mercosur trade deal looks close to ratification",
+      "url": "https://www.economist.com/the-americas/2025/11/04/an-eu-mercosur-trade-deal-looks-close-to-ratification",
+      "fecha": "2025-11-04T14:55:53",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "asamblea nacional eu mercosur trade deal looks close to ratification",
+      "fuente_url": "https://www.economist.com/the-americas/2025/11/04/an-eu-mercosur-trade-deal-looks-close-to-ratification",
+      "hash": "2bfcb60694370bd5c008b420348e3f65def8fb1a"
+    },
+    {
+      "titulo": "The meaning of America’s vast military build-up off Venezuela",
+      "url": "https://www.economist.com/the-americas/2025/10/27/the-meaning-of-americas-vast-military-build-up-off-venezuela",
+      "fecha": "2025-10-27T16:55:19",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "the meaning of america s vast military build up off venezuela",
+      "fuente_url": "https://www.economist.com/the-americas/2025/10/27/the-meaning-of-americas-vast-military-build-up-off-venezuela",
+      "hash": "6411cca6530bd21285812402d5dc73f44b5720be"
+    },
+    {
+      "titulo": "Javier Milei’s fate turns on an upcoming election. Can he win?",
+      "url": "https://www.economist.com/the-americas/2025/10/23/javier-mileis-fate-turns-on-an-upcoming-election-can-he-win",
+      "fecha": "2025-10-23T13:11:26",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "javier milei s fate turns on asamblea nacional upcoming election can he win",
+      "fuente_url": "https://www.economist.com/the-americas/2025/10/23/javier-mileis-fate-turns-on-an-upcoming-election-can-he-win",
+      "hash": "56e76ef7f657637bf6989607550efb1fb5ab9e66"
+    },
+    {
+      "titulo": "Venezuelans wonder if America will bring down Nicolás Maduro",
+      "url": "https://www.economist.com/the-americas/2025/10/15/venezuelans-wonder-if-america-will-bring-down-nicolas-maduro",
+      "fecha": "2025-10-15T22:15:25",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores",
+        "actores"
+      ],
+      "texto_normalizado": "venezuelans wonder if america will bring down nicolas maduro",
+      "fuente_url": "https://www.economist.com/the-americas/2025/10/15/venezuelans-wonder-if-america-will-bring-down-nicolas-maduro",
+      "hash": "2568775d6d3f38a1b6ea7a8ef22501fa300e5839"
+    },
+    {
+      "titulo": "María Corina Machado, Venezuela’s “Iron Lady”, gets the peace Nobel",
+      "url": "https://www.economist.com/the-americas/2025/10/10/maria-corina-machado-venezuelas-iron-lady-gets-the-peace-nobel",
+      "fecha": "2025-10-10T15:39:53",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores",
+        "actores"
+      ],
+      "texto_normalizado": "maria maria corina machado venezuela s iron lady gets the peace nobel",
+      "fuente_url": "https://www.economist.com/the-americas/2025/10/10/maria-corina-machado-venezuelas-iron-lady-gets-the-peace-nobel",
+      "hash": "5159e3cde826da973291a99ad50d04ae07ecc2e6"
+    },
+    {
+      "titulo": "From a forgotten country to an 11bn barrel petrostate",
+      "url": "https://www.economist.com/the-americas/2025/09/17/from-a-forgotten-country-to-an-11bn-barrel-petrostate",
+      "fecha": "2025-09-17T14:04:33",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "from a forgotten country to asamblea nacional 11bn barrel petrostate",
+      "fuente_url": "https://www.economist.com/the-americas/2025/09/17/from-a-forgotten-country-to-an-11bn-barrel-petrostate",
+      "hash": "77d1272600c608ba8e5f862fa143c40e130d0083"
+    },
+    {
+      "titulo": "Climate change threatens an Andean ski boom",
+      "url": "https://www.economist.com/the-americas/2025/08/21/climate-change-threatens-an-andean-ski-boom",
+      "fecha": "2025-08-21T13:04:05",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "climate change threatens asamblea nacional andean ski boom",
+      "fuente_url": "https://www.economist.com/the-americas/2025/08/21/climate-change-threatens-an-andean-ski-boom",
+      "hash": "b720f24d0bad8a926c9ac62435ef34e9b482b407"
+    },
+    {
+      "titulo": "An interview with Daniel Noboa, Ecuador’s president",
+      "url": "https://www.economist.com/the-americas/2025/06/12/an-interview-with-daniel-noboa-ecuadors-president",
+      "fecha": "2025-06-12T17:46:08",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "asamblea nacional interview with daniel noboa ecuador s president",
+      "fuente_url": "https://www.economist.com/the-americas/2025/06/12/an-interview-with-daniel-noboa-ecuadors-president",
+      "hash": "61cd83b53462c738c046e2392790911d1ded467d"
+    },
+    {
+      "titulo": "Venezuela’s sound of silence",
+      "url": "https://www.economist.com/the-americas/2025/05/29/venezuelas-sound-of-silence",
+      "fecha": "2025-05-29T12:48:24",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "venezuela s sound of silence",
+      "fuente_url": "https://www.economist.com/the-americas/2025/05/29/venezuelas-sound-of-silence",
+      "hash": "035a0985a0be34764c1b1052f396f44b43edbf3a"
+    },
+    {
+      "titulo": "An election win boosts Javier Milei’s reform project",
+      "url": "https://www.economist.com/the-americas/2025/05/22/an-election-win-boosts-javier-mileis-reform-project",
+      "fecha": "2025-05-22T12:47:13",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "asamblea nacional election win boosts javier milei s reform project",
+      "fuente_url": "https://www.economist.com/the-americas/2025/05/22/an-election-win-boosts-javier-mileis-reform-project",
+      "hash": "c3d25a71622f28849a8f6e76b037c6756e8c86ac"
+    },
+    {
+      "titulo": "Mark Carney must keep an expansionist America at bay",
+      "url": "https://www.economist.com/the-americas/2025/03/10/mark-carney-must-keep-an-expansionist-america-at-bay",
+      "fecha": "2025-03-10T06:45:16",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "mark carney must keep asamblea nacional expansionist america at bay",
+      "fuente_url": "https://www.economist.com/the-americas/2025/03/10/mark-carney-must-keep-an-expansionist-america-at-bay",
+      "hash": "fb23808d096748dfba1c2fa1546fc3167bb44748"
+    },
+    {
+      "titulo": "An Oscar-nominated film sparks a reckoning with Brazil’s dictatorship",
+      "url": "https://www.economist.com/the-americas/2025/02/20/an-oscar-nominated-film-sparks-a-reckoning-with-brazils-dictatorship",
+      "fecha": "2025-02-20T11:09:07",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "asamblea nacional oscar nominated film sparks a reckoning with brazil s dictatorship",
+      "fuente_url": "https://www.economist.com/the-americas/2025/02/20/an-oscar-nominated-film-sparks-a-reckoning-with-brazils-dictatorship",
+      "hash": "d414806c68f1c723558460054c9bdbaf5b02d4a1"
+    },
+    {
+      "titulo": "Argentina’s Javier Milei is betting big on an oil gusher",
+      "url": "https://www.economist.com/the-americas/2025/02/16/argentinas-javier-milei-is-betting-big-on-an-oil-gusher",
+      "fecha": "2025-02-16T12:05:45",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "argentina s javier milei is betting big on asamblea nacional oil gusher",
+      "fuente_url": "https://www.economist.com/the-americas/2025/02/16/argentinas-javier-milei-is-betting-big-on-an-oil-gusher",
+      "hash": "4bdff77eb3e050155edd01f0e29b384934a58d92"
+    },
+    {
+      "titulo": "Donald Trump turns an angry gaze south",
+      "url": "https://www.economist.com/the-americas/2025/01/30/donald-trump-turns-an-angry-gaze-south",
+      "fecha": "2025-01-30T15:42:32",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "donald trump turns asamblea nacional angry gaze south",
+      "fuente_url": "https://www.economist.com/the-americas/2025/01/30/donald-trump-turns-an-angry-gaze-south",
+      "hash": "79216e2bb5f96c278cc38ac06edba590eb7fbb14"
+    },
+    {
+      "titulo": "Armed groups are terrorising Colombia’s border with Venezuela",
+      "url": "https://www.economist.com/the-americas/2025/01/30/armed-groups-are-terrorising-colombias-border-with-venezuela",
+      "fecha": "2025-01-30T15:42:32",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "armed groups are terrorising colombia s border with venezuela",
+      "fuente_url": "https://www.economist.com/the-americas/2025/01/30/armed-groups-are-terrorising-colombias-border-with-venezuela",
+      "hash": "a810b970ab5e05958ec50539ea456bf87ccfea36"
+    },
+    {
+      "titulo": "Venezuela’s Nicolás Maduro looks set to take the throne",
+      "url": "https://www.economist.com/the-americas/2025/01/02/venezuelas-nicolas-maduro-looks-set-to-take-the-throne",
+      "fecha": "2025-01-02T14:06:25",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores",
+        "actores"
+      ],
+      "texto_normalizado": "venezuela s nicolas maduro looks set to take the throne",
+      "fuente_url": "https://www.economist.com/the-americas/2025/01/02/venezuelas-nicolas-maduro-looks-set-to-take-the-throne",
+      "hash": "88a649077ebc50a41bf88d57da916b1eec83da21"
+    },
+    {
+      "titulo": "Can an agreement with the EU resurrect Mercosur?",
+      "url": "https://www.economist.com/the-americas/2024/12/12/can-an-agreement-with-the-eu-resurrect-mercosur",
+      "fecha": "2024-12-12T13:39:21",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "can asamblea nacional agreement with the eu resurrect mercosur",
+      "fuente_url": "https://www.economist.com/the-americas/2024/12/12/can-an-agreement-with-the-eu-resurrect-mercosur",
+      "hash": "75bd5f70fa77ad31df9595601e0493cf6c017a6b"
+    },
+    {
+      "titulo": "An interview with Javier Milei, Argentina’s president",
+      "url": "https://www.economist.com/the-americas/2024/11/28/an-interview-with-javier-milei-argentinas-president",
+      "fecha": "2024-11-28T20:01:21",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "asamblea nacional interview with javier milei argentina s president",
+      "fuente_url": "https://www.economist.com/the-americas/2024/11/28/an-interview-with-javier-milei-argentinas-president",
+      "hash": "64a4d49e560bd7f744cfdfbf29c80c6a3b958cf1"
+    },
+    {
+      "titulo": "BRICS isn’t exactly picky, but has just rejected Venezuela",
+      "url": "https://www.economist.com/the-americas/2024/11/07/brics-isnt-exactly-picky-but-has-just-rejected-venezuela",
+      "fecha": "2024-11-07T14:13:37",
+      "medio_id": "economist",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "brics isn t exactly picky but has just rejected venezuela",
+      "fuente_url": "https://www.economist.com/the-americas/2024/11/07/brics-isnt-exactly-picky-but-has-just-rejected-venezuela",
+      "hash": "ecd9b672300f048247c0fa47c30e2c6d1627e5a7"
+    },
+    {
+      "titulo": "Worse Than an Axis",
+      "url": "https://www.foreignaffairs.com/china/worse-axis",
+      "fecha": "2026-07-01T04:00:00",
+      "medio_id": "foreignaffairs",
+      "conectores_activados": [
+        "actores"
+      ],
+      "texto_normalizado": "worse than asamblea nacional axis",
+      "fuente_url": "https://www.foreignaffairs.com/china/worse-axis",
+      "hash": "da55f7611a2f8b404326bf44dbf2237c86ede358"
+    }
+  ],
+  "csv_matriz": "medio_id,medio_nombre,region,semaforo,titulo,url,url_archivo,fecha,tipo_pieza,enfoque_matriz,valencia,valencia_respecto_a,prominencia,conectores_activados,resumen_1_frase\n\"clarin\",\"Clarín\",\"iberoamerica\",\"VERDE_con_cobertura\",\"Venezuela y los desafíos de su reconstrucción: costos en alza, viviendas temporales y aprender a convivir con la amenaza de un nuevo terremoto\",\"https://www.clarin.com/mundo/venezuela-desafios-reconstruccion-costos-alza-viviendas-temporales-aprender-convivir-amenaza-nuevo-terremoto_0_eSTM5JeuJN.html\",\"\",\"2026-07-13T21:05:59\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"clarin\",\"Clarín\",\"iberoamerica\",\"VERDE_con_cobertura\",\"\"\"¿Dónde están las grúas?\"\": familiares de víctimas de los terremotos claman por el regreso de los rescatistas extranjeros a Venezuela\",\"https://www.clarin.com/mundo/gruas-familiares-victimas-terremotos-claman-regreso-rescatistas-extranjeros-venezuela_0_mDqeBX7GeJ.html\",\"\",\"2026-07-13T15:25:32\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"cnbc\",\"CNBC\",\"eeuu\",\"VERDE_con_cobertura\",\"Rebellions is targeting an IPO in South Korea next year: CEO Park\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"cnn_esp\",\"CNN en Español\",\"eeuu\",\"VERDE_con_cobertura\",\"¿Los escombros también sepultaron la economía? El dólar se acelera, los precios suben y los venezolanos se inquietan\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"cnn_esp\",\"CNN en Español\",\"eeuu\",\"VERDE_con_cobertura\",\"Video\n                    \"\"De vender hamburguesas a salvar vidas\"\". McDonald’s se convierte en centro médico tras terremoto en Venezuela\n                        3:05\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"cnn_esp\",\"CNN en Español\",\"eeuu\",\"VERDE_con_cobertura\",\"La cifra de fallecidos por los terremotos en Venezuela sube a 4.490\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"cnn_esp\",\"CNN en Español\",\"eeuu\",\"VERDE_con_cobertura\",\"Un corte por la dignidad: estilistas en Venezuela van a hospitales y refugios para ayudar a damnificados por los terremotos\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"cnn_esp\",\"CNN en Español\",\"eeuu\",\"VERDE_con_cobertura\",\"\"\"El peor momento\"\" para los venezolanos en Estados Unidos: crecen los llamados para que regrese el TPS luego de los terremotos\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"cnn_esp\",\"CNN en Español\",\"eeuu\",\"VERDE_con_cobertura\",\"Video\n                    Fue deportada de EE.UU. y horas después sobrevivió a los terremotos en Venezuela\n                        2:29\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"cnn_esp\",\"CNN en Español\",\"eeuu\",\"VERDE_con_cobertura\",\"Un vuelo de deportados venezolanos partió desde Miami horas antes del sismo. El hotel donde se alojaban colapsó\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"Cifra de fallecidos por terremotos en Venezuela asciende a casi 4.500\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"Terremoto en Venezuela\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"Más de 36,000 mujeres embarazadas están en riesgo tras sismos en Venezuela, según la ONU\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"No hay grúas para sacar a Fabio, el niño venezolano de 9 años atrapado bajo escombros tras terremotos\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"Cifra de víctimas mortales sigue en aumento mientras Venezuela intenta recuperar la normalidad\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"Miami abre un centro de acopio en el loanDepot Park para damnificados del terremoto en Venezuela\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"Venezolano Jesús Valenzuela sigue en carrera: la FIFA respalda al árbitro venezolano en el Mundial\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"Delcy Rodríguez designa a su jefe de misión en EEUU como nuevo canciller tras destituir a Yván Gil\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"Reparación del cable submarino de fibra óptica en Venezuela, tras los sismos, debe esperar más tiempo\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"Miembro de ETA sobrevive a sismos en Venezuela;  mientras en España reclaman detención\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"María Corina Machado y Edmundo González reciben Premio de Convivencia en España por su vocación democrática\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores;actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"Venezuela, terremotos, Delcy Rodríguez y Trump\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores;actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"VENEZUELA  Encuentran cuerpo del niño Fabio y de su madre en escombros de su residencia en La Guaira   Por\n                            REDACCIÓN/Diario Las Américas\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"EMERGENCIA  Cifra de fallecidos por terremotos en Venezuela asciende a casi 4.500   Por\n                            REDACCIÓN/Diario Las Américas\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"TRAGEDIA  Más de 36,000 mujeres embarazadas están en riesgo tras sismos en Venezuela, según la ONU   Por\n                            REDACCIÓN/Diario Las Américas\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"TRAGEDIA  No hay grúas para sacar a Fabio, el niño venezolano de 9 años atrapado bajo escombros tras terremotos   Por\n                            REDACCIÓN/Diario Las Américas\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"Tragedia  Cifra de víctimas mortales sigue en aumento mientras Venezuela intenta recuperar la normalidad   Por\n                            REDACCIÓN/Diario Las Américas\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"ALTRUISMO  Miami abre un centro de acopio en el loanDepot Park para damnificados del terremoto en Venezuela   Por\n                            Daniel Castropé\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"Fútbol  Venezolano Jesús Valenzuela sigue en carrera: la FIFA respalda al árbitro venezolano en el Mundial   Por\n                            Pedro Felipe Hernández\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"¿CAMBIOS?  Delcy Rodríguez designa a su jefe de misión en EEUU como nuevo canciller tras destituir a Yván Gil   Por\n                            REDACCIÓN/Diario Las Américas\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"TRAGEDIA  Reparación del cable submarino de fibra óptica en Venezuela, tras los sismos, debe esperar más tiempo   Por\n                            REDACCIÓN/Diario Las Américas\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"TRÁMITES  Miembro de ETA sobrevive a sismos en Venezuela;  mientras en España reclaman detención   Por\n                            REDACCIÓN/Diario Las Américas\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"GALARDÓN\t\t\tMaría Corina Machado y Edmundo González reciben Premio de Convivencia en España por su vocación democrática\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores;actores\",\"\"\n\"dlamericas\",\"Diario Las Américas\",\"eeuu\",\"VERDE_con_cobertura\",\"OPINIÓN\t\tVenezuela, terremotos, Delcy Rodríguez y Trump   Por\n                            VENAMÉRICA\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores;actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Mexico is placing an enormous bet on rail\",\"https://www.economist.com/the-americas/2026/07/06/mexico-is-placing-an-enormous-bet-on-rail\",\"\",\"2026-07-06T17:19:34\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Venezuelans are furious with the American-backed regime\",\"https://www.economist.com/the-americas/2026/07/02/venezuelans-are-furious-with-the-american-backed-regime\",\"\",\"2026-07-02T11:15:20\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"El Boletín newsletter: An earthquake shakes Venezuela’s political reset\",\"https://www.economist.com/the-americas/2026/06/30/el-boletin-newsletter-an-earthquake-shakes-venezuelas-political-reset\",\"\",\"2026-06-30T08:08:42\",\"\",\"\",\"\",\"\",\"\",\"actores;actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"How will America respond to Venezuela’s deadly quakes?\",\"https://www.economist.com/the-americas/2026/06/28/how-will-america-respond-to-venezuelas-deadly-quakes\",\"\",\"2026-06-28T19:36:10\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Venezuela suffers its worst earthquake in a century\",\"https://www.economist.com/the-americas/2026/06/25/venezuela-suffers-its-worst-earthquake-in-a-century\",\"\",\"2026-06-25T20:16:44\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"America is using force to drive gangsters from Venezuela’s gold\",\"https://www.economist.com/the-americas/2026/06/25/america-is-using-force-to-drive-gangsters-from-venezuelas-gold\",\"\",\"2026-06-25T12:58:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Two powerful earthquakes hit Venezuela\",\"https://www.economist.com/the-americas/2026/06/25/two-powerful-earthquakes-hit-venezuela\",\"\",\"2026-06-25T12:58:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Venezuela’s 100-year territorial dispute is back in court\",\"https://www.economist.com/the-americas/2026/05/07/venezuelas-100-year-territorial-dispute-is-back-in-court\",\"\",\"2026-05-07T13:08:12\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"The Venezuela Donald Trump “runs” is a land of surreal contrasts\",\"https://www.economist.com/the-americas/2026/03/30/the-venezuela-donald-trump-runs-is-a-land-of-surreal-contrasts\",\"\",\"2026-03-30T13:22:39\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Nicaragua has so far dodged the fate of Cuba and Venezuela\",\"https://www.economist.com/the-americas/2026/02/16/nicaragua-has-so-far-dodged-the-fate-of-cuba-and-venezuela\",\"\",\"2026-02-16T18:13:14\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"How to tell if Venezuela is heading for democracy\",\"https://www.economist.com/the-americas/2026/01/27/how-to-tell-if-venezuela-is-heading-for-democracy\",\"\",\"2026-01-27T16:39:29\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Venezuelans believe Donald Trump has offered them a better future\",\"https://www.economist.com/the-americas/2026/01/13/venezuelans-believe-donald-trump-has-offered-them-a-better-future\",\"\",\"2026-01-13T18:08:36\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Donald Trump’s Venezuela oil deal is already up and running\",\"https://www.economist.com/the-americas/2026/01/10/donald-trumps-venezuela-oil-deal-is-already-up-and-running\",\"\",\"2026-01-10T15:46:07\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Venezuela’s new dictator is a regime loyalist—and America’s hostage\",\"https://www.economist.com/the-americas/2026/01/09/venezuelas-new-dictator-is-a-regime-loyalist-and-americas-hostage\",\"\",\"2026-01-09T15:27:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"The Venezuelan regime is rapidly consolidating its grip on power\",\"https://www.economist.com/the-americas/2026/01/06/the-venezuelan-regime-is-rapidly-consolidating-its-grip-on-power\",\"\",\"2026-01-06T15:02:52\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Latin America fears what comes next after the Venezuela raid\",\"https://www.economist.com/the-americas/2026/01/06/latin-america-fears-what-comes-next-after-the-venezuela-raid\",\"\",\"2026-01-06T14:30:45\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"The many risks to Donald Trump’s plans to “run” Venezuela\",\"https://www.economist.com/the-americas/2026/01/04/the-many-risks-to-donald-trumps-plans-to-run-venezuela\",\"\",\"2026-01-04T10:23:53\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"How the Pentagon snatched Nicolás Maduro\",\"https://www.economist.com/the-americas/2026/01/03/how-the-pentagon-snatched-nicolas-maduro\",\"\",\"2026-01-03T21:16:06\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Donald Trump wants to run Venezuela, and dominate the western hemisphere\",\"https://www.economist.com/the-americas/2026/01/03/donald-trump-wants-to-run-venezuela-and-dominate-the-western-hemisphere\",\"\",\"2026-01-03T20:26:48\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"The United States has captured Venezuela’s dictator, Nicolás Maduro\",\"https://www.economist.com/the-americas/2026/01/03/the-united-states-has-captured-venezuelas-dictator-nicolas-maduro\",\"\",\"2026-01-03T10:23:37\",\"\",\"\",\"\",\"\",\"\",\"actores;actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Christmas in Caracas with Donald Trump on the doorstep\",\"https://www.economist.com/the-americas/2025/12/22/christmas-in-caracas-with-donald-trump-on-the-doorstep\",\"\",\"2025-12-22T14:22:22\",\"\",\"\",\"\",\"\",\"\",\"indirectos\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"An oil boom where the Amazon meets the Atlantic\",\"https://www.economist.com/the-americas/2025/12/15/an-oil-boom-where-the-amazon-meets-the-atlantic\",\"\",\"2025-12-15T18:20:57\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"An American oil blockade would devastate the Venezuelan regime\",\"https://www.economist.com/the-americas/2025/12/12/an-american-oil-blockade-would-devastate-the-venezuelan-regime\",\"\",\"2025-12-12T10:12:10\",\"\",\"\",\"\",\"\",\"\",\"actores;actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Is Donald Trump preparing to strike Venezuela or lining up a deal?\",\"https://www.economist.com/the-americas/2025/11/19/is-donald-trump-preparing-to-strike-venezuela-or-lining-up-a-deal\",\"\",\"2025-11-19T12:38:19\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"War looms in Venezuela as Trump tests an “Americas First” doctrine\",\"https://www.economist.com/the-americas/2025/11/06/war-looms-in-venezuela-as-trump-tests-an-americas-first-doctrine\",\"\",\"2025-11-06T14:01:38\",\"\",\"\",\"\",\"\",\"\",\"actores;actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Tracking America’s pressure campaign on Venezuela\",\"https://www.economist.com/interactive/the-americas/2025/11/05/tracking-american-drug-boat-strikes-off-venezuela-coast\",\"\",\"2025-11-05T13:00:39\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"An EU-Mercosur trade deal looks close to ratification\",\"https://www.economist.com/the-americas/2025/11/04/an-eu-mercosur-trade-deal-looks-close-to-ratification\",\"\",\"2025-11-04T14:55:53\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"The meaning of America’s vast military build-up off Venezuela\",\"https://www.economist.com/the-americas/2025/10/27/the-meaning-of-americas-vast-military-build-up-off-venezuela\",\"\",\"2025-10-27T16:55:19\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Javier Milei’s fate turns on an upcoming election. Can he win?\",\"https://www.economist.com/the-americas/2025/10/23/javier-mileis-fate-turns-on-an-upcoming-election-can-he-win\",\"\",\"2025-10-23T13:11:26\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Venezuelans wonder if America will bring down Nicolás Maduro\",\"https://www.economist.com/the-americas/2025/10/15/venezuelans-wonder-if-america-will-bring-down-nicolas-maduro\",\"\",\"2025-10-15T22:15:25\",\"\",\"\",\"\",\"\",\"\",\"actores;actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"María Corina Machado, Venezuela’s “Iron Lady”, gets the peace Nobel\",\"https://www.economist.com/the-americas/2025/10/10/maria-corina-machado-venezuelas-iron-lady-gets-the-peace-nobel\",\"\",\"2025-10-10T15:39:53\",\"\",\"\",\"\",\"\",\"\",\"actores;actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"From a forgotten country to an 11bn barrel petrostate\",\"https://www.economist.com/the-americas/2025/09/17/from-a-forgotten-country-to-an-11bn-barrel-petrostate\",\"\",\"2025-09-17T14:04:33\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Climate change threatens an Andean ski boom\",\"https://www.economist.com/the-americas/2025/08/21/climate-change-threatens-an-andean-ski-boom\",\"\",\"2025-08-21T13:04:05\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"An interview with Daniel Noboa, Ecuador’s president\",\"https://www.economist.com/the-americas/2025/06/12/an-interview-with-daniel-noboa-ecuadors-president\",\"\",\"2025-06-12T17:46:08\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Venezuela’s sound of silence\",\"https://www.economist.com/the-americas/2025/05/29/venezuelas-sound-of-silence\",\"\",\"2025-05-29T12:48:24\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"An election win boosts Javier Milei’s reform project\",\"https://www.economist.com/the-americas/2025/05/22/an-election-win-boosts-javier-mileis-reform-project\",\"\",\"2025-05-22T12:47:13\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Mark Carney must keep an expansionist America at bay\",\"https://www.economist.com/the-americas/2025/03/10/mark-carney-must-keep-an-expansionist-america-at-bay\",\"\",\"2025-03-10T06:45:16\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"An Oscar-nominated film sparks a reckoning with Brazil’s dictatorship\",\"https://www.economist.com/the-americas/2025/02/20/an-oscar-nominated-film-sparks-a-reckoning-with-brazils-dictatorship\",\"\",\"2025-02-20T11:09:07\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Argentina’s Javier Milei is betting big on an oil gusher\",\"https://www.economist.com/the-americas/2025/02/16/argentinas-javier-milei-is-betting-big-on-an-oil-gusher\",\"\",\"2025-02-16T12:05:45\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Donald Trump turns an angry gaze south\",\"https://www.economist.com/the-americas/2025/01/30/donald-trump-turns-an-angry-gaze-south\",\"\",\"2025-01-30T15:42:32\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Armed groups are terrorising Colombia’s border with Venezuela\",\"https://www.economist.com/the-americas/2025/01/30/armed-groups-are-terrorising-colombias-border-with-venezuela\",\"\",\"2025-01-30T15:42:32\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Venezuela’s Nicolás Maduro looks set to take the throne\",\"https://www.economist.com/the-americas/2025/01/02/venezuelas-nicolas-maduro-looks-set-to-take-the-throne\",\"\",\"2025-01-02T14:06:25\",\"\",\"\",\"\",\"\",\"\",\"actores;actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Can an agreement with the EU resurrect Mercosur?\",\"https://www.economist.com/the-americas/2024/12/12/can-an-agreement-with-the-eu-resurrect-mercosur\",\"\",\"2024-12-12T13:39:21\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"An interview with Javier Milei, Argentina’s president\",\"https://www.economist.com/the-americas/2024/11/28/an-interview-with-javier-milei-argentinas-president\",\"\",\"2024-11-28T20:01:21\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"economist\",\"The Economist\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"BRICS isn’t exactly picky, but has just rejected Venezuela\",\"https://www.economist.com/the-americas/2024/11/07/brics-isnt-exactly-picky-but-has-just-rejected-venezuela\",\"\",\"2024-11-07T14:13:37\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"eltiempo\",\"El Tiempo\",\"iberoamerica\",\"VERDE_con_cobertura\",\"Nasa revela que los terremotos en Venezuela desplazaron hasta 60 centímetros la superficie terrestre\",\"https://www.eltiempo.com/mundo/venezuela/nasa-revela-que-los-terremotos-en-venezuela-desplazaron-hasta-60-centimetros-la-superficie-terrestre-3570958\",\"\",\"2026-07-13T22:58:28\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"eltiempo\",\"El Tiempo\",\"iberoamerica\",\"VERDE_con_cobertura\",\"Delcy Rodríguez designó a Félix Plasencia como nuevo canciller en Venezuela tras destituir a Yván Gil: 'Tiene amplia experiencia en la diplomacia'\",\"https://www.eltiempo.com/mundo/venezuela/delcy-rodriguez-designo-a-felix-plasencia-como-nuevo-canciller-en-venezuela-tras-destituir-a-yvan-gil-tiene-amplia-experiencia-en-la-diplomacia-3570957\",\"\",\"2026-07-13T22:38:48\",\"\",\"\",\"\",\"\",\"\",\"actores;actores\",\"\"\n\"eltiempo\",\"El Tiempo\",\"iberoamerica\",\"VERDE_con_cobertura\",\"La inflación en Venezuela se dispara a 13,8 % en junio, mes de los terremotos\",\"https://www.eltiempo.com/mundo/venezuela/la-inflacion-en-venezuela-se-dispara-a-13-8-en-junio-mes-de-los-terremotos-3570948\",\"\",\"2026-07-13T20:21:20\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"eltiempo\",\"El Tiempo\",\"iberoamerica\",\"VERDE_con_cobertura\",\"González Urrutia: 'Reconstruir Venezuela exigirá recuperar instituciones y la confianza'\",\"https://www.eltiempo.com/mundo/venezuela/gonzalez-urrutia-reconstruir-venezuela-exigira-recuperar-instituciones-y-la-confianza-3570946\",\"\",\"2026-07-13T20:15:49\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"emol\",\"El Mercurio (Emol)\",\"iberoamerica\",\"VERDE_con_cobertura\",\"No se pudo realizar la migración de tu cuenta.\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"estructurales\",\"\"\n\"foreignaffairs\",\"Foreign Affairs (CFR)\",\"revistas_semanales\",\"VERDE_con_cobertura\",\"Worse Than an Axis\",\"https://www.foreignaffairs.com/china/worse-axis\",\"\",\"2026-07-01T04:00:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"latimes\",\"Los Angeles Times\",\"eeuu\",\"VERDE_con_cobertura\",\"With AI character Tilly Norwood set for feature-film debut, Hollywood debates what it means to be an actor\",\"https://www.latimes.com/entertainment-arts/movies/story/2026-07-13/tilly-norwood-starring-role-actor-hollywood-wrestles-with-ai\",\"\",\"2026-07-13T10:00:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"latimes\",\"Los Angeles Times\",\"eeuu\",\"VERDE_con_cobertura\",\"A vacant lot near City Hall will become an art park. Why are some people objecting?\",\"https://www.latimes.com/california/story/2026-07-13/vacant-lot-near-city-hall-will-become-art-park-why-are-some-people-objecting\",\"\",\"2026-07-13T10:00:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"latimes\",\"Los Angeles Times\",\"eeuu\",\"VERDE_con_cobertura\",\"Are the Dodgers tone deaf? White House visit is an insult to their fans\",\"https://www.latimes.com/sports/dodgers/story/2026-07-09/dodgers-white-house-visit-trump-insult-to-fans\",\"\",\"2026-07-09T22:54:08\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"latimes\",\"Los Angeles Times\",\"eeuu\",\"VERDE_con_cobertura\",\"After 58 years, Echo Park loses an iconic neighborhood burrito stand\",\"https://www.latimes.com/food/story/2026-07-09/echo-park-community-mourns-historic-burrito-king\",\"\",\"2026-07-10T01:18:07\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"latimes\",\"Los Angeles Times\",\"eeuu\",\"VERDE_con_cobertura\",\"He dreamed of a Midcentury compound on an 'unbuildable' L.A. hillside. It took 12 years\",\"https://www.latimes.com/lifestyle/story/2026-06-25/la-family-architects-design-build-side-by-side-homes-hillside-lot-mount-washington\",\"\",\"2026-06-25T10:00:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"latimes\",\"Los Angeles Times\",\"eeuu\",\"VERDE_con_cobertura\",\"He turned his one-bedroom West Hollywood apartment into an entertainer's paradise\",\"https://www.latimes.com/lifestyle/story/2026-06-26/west-hollywood-apartment-made-for-entertaining-not-boring-rentals\",\"\",\"2026-06-26T10:00:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"lemonde\",\"Le Monde\",\"francia\",\"VERDE_con_cobertura\",\"Venezuela : le double séisme révèle la fragilité des logements sociaux, écroulés tels des châteaux de cartes\",\"https://www.lemonde.fr/international/article/2026/07/13/venezuela-le-double-seisme-revele-la-fragilite-des-logements-sociaux-ecroules-tels-des-chateaux-de-cartes_6723082_3210.html\",\"\",\"2026-07-13T12:00:07\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"reforma\",\"Reforma\",\"iberoamerica\",\"VERDE_con_cobertura\",\"Arriban a Venezuela buques de la Semar con ayuda humanitaria\",\"https://www.reforma.com/arriban-a-venezuela-buques-de-la-semar-con-ayuda-humanitaria/ar3239638\",\"\",\"2026-07-13T22:47:04\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"rt\",\"RT en Español\",\"rusia\",\"VERDE_con_cobertura\",\"\"\"Abrazado a sus abuelos\"\": Así hallaron el cuerpo del niño Lucas Gámez tras los sismos en Venezuela\",\"https://actualidad.rt.com/actualidad/616555-abrazado-abuelo-hallaron-cuerpo-lucas-gamez?utm_source=rss&utm_medium=rss&utm_campaign=all\",\"\",\"2026-07-13T23:51:11\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"sputnik\",\"Sputnik (Noticias LATAM)\",\"rusia\",\"VERDE_con_cobertura\",\"Supera los 4.500 el número de fallecidos por el doble terremoto en Venezuela\",\"https://noticiaslatam.lat/20260713/supera-los-4500-el-numero-de-fallecidos-por-el-doble-terremoto-en-venezuela-1174271969.html\",\"\",\"2026-07-13T22:59:54\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"sputnik\",\"Sputnik (Noticias LATAM)\",\"rusia\",\"VERDE_con_cobertura\",\"Venezuela anuncia al nuevo canciller que sustituirá a Yván Gil\",\"https://noticiaslatam.lat/20260713/venezuela-anuncia-al-nuevo-canciller-que-sustituira-a-yvan-gil-1174271870.html\",\"\",\"2026-07-13T22:55:25\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"sputnik\",\"Sputnik (Noticias LATAM)\",\"rusia\",\"VERDE_con_cobertura\",\"Irán repudia el incumplimiento del memorando de entendimiento por parte de EEUU\",\"https://noticiaslatam.lat/20260713/iran-repudia-el-incumplimiento-del-memorando-de-entendimiento-por-parte-de-eeuu-1174264707.html\",\"\",\"2026-07-13T14:01:57\",\"\",\"\",\"\",\"\",\"\",\"estructurales\",\"\"\n\"sputnik\",\"Sputnik (Noticias LATAM)\",\"rusia\",\"VERDE_con_cobertura\",\"Venezuela recibe 88 contenedores con ayuda humanitaria de la Comunidad del Caribe\",\"https://noticiaslatam.lat/20260712/venezuela-recibe-88-contenedores-con-ayuda-humanitaria-de-la-comunidad-del-caribe-1174261206.html\",\"\",\"2026-07-12T23:03:05\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"sputnik\",\"Sputnik (Noticias LATAM)\",\"rusia\",\"VERDE_con_cobertura\",\"Se suman 157 fallecimientos al saldo fatal del doblete sísmico en Venezuela: van 4.490 en total\",\"https://noticiaslatam.lat/20260712/se-suman-157-fallecimientos-al-saldo-fatal-del-doblete-sismico-en-venezuela-van-4490-en-total-1174260914.html\",\"\",\"2026-07-12T22:58:36\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"sputnik\",\"Sputnik (Noticias LATAM)\",\"rusia\",\"VERDE_con_cobertura\",\"Llega a Venezuela el segundo cargamento de ayuda humanitaria rusa para los afectados por sismos\",\"https://noticiaslatam.lat/20260712/llega-a-venezuela-el-segundo-cargamento-de-ayuda-humanitaria-rusa-para-los-afectados-por-sismos-1174258331.html\",\"\",\"2026-07-12T13:19:18\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"sputnik\",\"Sputnik (Noticias LATAM)\",\"rusia\",\"VERDE_con_cobertura\",\"Este es el estimado de cuántas viviendas se requieren en Venezuela para los afectados por los sismos\",\"https://noticiaslatam.lat/20260711/este-es-el-estimado-de-cuantas-viviendas-se-requieren-en-venezuela-para-los-afectados-por-los-1174254784.html\",\"\",\"2026-07-11T22:13:02\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"sputnik\",\"Sputnik (Noticias LATAM)\",\"rusia\",\"VERDE_con_cobertura\",\"Venezuela agradece a Rusia tras la recepción de su primer envío de ayuda humanitaria\",\"https://noticiaslatam.lat/20260711/venezuela-agradece-a-rusia-tras-la-recepcion-de-su-primer-envio-de-ayuda-humanitaria-1174254233.html\",\"\",\"2026-07-11T21:42:14\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"sputnik\",\"Sputnik (Noticias LATAM)\",\"rusia\",\"VERDE_con_cobertura\",\"Aumenta a más de 4.300 el número de muertos tras los sismos en Venezuela\",\"https://noticiaslatam.lat/20260711/aumenta-a-mas-de-4300-el-numero-de-muertos-tras-los-sismos-en-venezuela-1174253526.html\",\"\",\"2026-07-11T18:25:23\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"sputnik\",\"Sputnik (Noticias LATAM)\",\"rusia\",\"VERDE_con_cobertura\",\"Arriba a Venezuela el primer cargamento con ayuda humanitaria desde Rusia | Videos\",\"https://noticiaslatam.lat/20260711/arriba-a-venezuela-el-primer-cargamento-con-ayuda-humanitaria-desde-rusia-1174252935.html\",\"\",\"2026-07-11T18:04:59\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"sputnik\",\"Sputnik (Noticias LATAM)\",\"rusia\",\"VERDE_con_cobertura\",\"La reconstrucción en Venezuela \"\"va a contribuir a repuntar\"\" la economía nacional, anticipa un experto\",\"https://noticiaslatam.lat/20260711/la-reconstruccion-en-venezuela-va-a-contribuir-a-repuntar-la-economia-nacional-anticipa-experto-1174249028.html\",\"\",\"2026-07-11T03:48:27\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"sputnik\",\"Sputnik (Noticias LATAM)\",\"rusia\",\"VERDE_con_cobertura\",\"Aumenta el número de fallecidos en Venezuela por los sismos a más de 4.000\",\"https://noticiaslatam.lat/20260710/aumenta-el-numero-de-fallecidos-en-venezuela-por-los-sismos-a-mas-de-4000-1174245727.html\",\"\",\"2026-07-10T22:26:58\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"sputnik\",\"Sputnik (Noticias LATAM)\",\"rusia\",\"VERDE_con_cobertura\",\"\"\"La sonrisa ha sido una extraordinaria terapia\"\": Venezuela crea la Ruta de la Esperanza para ayudar a la población\",\"https://noticiaslatam.lat/20260710/la-sonrisa-ha-sido-una-extraordinaria-terapia-venezuela-crea-la-ruta-de-la-esperanza-para-ayudar-a-1174233561.html\",\"\",\"2026-07-10T02:00:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"sputnik\",\"Sputnik (Noticias LATAM)\",\"rusia\",\"VERDE_con_cobertura\",\"\"\"Los recursos bloqueados deben volver para reconstruir Venezuela\"\", afirma vicepresidente sectorial de Planificación\",\"https://noticiaslatam.lat/20260709/los-recursos-bloqueados-deben-volver-para-reconstruir-venezuela-afirma-vicepresidente-sectorial-de-1174232047.html\",\"\",\"2026-07-09T22:30:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"tass\",\"TASS\",\"rusia\",\"VERDE_con_cobertura\",\"Venezuelan earthquake death toll reaches 4,561\",\"https://tass.com/world/2159773\",\"\",\"2026-07-13T19:38:13\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"watimes\",\"The Washington Times\",\"eeuu\",\"VERDE_con_cobertura\",\"Support for Israel isn&#8217;t a high priority for younger Jewish Americans, an AP-NORC poll finds\",\"None\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"wsj\",\"The Wall Street Journal\",\"eeuu\",\"VERDE_con_cobertura\",\"Fears Over New Luxury Jet Forced Trump Back to an Old Air Force One After Israeli Warning\",\"https://www.wsj.com/politics/national-security/trump-air-force-one-israel-iran-intelligence-7b51d456\",\"\",\"2026-07-11T04:00:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"wsj\",\"The Wall Street Journal\",\"eeuu\",\"VERDE_con_cobertura\",\"An Elite Club Is in the Firing Line of India’s War on Its Colonial Past\",\"https://www.wsj.com/world/asia/an-elite-club-is-in-the-firing-line-of-indias-war-on-its-colonial-past-80571fd4\",\"\",\"2026-07-10T17:50:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"wsj\",\"The Wall Street Journal\",\"eeuu\",\"VERDE_con_cobertura\",\"An Army of Foreign Doctors Is Saving Quake Victims From Venezuela’s Hospitals\",\"https://www.wsj.com/world/americas/venezuela-earthquake-healthcare-foreign-doctors-3cb9dcb8\",\"\",\"2026-07-11T18:00:00\",\"\",\"\",\"\",\"\",\"\",\"actores;actores\",\"\"\n\"wsj\",\"The Wall Street Journal\",\"eeuu\",\"VERDE_con_cobertura\",\"How Venezuelan Bureaucracy Thwarted an American Earthquake Rescue Squad\",\"https://www.wsj.com/world/americas/how-venezuelan-bureaucracy-thwarted-an-american-earthquake-rescue-squad-6a175a3f\",\"\",\"2026-07-09T23:00:00\",\"\",\"\",\"\",\"\",\"\",\"actores;actores\",\"\"\n\"wsj\",\"The Wall Street Journal\",\"eeuu\",\"VERDE_con_cobertura\",\"An English Estate Once Home to Princess Margaret Asks $5.29 Million\",\"https://www.wsj.com/real-estate/luxury-homes/princess-margaret-lord-snowdon-old-house-20ffcd07\",\"\",\"2026-07-08T17:30:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"wsj\",\"The Wall Street Journal\",\"eeuu\",\"VERDE_con_cobertura\",\"Opinion | An SOS From the Cuban People\",\"https://www.wsj.com/opinion/an-sos-from-the-cuban-people-67343e31\",\"\",\"2026-07-12T20:28:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"wsj\",\"The Wall Street Journal\",\"eeuu\",\"VERDE_con_cobertura\",\"Wagner’s Remnants Are Running an Opioid Empire in the Center of Africa\",\"https://www.wsj.com/world/africa/russia-wagner-africa-opioid-trade-d015c4bc\",\"\",\"2026-07-12T02:00:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"wsj\",\"The Wall Street Journal\",\"eeuu\",\"VERDE_con_cobertura\",\"The Science Behind Venezuela’s Doublet Earthquake\",\"https://www.wsj.com/world/americas/the-science-behind-venezuelas-doublet-earthquake-6246baea\",\"\",\"2026-06-25T16:02:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"wsj\",\"The Wall Street Journal\",\"eeuu\",\"VERDE_con_cobertura\",\"The U.S. Navy’s New Insurance Policy for War With China Is an Australian Base\",\"https://www.wsj.com/world/the-u-s-navys-new-insurance-policy-for-war-with-china-is-an-australian-base-764af616\",\"\",\"2026-02-08T03:00:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"\n\"wsj\",\"The Wall Street Journal\",\"eeuu\",\"VERDE_con_cobertura\",\"Bondi Beach Terror Suspects Condemned ‘Zionists’ and Amassed an Arsenal\",\"https://www.wsj.com/world/oceania/bondi-beach-terror-suspects-condemned-zionists-and-amassed-an-arsenal-f1b1cf04\",\"\",\"2025-12-22T11:11:00\",\"\",\"\",\"\",\"\",\"\",\"actores\",\"\"",
+  "panel_calidad": {
+    "hallazgos_iniciales": 2001,
+    "hallazgos_deduplicados": 0,
+    "hallazgos_agrupados": 0,
+    "actores_validos": 0,
+    "actores_invalidos": 0,
+    "timestamps_validos": 0,
+    "timestamps_plausibles": 0,
+    "timestamps_dudosos": 0,
+    "fallas_nivel_1": 0,
+    "fallas_nivel_2": 0,
+    "reintentos_ejecutados": 0,
+    "costo_total_llm": 0.0,
+    "tokens_totales": 0,
+    "tiempo_ejecucion": 2810.36
+  }
+}
