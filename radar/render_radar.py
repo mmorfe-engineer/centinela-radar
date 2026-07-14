@@ -150,6 +150,11 @@ def _render_top10(top10: List[Dict]) -> str:
     return "\n".join(items)
 
 
+def _tiene_url_real(h: dict) -> bool:
+    url = h.get("url") or h.get("fuente_url") or ""
+    return bool(url) and url.startswith(("http://", "https://")) and not url.startswith("synthetic://")
+
+
 def _render_todos_hallazgos(hallazgos: List[Dict]) -> str:
     """Renderiza una lista completa de todos los hallazgos sobre Venezuela."""
     # Filtrar solo hallazgos que mencionan Venezuela
@@ -158,9 +163,12 @@ def _render_todos_hallazgos(hallazgos: List[Dict]) -> str:
         if "venezuela" in normalizar_titulo(h.get("titulo", "") or "")
         or any("venezuela" in normalizar_titulo(c or "") for c in h.get("conectores_activados", []))
     ]
-    
+
     if not hallazgos_venezuela:
         return '<p class="empty">Sin hallazgos disponibles</p>'
+
+    # Artículos con link verificable primero
+    hallazgos_venezuela.sort(key=lambda h: 0 if _tiene_url_real(h) else 1)
 
     items = []
     for idx, hallazgo in enumerate(hallazgos_venezuela, 1):

@@ -378,9 +378,17 @@ def generar_top10_global(
         
         # Filtrar grupos relevantes (excluir deportes, cultura, etc.)
         grupos_relevantes = [g for g in grupos if es_grupo_relevante(g)]
-        
-        # Tomar Top 10 de los relevantes
-        top10 = grupos_relevantes[:10]
+
+        # Diversidad: máximo 1 grupo por medio para evitar dominancia de una sola fuente
+        medios_en_top: set = set()
+        top10 = []
+        for grupo in grupos_relevantes:
+            medio_ids = grupo.get("medio_ids", set())
+            if not medio_ids.intersection(medios_en_top):
+                top10.append(grupo)
+                medios_en_top.update(medio_ids)
+            if len(top10) >= 10:
+                break
         
         # Formatear resultado
         resultado = []
