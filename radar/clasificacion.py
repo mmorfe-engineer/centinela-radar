@@ -182,7 +182,8 @@ def clasificar_hallazgo(
         resultado_llm = cliente_llm.completar(
             accion="clasificar",
             prompt=prompt,
-            modelo="deepseek-r1",
+            # modelo=None → usa routing table: nvidia/deepseek-ai/deepseek-r1
+            # con fallback automático a mistral/mistral-large-latest
             temperatura=0.0,
             max_tokens=500
         )
