@@ -179,16 +179,21 @@ def clasificar_hallazgo(
         prompt = crear_prompt_clasificacion(hallazgo)
         
         # Ejecutar clasificación con DeepSeek (acción="clasificar")
-        respuesta = cliente_llm.completar(
+        resultado_llm = cliente_llm.completar(
             accion="clasificar",
             prompt=prompt,
             modelo="deepseek-r1",
             temperatura=0.0,
             max_tokens=500
         )
-        
+
+        # completar() devuelve un dict; extraer el texto de la respuesta
+        if not resultado_llm.get("exito"):
+            raise RuntimeError(f"LLM falló: {resultado_llm.get('error', 'sin detalle')}")
+        respuesta_texto = resultado_llm.get("respuesta", "") or ""
+
         # Parsear respuesta
-        clasificacion = parsear_respuesta_clasificacion(respuesta)
+        clasificacion = parsear_respuesta_clasificacion(respuesta_texto)
         
         # Añadir clasificación al hallazgo
         resultado = hallazgo.copy()
