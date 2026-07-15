@@ -257,7 +257,7 @@ def render_html_radar(
 
 <header class="hdr">
     <div class="hdr-logo">Sala Situacional · Medios Internacionales</div>
-    <h1>📡 {nombre_visible}</h1>
+    <h1>{nombre_visible} 📡</h1>
     <div class="hdr-meta">
         <span class="badge badge-{corte_lower}">{corte}</span>
         <span>{fecha}</span>
