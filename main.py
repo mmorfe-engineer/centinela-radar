@@ -39,6 +39,30 @@ from radar.render_radar import render_html_radar, generar_mensaje_telegram
 PAGES_URL = "https://mmorfe-engineer.github.io/centinela-radar/"
 _VERDE = "VERDE_con_cobertura"
 
+# Entidades que confirman que un hallazgo es sobre Venezuela.
+# Los conectores en conectores.json pueden ser genéricos (ej: "sanciones", "petróleo");
+# este filtro garantiza que el artículo mencione Venezuela de forma explícita.
+_ENTIDADES_VENEZUELA = {
+    "venezuela", "venezolano", "venezolana", "venezolanos", "venezolanas",
+    "venezuelan", "venezuelans",
+    "maduro", "nicolas maduro", "nicolás maduro",
+    "chavez", "chavez", "chavismo", "chavista", "chavistas",
+    "psuv", "bolivariano", "bolivariana",
+    "miraflores", "pdvsa", "petro", "bolivar",
+    "caracas", "maracaibo",
+}
+
+
+def _es_sobre_venezuela(h: dict) -> bool:
+    """True si el hallazgo menciona explícitamente entidades venezolanas."""
+    titulo = normalizar_titulo(h.get("titulo", "") or "")
+    resumen = normalizar_titulo(h.get("resumen_1_frase", "") or "")
+    conectores_str = " ".join(
+        normalizar_titulo(c or "") for c in h.get("conectores_activados", [])
+    )
+    texto = f"{titulo} {resumen} {conectores_str}"
+    return any(e in texto for e in _ENTIDADES_VENEZUELA)
+
 
 def cargar_config():
     with open("config/reporte.json", "r", encoding="utf-8") as f:
@@ -127,32 +151,16 @@ def main():
             return True
 
     hallazgos_capa2_recientes = [
-        h for h in (
-            h for region_data in resultados_capa2.get("por_region", {}).values()
-            for h in region_data.get("hallazgos", [])
-        )
+        h
+        for region_data in resultados_capa2.get("por_region", {}).values()
+        for h in region_data.get("hallazgos", [])
         if _es_reciente(h)
     ]
 
     # 7. Unificar capa1 + capa2 filtrada
     todos_hallazgos = hallazgos_capa1 + hallazgos_capa2_recientes
 
-    # 8. Semáforo DEFINITIVO — calculado con hallazgos de AMBAS capas
-    # Un medio AMARILLO (fetch ok, sin Venezuela en RSS) puede ascender a VERDE
-    # si Perplexity encontró cobertura reciente para él.
-    # Un medio ROJO (fetch fallido) permanece ROJO independientemente de capa2.
-    hallazgos_por_medio_final = {}
-    for h in todos_hallazgos:
-        mid = h.get("medio_id", "desconocido")
-        hallazgos_por_medio_final.setdefault(mid, []).append(h)
-
-    estados, tablero, errores_medios = asignar_estados(
-        medios,
-        capa1_result,
-        hallazgos_por_medio_final
-    )
-
-    # 9. Deduplicar
+    # 8. Deduplicar
     import hashlib as _hashlib
     for h in todos_hallazgos:
         if not h.get('fuente_url'):
@@ -163,21 +171,39 @@ def main():
             h['fuente_url'] = url
     nuevos, telemetria_dedup = deduplicar(todos_hallazgos, hashes_previos=set())
 
-    # 10. Clasificar
+    # 9. Clasificar
     from radar.clasificacion import clasificar_todos
     nuevos = clasificar_todos(nuevos, cliente_llm)
 
-    # 11. Filtrar hallazgos a solo medios VERDES
-    # El informe muestra ÚNICAMENTE lo que el semáforo certifica como "con cobertura".
-    # Esto garantiza coherencia: N verdes = N fuentes en hallazgos.
-    medios_verdes = {mid for mid, est in estados.items() if est == _VERDE}
-    hallazgos_informe = [h for h in nuevos if h.get("medio_id") in medios_verdes]
+    # 10. FILTRO ESTRICTO: solo hallazgos que mencionan entidades venezolanas reales.
+    # Los conectores pueden ser genéricos ("sanciones", "petróleo") y capturar
+    # artículos de Irán, Colombia, etc. Este filtro garantiza que el hallazgo
+    # mencione Venezuela de forma explícita en título, resumen o conectores activados.
+    hallazgos_venezuela = [h for h in nuevos if _es_sobre_venezuela(h)]
 
-    # 12. Generar CSV
+    # 11. Semáforo DEFINITIVO — calculado con hallazgos Venezuela reales.
+    # Un medio es VERDE solo si tiene al menos un artículo sobre Venezuela confirmado.
+    # La coherencia garantizada: N verdes = exactamente los medios con hallazgos reales.
+    hallazgos_por_medio_ve = {}
+    for h in hallazgos_venezuela:
+        mid = h.get("medio_id", "desconocido")
+        hallazgos_por_medio_ve.setdefault(mid, []).append(h)
+
+    estados, tablero, errores_medios = asignar_estados(
+        medios,
+        capa1_result,
+        hallazgos_por_medio_ve
+    )
+
+    # 12. Hallazgos del informe = solo medios VERDES con hallazgos Venezuela
+    medios_verdes = {mid for mid, est in estados.items() if est == _VERDE}
+    hallazgos_informe = [h for h in hallazgos_venezuela if h.get("medio_id") in medios_verdes]
+
+    # 13. Generar CSV
     fecha, corte = generar_nombre_archivo_csv()
     csv_matriz = generar_csv_matriz(hallazgos_informe, medios, fecha, corte)
 
-    # 13. Construir contrato y renderizar informe HTML
+    # 14. Construir contrato y renderizar informe HTML
     contrato = {
         "correlativo": f"{datetime.now().strftime('%Y%m%d')}-RADAR-{corte_pipeline}",
         "tipo_reporte": "radar",
@@ -193,12 +219,12 @@ def main():
     }
     html = render_html_radar(contrato, url_pages=PAGES_URL, corte=corte_pipeline)
 
-    # 13.5 Guardar HTML para GitHub Pages
+    # 14.5 Guardar HTML para GitHub Pages
     os.makedirs("docs", exist_ok=True)
     with open("docs/index.html", "w", encoding="utf-8") as _f:
         _f.write(html)
 
-    # 14. Entregar — mensaje corto en Telegram + link al informe
+    # 15. Entregar — mensaje corto en Telegram + link al informe
     import logging as _logging
     msg_telegram = generar_mensaje_telegram(contrato, url_pages=PAGES_URL, corte=corte_pipeline)
     resultado_tg = enviar_telegram(msg_telegram)
@@ -208,10 +234,10 @@ def main():
         _logging.warning(f"Telegram falló: {resultado_tg.get('detalle')} | {resultado_tg.get('error')}")
     enviar_discord(html)
 
-    # 15. Guardar en rama datos
+    # 16. Guardar en rama datos
     guardar_salida(contrato["correlativo"], contrato)
 
-    # 16. Finalizar
+    # 17. Finalizar
     panel.finalizar()
     print(f"Tiempo de ejecución: {panel.resumen()['tiempo_ejecucion']}s")
     return 0
