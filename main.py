@@ -135,27 +135,30 @@ def main():
         cliente_llm=cliente_llm
     )
 
-    # Perplexity devuelve resultados históricos — filtrar a últimas 48h
     _limite_48h = datetime.now(tz=timezone.utc) - timedelta(hours=48)
 
-    def _es_reciente(h: dict) -> bool:
-        fecha_str = (h.get("fecha") or "").strip()
-        if not fecha_str:
-            return True  # sin fecha = RSS actual, se incluye
+    def _parsear_fecha(fecha_str: str):
+        """Intenta parsear una fecha ISO. Devuelve datetime o None."""
+        s = (fecha_str or "").strip()
+        if not s:
+            return None
         try:
-            f = datetime.fromisoformat(fecha_str.replace("Z", "+00:00"))
-            if f.tzinfo is None:
-                f = f.replace(tzinfo=timezone.utc)
-            return f >= _limite_48h
+            f = datetime.fromisoformat(s.replace("Z", "+00:00"))
+            return f if f.tzinfo else f.replace(tzinfo=timezone.utc)
         except Exception:
-            return True
+            return None
 
-    hallazgos_capa2_recientes = [
-        h
-        for region_data in resultados_capa2.get("por_region", {}).values()
-        for h in region_data.get("hallazgos", [])
-        if _es_reciente(h)
-    ]
+    # Capa 2: filtro ESTRICTO.
+    # Perplexity devuelve artículos históricos (2024, enero 2025/2026, etc.).
+    # Regla: sin fecha → EXCLUIR (nunca asumir "reciente" en Perplexity).
+    #        fecha inválida → EXCLUIR.
+    #        fecha válida fuera de 48h → EXCLUIR.
+    hallazgos_capa2_recientes = []
+    for region_data in resultados_capa2.get("por_region", {}).values():
+        for h in region_data.get("hallazgos", []):
+            f = _parsear_fecha(h.get("fecha"))
+            if f is not None and f >= _limite_48h:
+                hallazgos_capa2_recientes.append(h)
 
     # 7. Unificar capa1 + capa2 filtrada
     todos_hallazgos = hallazgos_capa1 + hallazgos_capa2_recientes
@@ -197,7 +200,31 @@ def main():
 
     # 12. Hallazgos del informe = solo medios VERDES con hallazgos Venezuela
     medios_verdes = {mid for mid, est in estados.items() if est == _VERDE}
-    hallazgos_informe = [h for h in hallazgos_venezuela if h.get("medio_id") in medios_verdes]
+
+    def _tiene_url_real(h: dict) -> bool:
+        url = (h.get("url") or h.get("fuente_url") or "").strip()
+        return url.startswith(("http://", "https://")) and "synthetic://" not in url
+
+    def _ts(h: dict) -> float:
+        f = _parsear_fecha(h.get("fecha"))
+        return f.timestamp() if f else 0.0
+
+    # Filtrar a VERDES con URL verificable, luego cap de 3 por medio (más recientes primero).
+    # Un medio VERDE puede tener varios artículos Venezuela en RSS; mostramos los mejores 3.
+    # Sin URL real = no hay forma de verificar → no se muestra en el informe.
+    _MAX_POR_MEDIO = 3
+    _candidatos = [
+        h for h in hallazgos_venezuela
+        if h.get("medio_id") in medios_verdes and _tiene_url_real(h)
+    ]
+    _por_medio: dict = {}
+    for h in _candidatos:
+        _por_medio.setdefault(h.get("medio_id", ""), []).append(h)
+
+    hallazgos_informe = []
+    for mid, lista in _por_medio.items():
+        lista_ord = sorted(lista, key=_ts, reverse=True)
+        hallazgos_informe.extend(lista_ord[:_MAX_POR_MEDIO])
 
     # 13. Generar CSV
     fecha, corte = generar_nombre_archivo_csv()
