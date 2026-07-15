@@ -233,6 +233,18 @@ def render_html_radar(
         .hallazgo-titulo{{font-size:14px;font-weight:500;margin-bottom:6px;line-height:1.4}}
         .hallazgo-meta{{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:11px}}
 
+        /* LEYENDA */
+        .leyenda{{background:var(--card);border-radius:12px;padding:18px 20px;margin:0 0 8px;
+                  border:1px solid var(--border);font-size:13px;color:var(--muted)}}
+        .leyenda-titulo{{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+                         color:var(--muted);margin-bottom:12px}}
+        .leyenda-grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}}
+        .leyenda-item{{display:flex;gap:8px;align-items:flex-start;line-height:1.4}}
+        .leyenda-icono{{font-size:15px;flex-shrink:0;margin-top:1px}}
+        .leyenda-texto strong{{color:var(--text);font-weight:600}}
+        .leyenda-horarios{{margin-top:12px;padding-top:12px;border-top:1px solid var(--border);
+                           font-size:12px;color:var(--muted)}}
+
         /* FOOTER */
         footer{{background:var(--header);color:#475569;padding:28px 20px;text-align:center;font-size:12px;margin-top:48px;line-height:2}}
         footer strong{{color:#94A3B8}}
@@ -282,6 +294,31 @@ def render_html_radar(
             <div class="sem-num">{rojo}</div>
             <div class="sem-label">🔴 No verificable</div>
             <div class="sem-sub">Error · paywall · timeout</div>
+        </div>
+    </div>
+
+    <div class="leyenda">
+        <div class="leyenda-titulo">Guía de lectura</div>
+        <div class="leyenda-grid">
+            <div class="leyenda-item">
+                <span class="leyenda-icono">🟢</span>
+                <span class="leyenda-texto"><strong>Con cobertura</strong> — el medio publicó al menos una pieza sobre Venezuela en este corte y pudimos verificarla con enlace directo.</span>
+            </div>
+            <div class="leyenda-item">
+                <span class="leyenda-icono">🟡</span>
+                <span class="leyenda-texto"><strong>Sin cobertura certificado</strong> — revisamos el medio, está operativo, y no encontramos publicaciones sobre Venezuela en la ventana de análisis.</span>
+            </div>
+            <div class="leyenda-item">
+                <span class="leyenda-icono">🔴</span>
+                <span class="leyenda-texto"><strong>No verificable</strong> — no pudimos revisar el medio (error de conexión, paywall sin acceso, timeout). No hay certeza sobre su cobertura.</span>
+            </div>
+            <div class="leyenda-item">
+                <span class="leyenda-icono">📰</span>
+                <span class="leyenda-texto"><strong>Hallazgo</strong> — artículo publicado por un medio 🟢 que menciona Venezuela de forma explícita, con enlace verificable incluido.</span>
+            </div>
+        </div>
+        <div class="leyenda-horarios">
+            ⏱ Corridas automáticas: <strong>07:00 VET</strong> (corte matutino) y <strong>17:00 VET</strong> (corte vespertino) · Universo: 35 medios internacionales
         </div>
     </div>
 
