@@ -209,10 +209,10 @@ def main():
         f = _parsear_fecha(h.get("fecha"))
         return f.timestamp() if f else 0.0
 
-    # Filtrar a VERDES con URL verificable, luego cap de 3 por medio (más recientes primero).
-    # Un medio VERDE puede tener varios artículos Venezuela en RSS; mostramos los mejores 3.
-    # Sin URL real = no hay forma de verificar → no se muestra en el informe.
-    _MAX_POR_MEDIO = 3
+    # Un artículo por medio VERDE (el más reciente con URL real).
+    # Resultado: N_verdes hallazgos exactos — uno por cada medio certificado.
+    # Sin URL = no verificable → excluido del informe.
+    _MAX_POR_MEDIO = 1
     _candidatos = [
         h for h in hallazgos_venezuela
         if h.get("medio_id") in medios_verdes and _tiene_url_real(h)
