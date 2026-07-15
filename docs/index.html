@@ -78,6 +78,18 @@
         .hallazgo-titulo{font-size:14px;font-weight:500;margin-bottom:6px;line-height:1.4}
         .hallazgo-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:11px}
 
+        /* LEYENDA */
+        .leyenda{background:var(--card);border-radius:12px;padding:18px 20px;margin:0 0 8px;
+                  border:1px solid var(--border);font-size:13px;color:var(--muted)}
+        .leyenda-titulo{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+                         color:var(--muted);margin-bottom:12px}
+        .leyenda-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+        .leyenda-item{display:flex;gap:8px;align-items:flex-start;line-height:1.4}
+        .leyenda-icono{font-size:15px;flex-shrink:0;margin-top:1px}
+        .leyenda-texto strong{color:var(--text);font-weight:600}
+        .leyenda-horarios{margin-top:12px;padding-top:12px;border-top:1px solid var(--border);
+                           font-size:12px;color:var(--muted)}
+
         /* FOOTER */
         footer{background:var(--header);color:#475569;padding:28px 20px;text-align:center;font-size:12px;margin-top:48px;line-height:2}
         footer strong{color:#94A3B8}
@@ -102,11 +114,11 @@
 
 <header class="hdr">
     <div class="hdr-logo">Sala Situacional · Medios Internacionales</div>
-    <h1>📡 📡 RADAR</h1>
+    <h1>📡 RADAR 📡</h1>
     <div class="hdr-meta">
         <span class="badge badge-matutino">MATUTINO</span>
-        <span>15 Jul 2026 · 12:54 VET</span>
-        <span>35/35 medios · 6 hallazgos Venezuela</span>
+        <span>15 Jul 2026 · 13:51 VET</span>
+        <span>35/35 medios · 7 hallazgos Venezuela</span>
     </div>
 </header>
 
@@ -114,12 +126,12 @@
 
     <div class="semaforo">
         <div class="sem-card v">
-            <div class="sem-num">9</div>
+            <div class="sem-num">10</div>
             <div class="sem-label">🟢 Con cobertura</div>
             <div class="sem-sub">Venezuela en agenda</div>
         </div>
         <div class="sem-card a">
-            <div class="sem-num">18</div>
+            <div class="sem-num">17</div>
             <div class="sem-label">🟡 Sin cobertura</div>
             <div class="sem-sub">Certificado · sin Venezuela</div>
         </div>
@@ -127,6 +139,31 @@
             <div class="sem-num">8</div>
             <div class="sem-label">🔴 No verificable</div>
             <div class="sem-sub">Error · paywall · timeout</div>
+        </div>
+    </div>
+
+    <div class="leyenda">
+        <div class="leyenda-titulo">Guía de lectura</div>
+        <div class="leyenda-grid">
+            <div class="leyenda-item">
+                <span class="leyenda-icono">🟢</span>
+                <span class="leyenda-texto"><strong>Con cobertura</strong> — el medio publicó al menos una pieza sobre Venezuela en este corte y pudimos verificarla con enlace directo.</span>
+            </div>
+            <div class="leyenda-item">
+                <span class="leyenda-icono">🟡</span>
+                <span class="leyenda-texto"><strong>Sin cobertura certificado</strong> — revisamos el medio, está operativo, y no encontramos publicaciones sobre Venezuela en la ventana de análisis.</span>
+            </div>
+            <div class="leyenda-item">
+                <span class="leyenda-icono">🔴</span>
+                <span class="leyenda-texto"><strong>No verificable</strong> — no pudimos revisar el medio (error de conexión, paywall sin acceso, timeout). No hay certeza sobre su cobertura.</span>
+            </div>
+            <div class="leyenda-item">
+                <span class="leyenda-icono">📰</span>
+                <span class="leyenda-texto"><strong>Hallazgo</strong> — artículo publicado por un medio 🟢 que menciona Venezuela de forma explícita, con enlace verificable incluido.</span>
+            </div>
+        </div>
+        <div class="leyenda-horarios">
+            ⏱ Corridas automáticas: <strong>07:00 VET</strong> (corte matutino) y <strong>17:00 VET</strong> (corte vespertino) · Universo: 35 medios internacionales
         </div>
     </div>
 
@@ -147,9 +184,9 @@
 <div class="medio-chip rojo" title="Error: Fetch fallido: Bloqueado: HTTP 403"><span class="dot"></span><span class="nombre">Bloomberg / Bloomberg Línea</span></div>
 <div class="medio-chip rojo" title="Error: Fetch fallido: HTTP 401"><span class="dot"></span><span class="nombre">Reuters (Americas)</span></div>
 <div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Financial Times</span></div>
-<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">BBC</span></div>
+<div class="medio-chip verde" title="Con cobertura"><span class="dot"></span><span class="nombre">BBC</span></div>
 <div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">AFP — Agence France-Presse</span></div>
-<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Le Monde</span></div>
+<div class="medio-chip verde" title="Con cobertura"><span class="dot"></span><span class="nombre">Le Monde</span></div>
 <div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Al Jazeera</span></div>
 <div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Asharq Al-Awsat</span></div>
 <div class="medio-chip rojo" title="Error: Fetch fallido: Bloqueado: HTTP 403"><span class="dot"></span><span class="nombre">Arab News</span></div>
@@ -162,7 +199,7 @@
 <div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Clarín</span></div>
 <div class="medio-chip verde" title="Con cobertura"><span class="dot"></span><span class="nombre">El Mercurio (Emol)</span></div>
 <div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Reforma</span></div>
-<div class="medio-chip verde" title="Con cobertura"><span class="dot"></span><span class="nombre">El Tiempo</span></div>
+<div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">El Tiempo</span></div>
 <div class="medio-chip verde" title="Con cobertura"><span class="dot"></span><span class="nombre">The Economist</span></div>
 <div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Foreign Affairs (CFR)</span></div>
 <div class="medio-chip amarillo" title="Sin cobertura certificada"><span class="dot"></span><span class="nombre">Foreign Affairs Latinoamérica</span></div>
@@ -172,7 +209,7 @@
     </section>
 
     <section>
-        <h2 class="sec-title">📰 Hallazgos Venezuela · 9 medios con cobertura</h2>
+        <h2 class="sec-title">📰 Hallazgos Venezuela · 10 medios con cobertura</h2>
         <div class="hallazgo-list">
 
         <div class="hallazgo-item">
@@ -186,13 +223,21 @@
         <div class="hallazgo-item">
             <div class="hallazgo-rank">2</div>
             <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela government to launch formal talks with opposition members</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">BBC</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.bbc.co.uk/news/articles/c1eye5320g5o?at_medium=RSS&at_campaign=rss" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">3</div>
+            <div class="hallazgo-content">
                 <div class="hallazgo-titulo">Venezuela earthquake death toll rises to 4,734: report</div>
                 <div class="hallazgo-meta"><span class="tag tag-medio">MEHR</span> <a class="tag-fuente" href="https://en.mehrnews.com/news/246222/Venezuela-earthquake-death-toll-rises-to-4-734-report" target="_blank" rel="noopener">→ ver nota</a></div>
             </div>
         </div>
 
         <div class="hallazgo-item">
-            <div class="hallazgo-rank">3</div>
+            <div class="hallazgo-rank">4</div>
             <div class="hallazgo-content">
                 <div class="hallazgo-titulo">Venezuela’s acting president expresses gratitude for Russia’s solidarity — ambassador</div>
                 <div class="hallazgo-meta"><span class="tag tag-medio">TASS</span> <span class="tag tag-favorable">favorable</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://tass.com/emergencies/2160457" target="_blank" rel="noopener">→ ver nota</a></div>
@@ -200,18 +245,10 @@
         </div>
 
         <div class="hallazgo-item">
-            <div class="hallazgo-rank">4</div>
+            <div class="hallazgo-rank">5</div>
             <div class="hallazgo-content">
                 <div class="hallazgo-titulo">Supera los 4.500 el número de fallecidos por el doble terremoto en Venezuela</div>
                 <div class="hallazgo-meta"><span class="tag tag-medio">SPUTNIK</span> <a class="tag-fuente" href="https://noticiaslatam.lat/20260713/supera-los-4500-el-numero-de-fallecidos-por-el-doble-terremoto-en-venezuela-1174271969.html" target="_blank" rel="noopener">→ ver nota</a></div>
-            </div>
-        </div>
-
-        <div class="hallazgo-item">
-            <div class="hallazgo-rank">5</div>
-            <div class="hallazgo-content">
-                <div class="hallazgo-titulo">Ley de arrendamiento: el mecanismo con el que el chavismo expropió cientos de inmuebles será modificado tras reconocer su fracaso</div>
-                <div class="hallazgo-meta"><span class="tag tag-medio">ELTIEMPO</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.eltiempo.com/mundo/venezuela/ley-de-arrendamiento-el-mecanismo-con-el-que-el-chavismo-expropio-cientos-de-inmuebles-sera-modificado-tras-reconocer-su-fracaso-3571164" target="_blank" rel="noopener">→ ver nota</a></div>
             </div>
         </div>
 
@@ -222,15 +259,23 @@
                 <div class="hallazgo-meta"><span class="tag tag-medio">ECONOMIST</span> <span class="tag tag-critica">critica</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.economist.com/the-americas/2026/07/02/venezuelans-are-furious-with-the-american-backed-regime" target="_blank" rel="noopener">→ ver nota</a></div>
             </div>
         </div>
+
+        <div class="hallazgo-item">
+            <div class="hallazgo-rank">7</div>
+            <div class="hallazgo-content">
+                <div class="hallazgo-titulo">Venezuela : le bilan des séismes dépasse 4 500 morts</div>
+                <div class="hallazgo-meta"><span class="tag tag-medio">LEMONDE</span> <span class="tag tag-gobierno">gobierno</span> <a class="tag-fuente" href="https://www.lemonde.fr/venezuela/article/2026/07/15/venezuela-le-bilan-des-seismes-depasse-4-500-morts_XXXXXXX_1613792_608.html" target="_blank" rel="noopener">→ ver nota</a></div>
+            </div>
+        </div>
         </div>
     </section>
 
 </div>
 
 <footer>
-    <strong>CENTINELA RADAR</strong> · 20260715-RADAR-MATUTINO · 366.85s<br>
+    <strong>CENTINELA RADAR</strong> · 20260715-RADAR-MATUTINO · 344.53s<br>
     Pipeline automatizado de monitoreo de prensa internacional<br>
-    Generado el 15 de Jul de 2026 a las 12:54<br><a href="https://mmorfe-engineer.github.io/centinela-radar/">🔗 https://mmorfe-engineer.github.io/centinela-radar/</a>
+    Generado el 15 de Jul de 2026 a las 13:51<br><a href="https://mmorfe-engineer.github.io/centinela-radar/">🔗 https://mmorfe-engineer.github.io/centinela-radar/</a>
 </footer>
 
 </body>
